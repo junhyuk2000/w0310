@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font:15px/1.6 '돋움',sans-serif;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color:#333;
+    text-decoration: none;
+}
+img {
+    object-fit: cover;
+    vertical-align: middle;
+}
+/* ========================= */
+.wrap {
+    width: 100%;
+    height: 800px;
+    display: flex;
+}
+header {
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    height: 800px;
+    border: 1px solid #000;
+}
+
+.gnb {
+    width: 180px;
+    margin: 100px auto;
+}
+.main::before {
+    z-index: -1;
+    content:"";
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 170px;
+    left: 100%;
+    height: 200px;
+    width: 0;
+    transition: .3s;
+}
+
+.main:hover::before {
+    width: 720px;
+
+}
+
+.main>li {
+    position: relative;
+}
+.main>li>a {
+    display: block;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: .3s;
+}
+.main>li>a:hover {
+    background: lightblue;
+    color:#333;
+}
+
+.main:hover .sub {
+    height: 200px;
+    opacity: 1;
+    visibility: visible;
+}
+.sub a {
+    display: block;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: .3s;
+    color:#fff;
+}
+.sub {
+    position: absolute;
+    top: 0;
+    left: 105%;
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    font-size: 12px;
+}
+
+.sub a:hover {
+    background: lightblue;
+}
+
+/* 콘텐츠 */
+.contents {
+    width: 400px;
+    border: 1px solid #000;
+}
+/* 탭 */
+
+.tabs {
+    padding: 10px;
+    position: relative;
+}
+.tabs input {
+    display: none;
+}
+
+.tabs label {
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background: lightblue;
+    color:green;
+    font-weight: bold;
+}
+.tabs input:checked+label+.tab_contents {
+    display: block;
+}
+
+.tabs input:checked+label {
+    background: lightcoral;
+    color:#fff;
+}
+.tab_contents {
+    display: none;
+    position: absolute;
+}
+
+.tabs img {
+    width: 100px;
+    height: 100px;
+}
+
+.tabs li {
+    padding: 15px 0;
+}
+.tabs span {
+    display: inline-block;
+    width: 300px;
+}
+.tabs>.tab1 a:hover {
+    color:aqua;
+    text-decoration: underline;
+}
+
+.tabs input:checked+label+.tab2 {
+    display: flex;
+    width: 400px;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+/* 슬라이드 */
+
+.slide {
+    width: 1200px;
+    height: 300px;
+    position: relative;
+}
+.inner {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .3s;
+
+}
+
+.active {
+    opacity: 1;
+}

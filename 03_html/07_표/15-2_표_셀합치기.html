@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        td{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>표 - 셀합치기</h1>
+    <p>열 합치기는 colsapn을 사용하고, 행 합치기는 rowspan을 사용한다. 값은 셀을 합친 개수 만큼 작성한다.
+        또한 두 속성은 &lt; th &gt; 태그와 &lt; td &gt; 태그에만 사용할 수 있다.</p>
+    <h2>열 합치기</h2>
+    <table>
+        <tr>
+            <!-- 1열~3열까지 하나의 열로 합치기 -->
+            <td colspan="3">1</td> <!-- 1행1열 -->
+            <!-- <td>2</td>  --><!-- 1행2열 -->
+            <!-- <td>3</td> --> <!-- 1행3열 -->
+        </tr>
+        <tr>
+            <td>4</td><!-- 2행1열 -->
+            <td>5</td><!-- 2행2열 -->
+            <td>6</td><!-- 2행3열 -->
+        </tr>
+    </table>
+
+
+
+    <h2>행 합치기</h2>
+    <table>
+        <tr>
+            <td rowspan="2">1</td><!-- 1행1열 -->
+            <td>2</td><!-- 1행2열 -->
+            <td>3</td><!-- 1행3열 -->
+        </tr>
+        <tr>
+            <!-- <td>4</td> -->
+            <td>5</td><!-- 2행2열 -->
+            <td>6</td><!-- 2행3열 -->
+        </tr>
+    </table>
+</body>
+</html>

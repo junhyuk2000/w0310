@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "굴림", Arial, sans-serif;
+            font-size: 13px;
+            line-height: 22px;
+        }
+
+        h2 {
+            background-color: lightblue;
+        }
+
+        ul {
+            list-style: none;
+            background-color: lightblue;
+        }
+
+        a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        .notice {
+            width: 100%;
+        }
+
+        .notice ul {
+            padding: 20px;
+        }
+
+        .notice span {
+            display: inline-block;
+            width: 320px;
+        }
+
+        /* 모달 팝업 창 */
+        .modal {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .contents {
+            width: 500px;
+            margin: 200px auto 0;
+            background: lightcoral;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .contents a {
+            display: inline-block;
+            margin-left: 420px;
+            width: 70px;
+            height: 30px;
+            background: lightskyblue;
+            text-align: center;
+            line-height: 30px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="contents">
+            <a href="#">&times;</a>
+            <h3>모달내용</h3>
+            <p>모달내용입니다.</p>
+        </div>
+    </div>
+    <div class="notice">
+        <h2>공지사항</h2>
+        <ul>
+            <li><a href="#"><span>설 연휴 국내/해외 항공 업무 안내</span>2022.01.27</a></li>
+            <li><a href="#"><span>&lt;하나LIVE&gt;스타벅스 기프티콘 이벤트 당첨자 안내</span>2022.01.14</a></li>
+            <li><a href="#"><span>[플래너 공모전]대상~장려상 수장자 마일리지 ...</span>2022.01.13</a></li>
+            <li><a href="#"><span>[국내항공]12월 국내항공 구매자 이벤트 당첨자 안내</span>2021.12.30</a></li>
+        </ul>
+    </div>
+
+
+</body>
+<!-- CDN -->
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+
+<!-- 다운로드 -->
+<!-- 다운로드 한 제이쿼리 라이브러리 연결 -->
+<script src="jquery-3.7.1.js"></script>
+<script src="index.js">
+    // 2. 준비 이벤트 작성
+    // 문서 객체가 준비되면 함수 내용을 실행한다.
+    //(ducument).ready 생략가능
+
+    /*
+
+        함수 데이터 : function(){}
+
+        함수 
+            1. 익명함수
+                변수1 = (para , ...)=>{}
+                변수2 = (para , ...)=>{}
+                변수3 = (para , ...)=>{}
+            2. 선언적함수
+                function이름1(para , ...){}
+                function이름2(para , ...){}
+                function이름3(para , ...){}
+
+        이벤트
+            1. 윈도우
+            2. 문서 : ready
+            3. 마우스 : click
+            4. 키보드
+
+        이벤트 메서드(function(){})
+            ready()
+            click()
+        
+        객체는 속성과 메서드()로 구성된다.
+
+            메서드(매개변수,parameter) -> 객체의 함수
+
+            이벤트
+                .ready -> 준비한다
+                .click -> 클릭한다
+
+            효과
+                .show -> 보인다
+                .hide -> 숨긴다
+        
+        객체.속성;
+        객체.메서드();
+    */
+
+</script>
+
+</html>

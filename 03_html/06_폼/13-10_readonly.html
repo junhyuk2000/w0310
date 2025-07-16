@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <!-- 
+        readonly는 탭키로 포커스 가능
+        disabled는 포커스 불가능 
+    -->
+    <form>
+        <fieldset>
+            <legend>disabled 속성과 readnoly 속성</legend>
+            <p>
+                <label for="identification">인증번호</label>
+                <input type="text" id="identification" title="인증번호 입력">
+                <input type="button" value="이전">
+                <!-- disabled 비활성화 ㅡ 포커스 x, 데이터 전송 x-->
+                <input type="button" value="다음" disabled>
+            </p>
+
+            <p>
+                <label for="book">선택한 책</label>
+                <!-- readonly는 읽기 전용, 포커스 o , 데이터 전송 o -->
+                <input type="text" id="book" value="반응형 웹" readonly> <br>
+                <label for="quantity">수량</label>
+                <!-- 
+                    min : 최솟값
+                    max : 최댓값
+                    step : 단계 (넘어가는 수)
+                    value : 초기값
+                -->
+                <input type="number" id="quantity" min="1" max="20" 
+                step="5" value="1" title="수량 입력">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

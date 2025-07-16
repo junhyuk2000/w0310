@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+    background: #000;
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    padding-right: 30px;
+}
+header li {
+    width: 90px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+
+}
+header a {
+    color:white;
+}
+header a:hover {
+    transition:.3s;
+    color:purple;
+}
+
+
+
+
+
+/* 슬라이드*/
+.slide_box {
+    width: 1200px;
+    overflow: hidden;
+}
+.slide {
+    display: flex;
+    position: relative;
+    width: 400%;
+    height: 350px;
+}
+.inner {
+    width: 100%;
+}
+
+/* 콘텐츠 */
+.contents {
+    display: flex;
+    height: 200px;
+
+}
+
+.noge {
+    width: 400px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+.noge h2{
+    padding: 20px 0 10px 10px;
+}
+.noge li {
+    padding: 5px 0 0 10px;
+}
+.noge a {
+    display: inline-block;
+    width: 300px;
+}
+.noge a:hover {
+    color:aquamarine;
+    text-decoration: underline;
+}
+.noge span:hover {
+    color:aquamarine;
+    text-decoration: underline;
+}
+
+
+.banner {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #000;
+}
+.banner img{
+    width: 70px;
+    height: 60px;
+}
+.link {
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 1px solid #000;
+}
+.link img {
+    width: 70px;
+    height: 60px;
+}
+.link_align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 푸터 */
+footer { 
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+}
+.blogo {
+    width: 215px;
+    line-height: 120px;
+}
+.copy{
+    width: 800px;
+    height: 100px;
+    line-height: 100px;
+}
+.copy p {
+    color:#666;
+}
+
+.sns {
+    display: flex;
+}
+.sns img {
+    width: 40px;
+    height: 40px;
+}

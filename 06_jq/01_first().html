@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <title>first()</title>
+</head>
+<body>
+    <ul>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+    </ul>
+    
+    <script>
+        $(()=>{
+            $('ul li').first().css({color:"red"}); // 속성에 ''은 한 단어거나 카멜표기법이면 생략가능 ex) background-color 는 ''로 묶어줘야함
+        });
+    </script>
+</body>
+</html>

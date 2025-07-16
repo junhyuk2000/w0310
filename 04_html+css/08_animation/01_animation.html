@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            개별 속성
+                animation-name : 애니메이션 이름;
+                animation-duration : 동작시간; 
+                    값 : 1s -> 단위 s(초)
+                animation-iteration-count: 반복횟수;
+                    값 :  1(기본값),숫자(반복할 횟수), infinite(무한 반복)
+                animation-direction : 방향;
+                    조건 : 반복 횟수 2 이상 지정해야 함
+                    값 : normal(기본값) - 정방향
+                         reverse - 역방향
+                         alternate - 양방향
+                         alternate-reverse
+                animation-delay: 대기시간;
+                    값 : 1s -> 단위 : s(초)
+                animation-timing-function: 속도곡선;
+                    값 : ease(기본값) - 처음에 느리고, 중간에 빠르고, 끝에 느리게
+                         ease-in - 처음에 느리고, 끝에 빠르게
+                         ease-out - 처음에 빠르고, 끝에 느리게
+                         ease-in-out - 처음과 끝이 느리고, 중간은 빠르게 (처음과 끝이 동일하게)
+                         linear(등속)
+                animation-fill-mode: 종료 후 속성 상태;
+                    값 : none - 애니메이션이 끝난 후 아무런 스타일 변화가 없음
+                         forwards - 애니메이션 끝난 후 마지막 상태 유지
+                         backwards - 애니메이션 시작 전 적용된 스타일 유지
+                         both - 애니메이션 시작 전과 후의 상태 모두 유지
+                animation-play-state: 동작 상태;
+                    값 : running(기본값) - 재개
+                         pause - 일시정지
+
+
+                font : [이텔릭|굵기] 크기[/줄간격] 글꼴1개 이상 -> 정해진 순서   
+
+            속기 속성
+            animation : 이름 동작시간 [반복횟수] [대기시간] [방향] [속도] [속성 상태] [동작상태];
+            [] > 생략가능
+            -> 속성 값 간의 정해진 순서는 없다
+            
+            요소가 한 스타일에서 다른 스타일로 점진적으로 변경할 수 있도록 한다.
+            애니메이션의 작업 단위 : 키프레임 (keyflame)
+
+            @keyframes 애니메이션이름 {
+                from {속성 : 값 ...;}
+                to {속성 : 값 ...;}
+            }
+
+            @keyframes 애니메이션이름 {
+                0% {속성 : 값 ...;}
+                50% {속성 : 값 ...;}
+                59.99999% {속성 : 값 ...;}
+                100% {속성 : 값 ...;}
+            }
+        */
+        div {
+            position: absolute;
+            left:auto;
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            animation-name: rightMove;
+            animation-duration: 5s;
+            /* animation-delay: 3s; */
+            /* animation-direction:alternate; */
+            /* animation-timing-function: linear; */
+            /* animation-iteration-count: infinite; */
+            animation-fill-mode: forwards;
+        }
+        @keyframes rightMove {
+            from {left:0}
+            to {left:500px}            
+        }
+        @keyframes rightMove2 {
+            0% {left:0}
+            50% {left:1000px}            
+            100% {left:0}
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+</body>
+</html>

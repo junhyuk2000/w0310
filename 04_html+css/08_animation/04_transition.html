@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        /* 
+            transition : [속성명] 전환시간 [가속도] [지연시간]
+                지정한 시간동안 부드럽게 속성을 전환한다
+            
+            참고로 display, position, z-index, overflow, visibility, font-family, box-sizing, ... 은 적용되지 않는다.
+        */
+
+        ul {
+            list-style: none;
+        }
+        .menu {
+            /* display: flex; */
+        }
+
+        .menu li {
+            /* padding: 20px; */
+        }
+        a {
+            background: #abc;
+            color : #000fe6;
+            text-decoration: none;
+            display: block;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            /* transition-property: width,color ; */
+            /* transition-duration:1s,1s; */
+            transition: 1s;
+        }
+
+        a:hover {
+            width: 400px;
+            background: #aca;
+            color: #c00
+        }
+    </style>
+</head>
+<body>
+    <h1>Moving Menu</h1>
+    <ul class="menu">
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Customer Support</a></li>
+        <li><a href="#">Community</a></li>
+    </ul>
+</body>
+</html>

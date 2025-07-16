@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/* 초기화 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font : 15px/1.6 "돋움","sans-serif";
+    background-color: #fff;
+    color:#333;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color:#333;
+}
+ul {
+    list-style: none;
+}
+/* 전체 콘텐츠 flex */
+.wrap {
+    display: flex;
+}
+
+/* 헤더 */
+header {
+    position: relative;
+    width: 200px;
+    height: 800px;
+}
+/* 내비게이션 */
+.gnb {
+    position: absolute;
+    margin-top: 100px;
+}
+.main {
+    z-index: 5;
+}
+.main::before {
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    top: 0;
+    left: 200px;
+    display: none;
+    width: 0;
+    height: 0;
+    z-index: 1;
+}
+
+.main:hover::before {
+    display: block;
+    width: 1720px;
+    height: 280px;
+}
+.main>li {
+    display: flex;
+}
+.main>li>a {
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    line-height:70px;
+    transition: .5s;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main>li>a:hover {
+    background: #000;
+    color:#fff;
+}
+
+.sub {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+    display: flex;
+    z-index: 2;
+}
+
+.main:hover .sub {
+    width: 800px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub a {
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    transition: .5s;
+    color:white
+}
+
+.sub a:hover {
+    background: #aaa;
+    color: #444;
+}
+
+/* 콘텐츠 */
+.contents {
+    width: calc(100% - 200px);
+}
+/* 슬라이드 */
+.slide {
+    width: 1720px;
+    height: 400px;
+    overflow: hidden;
+}
+.slidelist {
+    width: 400%;
+    display: flex;
+}
+.slide img {
+    width: 100%;
+    height: 400px;
+}
+.inner {
+    z-index: -2;
+}
+/* 바로가기 */
+
+.link {
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+/* 공지+갤러리 */
+.noge {
+    display: flex;
+    height: 250px;
+}
+/* 공지사항 */
+.notice {
+    width: calc(100% - 50%);
+    border-right: 1px solid #ccc;
+}
+
+.notice h2 {
+    padding: 20px 0 20px 20px;
+}
+
+.notice li {
+    padding: 0 0 10px 20px;
+}
+
+.notice li a {
+    display: inline-block;
+    width: 700px;
+}
+
+.notice li a:hover {
+    color: lightslategray;
+    text-decoration: underline;
+}
+
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
+.modal:target {
+    display: block;
+}
+.modal_contents {
+    position:relative;
+    width: 500px;
+    height: 300px;
+    margin: 15% auto;
+    background: #fff;
+}
+
+.modal_contents h3 {
+    padding: 20px 0 10px 10px;
+}
+.modal_contents p {
+    padding: 10px 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: #000;
+    color:#fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 30px;
+}
+.close:hover {
+    background: #ccc;
+    color:#000;
+}
+
+
+/* 갤러리 */
+.gallery {
+    width: calc(100% - 50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.gallery p {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    background: #333;
+}
+.none {
+    width: 200px;
+}
+
+.ft_info {
+    width: 1200px;
+    border: 1px solid #000;
+}
+.ft_link ul {
+    display: flex;
+}
+.ft_link li:not(:last-child) {
+    margin-right: 20px;
+}
+.ft_link a {
+    color:#666;
+}
+.copy {
+    color:#666;
+    padding-top: 15px;
+}
+
+.fs {
+    margin: 0 auto;
+    line-height: 120px;
+}

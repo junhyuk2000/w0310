@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 선언 : const</title>
+</head>
+<body>
+    <script>
+        /* 
+            let : 변경되는 데이터를 저장
+            const : 변경하지 않을 데이터를 저장
+        */
+       // 단위환산 : cm -> m
+       let cm = prompt('cm를 입력하세요!','');
+       const DIVSION_VALUE = 100;   /* 상수는 변수명을 대문자로 많이 표기 함 */
+       let m = cm / DIVSION_VALUE; // 1.23 m
+       document.write(cm + 'cm 는' + m + 'm 입니다');
+
+        // const는 재선언 / 재할당을 할 수 없다.
+        // let은 재선언할 수 없다. 다만 재선언은 가능하다.
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/* 초기화식 */
+body {
+    margin: 0;
+    font: 16px/1.6 sans-serif,'돋움';
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color:#fff;
+    text-decoration: none;
+}
+h1 {
+    margin: 0;
+}
+
+
+img {
+    vertical-align: bottom;
+}
+
+
+/* header */
+.header {
+    width: 100%;
+    height: 150px;
+}
+
+/* header_top */
+.header_top {
+    height: 50px;
+    background: #000;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.header_btn {
+    margin-right: 50px;
+}
+.header_btn button:first-of-type {
+    margin-right: 10px;
+}
+
+.header button {
+    width: 115px;
+    height: 30px;
+    border-radius: 10px;
+    background: #000;
+    color:#fff;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: .3s;
+}
+
+.header button:hover {
+    background: linear-gradient(90deg, #000 0%, #1A2C59 50%, #000 100%);
+    scale: 1.1;
+}
+
+
+/* header_bottom */
+.header_bottom {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: linear-gradient(90deg, #000 0%, #1A2C59 50%, #000 100%);
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+.gnb {
+    width: 810px;
+    margin-right: 525px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main::before {
+    z-index: -1;
+    content:"";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: .3s;
+    background: linear-gradient(90deg, #000 0%, #1A2C59 50%, #000 100%);
+}
+
+.main:hover::before {
+    height: 200px;
+}
+
+.main>li {
+    width: 170px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.main>li>a {
+    position: relative;
+    font-size: 18px;
+    transition: .3s;
+}
+.main>li>a::after {
+    content: "";
+    position: absolute;
+    top: 130%;
+    left: 0;
+    width:100%;
+    height: 2px;
+    background: #8E2DE2;
+    transform:scaleX(0);
+    transform-origin:center;
+    transition : transform .3s ease;
+}
+
+.main>li>a:hover::after {
+    transform: scale(1);
+}
+
+/* a태그 수정 */
+.main>li:hover .header_main{
+    color:#8E2DE2;
+}
+
+.sub {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.sub a {
+    transition: .2s;
+}
+.sub a:hover {
+    color:#8E2DE2;
+}
+
+.sub li {
+    margin-top: 18px;
+}

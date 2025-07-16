@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트의 적용 위치</title>
+    <!-- 외부 스타일 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 내부 스타일 -->
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            color:white;
+        }
+    </style>
+    <script src="외부스크립트.js"></script>
+    <!-- 내부 스크립트 -->
+    <script>
+        // 문서 출력
+        // 명령어의 대소문자 구별한다.
+        document.write("head사이 스크립트");
+        // 콘솔 로그
+        console.log("자바스크립트")
+    </script>
+</head>
+
+<body>
+    <!-- 인라인 스크립트 -->
+    <!-- div를 클릭하면 alert()가 호출된다. -->
+    <!-- onclick은 HTML의 이벤트 속성 -->
+    <div onclick="alert('인라인스크립트');">박스</div>
+
+
+
+
+    <!-- 내부 스크립트 -->
+    <script>
+        document.write("body사이 스크립트")
+    </script>
+</body>
+</html>

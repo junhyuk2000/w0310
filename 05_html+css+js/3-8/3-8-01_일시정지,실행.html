@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>play pause Button</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <button type="button" id="play_btn">play</button>
+  <button type="button" id="pause_btn">pause</button>
+  <script>
+
+
+    const playBtn = document.getElementById('play_btn');
+    const pauseBtn = document.getElementById('pause_btn');
+    let intervalId = null;
+    let count = 0;
+
+    const play = () => {
+      // 타이머 중복실행 방지
+      if (intervalId !== null) return;
+      intervalId = setInterval(() => {
+        count++;
+        console.log(count);
+      }, 2000);
+    };
+
+
+    const pause = () => {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+
+    play();
+    playBtn.onclick = () => {
+      play();
+    }
+    pauseBtn.onclick = () => {
+      pause();
+    }
+
+  </script>
+</body>
+
+</html>

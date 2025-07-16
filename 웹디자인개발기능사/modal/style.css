@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+a {
+  text-decoration: none;
+}
+/* 모달창 열기 버튼*/
+.open {
+  display: block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: darkgreen;
+  color:white;
+  border-radius: 10px;
+}
+.open:hover {
+  background: rgb(0, 202, 0);
+}
+
+/* 모달창 배경(전체로) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+}
+/* target되면 열리기 */
+.modal:target {
+  display: block;
+}
+
+/* 모달창 내용 */
+.modal_contents {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: white;
+  margin: 15% auto;
+  padding: 20px;
+}
+/* 닫기버튼 */
+.close {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: darkgreen;
+  color:white;
+  width:25px;
+  text-align: center;
+  border-radius: 8px;
+}
+.close:hover{
+  background: rgb(0, 202, 0);
+}

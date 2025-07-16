@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+
+    <style>
+        /* 
+            부모 자식 관계 선택자
+            1. 선택자 선택자   -> 하위선택자  
+            2. 선택자 > 선택자 -> 자식선택자
+
+            형제 관계 선택자
+            3. 선택자 ~ 선택자 -> 형제선택자
+            4. 선택자 + 선택자 -> 인접형제선택자
+
+            종속선택자 : type, id , class를 결합한 형태
+
+        */
+        /* id 선택자 */
+        #atxt{
+            color:red;
+        }
+
+        /* 종속 선택자 */
+        /* p이면서 id가 atxt인 것을 선택*/
+        p#atxt{
+            color:green;
+        }
+        /* p이면서 class가 atxt인 것을 선택 */
+        p.atxt{
+            color:yellow;
+        }
+        /* id가 atxt이면서 class가 atxt인 것을 선택 */
+        #atxt.atxt {
+            color:blue;
+        }
+        /* 하위선택자 / 헷갈리면 안됨 */
+        p .atxt{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p>선택자의 다양한 표현</p>
+    <p id="atxt">선택자의 다양한 표현</p>
+    <p class="atxt">선택자의 다양한 표현</p>
+    <p id="atxt" class="atxt">선택자의 <span class="atxt">다양한</span> 표현</p>
+</body>
+</html>

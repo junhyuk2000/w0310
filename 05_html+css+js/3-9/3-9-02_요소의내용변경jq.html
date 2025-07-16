@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background: #718c00;
+    }
+  </style>
+</head>
+
+<body>
+  <button>textContent</button>
+  <button>innerHTML</button>
+  <div id="content"></div>
+  <script>
+    /* 
+    <태그 속성 = 값>내용 </태그>
+
+    DOM 객체 내용의 변경
+      textContent
+        -> 태그 인식x
+      innerHTML
+        -> 문자 방식으로 요소 생성
+        -> 태그인식
+      
+  */
+    const bt0 = $('button').eq(0);
+    const bt1 = $('button:eq(1)');
+    const content = $('#content');
+
+    bt0.click(() => {
+      content.text('<p class="m1">자바스크립트</p>');
+    });
+
+    bt1.click(() => {
+      content.html('<p class="m1">자바스크립트</p>');
+    });
+
+  </script>
+</body>
+
+</html>

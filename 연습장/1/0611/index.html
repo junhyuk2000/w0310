@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="logo"><a href="#"><img src="logo.png" alt="#"></a></h1>
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">메인1</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul></li>
+                    <li><a href="#">메인2</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul></li>
+                    <li><a href="#">메인3</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul></li>
+                    <li><a href="#">메인4</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="contents">
+            <div class="tabs">
+                <input type="radio" name="tab" id="tab1" checked>
+                <label for="tab1">공지사항</label>
+                <div class="tab1 tab_contents">
+                    <ul>
+                        <li><a href="#modal">공지1</a></li>
+                        <li><a href="#">공지2</a></li>
+                        <li><a href="#">공지3</a></li>
+                        <li><a href="#">공지4</a></li>
+                    </ul>
+                </div>
+                <input type="radio" name="tab" id="tab2">
+                <label for="tab2">갤러리</label>
+                <div class="tab2 tab_contents">
+                    <div><a href="#"><img src="gallery1.jpg" alt="1"></a><p>갤1</p></div>
+                    <div><a href="#"><img src="gallery1.jpg" alt="1"></a><p>갤2</p></div>
+                    <div><a href="#"><img src="gallery1.jpg" alt="1"></a><p>갤3</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modal_contents">
+                <a href="#" class="close">&times;</a>
+                <h3>모달제목</h3>
+                <p>모달</p>
+            </div>
+        </div>
+        <div class="slide">
+                <div class="inner active"><a href="#"><img src="slide1.jpg" alt="1"></a></div>
+                <div class="inner"><a href="#"><img src="slide2.jpg" alt="2"></a></div>
+                <div class="inner"><a href="#"><img src="slide3.jpg" alt="3"></a></div>
+        </div>
+    </div>  <!-- wrap.end -->
+    <script src="index.js"></script>
+</body>
+</html>

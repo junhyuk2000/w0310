@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexable 방식</title>
+
+    <style>
+        /* 
+        부모요소에 지정 (flex container : 전체적인 정렬 및 흐름속성) 
+                display: flex; (flex container로 만듦, 자식은 flex-item)
+                flex-direcion : 방향 지정(기본적으로 row)
+                justify-content : align (정렬,맞춤)
+                flex-wrap - 줄 바꿈 방식
+                align-items - 정렬
+                align-content - 여러 행 정렬
+                flex-flow : direction wrap;(flex-direcion + flex-wrap)
+                
+                속기속성
+                flex-flow  : direction + wrap
+                
+                
+                자식요소에 지정 (flex item : 크기나 순서에 관련된 속성) 
+                    개별속성
+                    align-self - 정렬
+                    flex-grow - 성장
+                    flex-shrink - 수축
+                    flex-basis - 가로 크기 초기값
+                    order - 자식 요소의 순서
+                속기속성
+                flex : 1;
+                
+         */
+
+         div {
+            outline: 1px solid red;
+         }
+
+         .flexbox {
+            /* 가로배치 : width가 자식 크기, height는 부모 크기의 100% */
+            display: flex;
+            height: 200px;
+            background: #ccc;
+         }
+         .flexbox > div {
+            background: darkcyan;
+            margin: 10px;
+            flex:0 1 auto;
+            flex:1;
+            
+            flex-grow:0;    /* 기본값 0 */
+            flex-shrink: 1; /* 기본값 1 */
+            flex-basis: 200px;
+            
+            /* grow와 shrink가 1이면 basis는 어떤 값이든 같다 */
+
+         }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <!-- 블록레벨요소는 width는 부모크기의 100%이며, 줄바꿈 되기 때문에 세로(위에서 아래로)배치된다 
+        height는 자식 크기만큼 지정된다.-->
+    <div>flex-item</div>
+    <div>flex-item</div>
+    <div>flex-item</div>
+    </div>
+</body>
+</html>

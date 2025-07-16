@@ -1,0 +1,20 @@
+1. 로고 // 내비 display:flex; 
+			justify-content : space-between;
+			align-item : center
+2. 메인 내비게이션의 모든 자식요소 li의  width height 지정
+	후에 text-align, line-height 로 정렬
+3. 서브메뉴는 
+height : 0;
+opacity : 0;
+visibility : hidden;
+overflow : hidden;
+bg : rgba 0,0,0,0.5;
+line-height : 2; < 안주면 서브메뉴 잘림
+transition : .5s;
+
+이후 모든 서브메뉴가 한번에 내려오는거면 .main : hover
+개별 메뉴의 서브메뉴 하나씩 내려오는거면 .main>li : hover
+
+header에 position:relative;
+내비게이션 ul 에 position:absolute;
+

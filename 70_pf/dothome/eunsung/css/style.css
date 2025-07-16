@@ -1,0 +1,286 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 초기화 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+body {
+    background: #fff;
+    color:#333;
+    font: 15px/1.6 '굴림돋움', sans-serif;
+    width: 100%;
+}
+a {
+    color:#333;
+    text-decoration: none;
+}
+img {
+    vertical-align: middle;
+}
+/* 공통 */
+html, body {
+    height:100%
+}
+.wrap {
+    display: flex;
+    /* 
+        calc(피연산자 연산자 피연산자); 
+        연산자: +, -, *, /
+    */
+    
+    height: calc(100% - 120px);
+}
+
+/* 헤더 */
+header {
+    position: relative;
+    width: 200px;
+    background: lightcyan;
+    padding: 20px 0;
+}
+/* 로고 */
+.logo {
+    text-align: center;
+}
+
+/* 내비게이션 */
+
+.main {
+    margin-top: 100px;
+}
+.main::before {
+    z-index: 1;
+    position: absolute;
+    width: 0;
+    top: 171px;
+    left: 200px;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    content:"";
+}
+
+.main:hover::before {
+    width: 1720px;
+    height: 200px;
+    opacity: 1;
+    visibility: visible;
+}
+.main>li {
+    z-index: 3;
+    position: relative;
+}
+.main>li>a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #28A7E1;
+    border: 1px solid #ddd;
+}
+.main>li>a:hover {
+    background:#28A7E1;
+    color:#fff;
+}
+.sub {
+    display: flex;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: .3s;
+}
+.sub a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: #28a7e1;
+    line-height: 50px;
+}
+.main:hover .sub {
+    width: 800px;
+    opacity: 1;
+    visibility: visible;
+}
+.sub a:hover {
+    color:#fff;
+    background: #28A7E1;
+}
+/* 콘텐츠 */
+.contents {
+    width: 400px;
+}
+
+/* 배너 */
+.banner {
+    display: flex;
+    /* height: 150px; */
+    height: 15%;
+    background: rgb(150, 191, 243);
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 14px;
+}
+.banner .cont {
+    display: flex;
+}
+.banner .cont img {
+    margin-right: 16px;
+}
+/* 공지사항 */
+.notice {
+    /* height: calc(100% - 630px); */
+    height: 30%;
+}
+
+.notice li {
+    border-bottom: 1px solid black ;
+    padding: 15px 10px;
+    height: 56px;
+}
+.notice span:hover {
+    border-bottom: 1px solid #28A7E1 ;
+}
+.notice a:hover {   
+    color:#28A7E1 ;
+}
+.notice h2{
+    border-bottom: 1px solid #000;
+    padding: 15px;
+}
+.notice span{
+    display: inline-block;
+    width: 280px;
+}
+
+.modal {
+    display: none;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+}
+.modal:target {
+    display: block;
+}
+.modal_contents {
+    position: relative;
+    margin: 15% auto;
+    background: white;
+    width: 400px;
+    height: 200px;
+    padding: 20px
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    background: #28A7E1;
+    border-radius: 10px;
+    
+}
+.close:hover {
+    color:#fff;
+    background: #5cbce9;
+}
+.modal
+/* 갤러리 */
+.gallery {
+    height: 30%;
+    /* height: 360px; */
+    background: #c0fcfc;
+}
+.gallery h2 {
+    padding: 15px 0 15px 12px;
+}
+.gall_inner {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* 바로가기 링크 */
+.link {
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 14px;
+    /* height: 120px; */
+    text-align: center;
+    align-items: center;
+    background: #d3ffff;
+}
+
+
+/* 슬라이드 */
+.slide {
+    width: 1320px;
+    overflow: hidden;
+}
+.slidelist {
+    display: flex;
+    width: 400%;
+}
+
+.inner {
+    width: 100%;
+}
+
+
+/* 푸터 */
+footer {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    background: #333;
+}
+/* 하단 로고 */
+.blogo {
+    width: 200px;
+}
+/* 하단 메뉴, 주소 및 저작권*/
+.center_content{
+    width: calc(100% - 500px);
+    padding-left: 30px;
+    color:#666;
+}
+.bmenu {
+    display:flex;
+    /* justify-content: center; */
+    height: 50px;
+}
+.bmenu a {
+    color:#999;
+}
+.bmenu li {
+    margin-right: 16px;
+}
+.bmenu li:not(:last-child):after {
+    content:'|';
+    margin-left: 16px;
+}
+/* 패밀리사이트 */
+.fs {
+    width: 300px;
+}

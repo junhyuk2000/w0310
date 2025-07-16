@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+/*      
+        연산자
+        1. 산술연산자 : + - * /
+        2. 비교연산자 : > < >= <=
+        2. 비교연산자 : != !== 같지않다
+        2. 비교연산자 : == === 같다
+        3. 대입(할당) : = 
+        4. typeof
+        5. 논리연산자 : &&(and), || (or), !(not)
+        6. 비트 : &, |, ~, ^, << , >> , ... 
+        7. 삼항 : 피연산자1 ? 피연산자2 : 피연산자3
+*/
+
+/*         
+        단항 : 피연산자 1개 -> ++,--,!
+        이항 : 피연산자 2개 -> 
+        삼항 : 피연산자 3개 ->
+ */    
+
+        // 산술연산자 ---------------------
+        document.write("산술연산" + '<br>'+ '<br>');
+        var a = 5;
+        var b = '5';
+        
+        document.write (a + b);
+        document.write ('<br>');
+        document.write (a + '2');
+        document.write ('<br>');
+        document.write (a - b);
+        document.write ('<br>');
+        document.write (a * b);
+        document.write ('<br>');
+        document.write (a / b); //2.5
+        document.write ('<br>');
+        // 나머지
+        document.write (a % b); //1
+        document.write ('<hr>');
+        // 1씩 증가(후위연산)
+        document.write(a++); //5
+        document.write('<br>');
+        document.write(a); //6
+        document.write('<br>');
+        // 1씩증가(전위연산)
+        document.write(++a);//7
+
+        document.write('<hr>');
+
+        // 대입연산자  ---------------------
+        /* 
+            =   오른쪽에 값을 왼쪽 변수에 대입
+            +=  더한 후 대입
+            -=  뺀 후 대입
+            *=  곱한 후 대입
+            /=  나눈 후 대입
+            %=  나머지를 구한 후 대입
+        */
+
+        // NaN : Not a Number
+        // ( ) -> 연산의 우선 순위를 바꾼다
+        document.write("대입연산"+ '<br>'+ '<br>')
+       document.write((a=b) +'<br>');
+       document.write((a+=b) +'<br>');
+       document.write((a-=b) +'<br>');
+       document.write((a*=b) +'<br>');
+       document.write((a/=b) +'<br>');
+       document.write((a%=b) +'<br>');
+       document.write('<hr>');
+       // 비교연산자 ---------------------
+       /* 
+            >       초과(크다)
+            <       미만(작다)
+            >=      이상(크거나 같다)
+            <=      이하(작거나 같다)
+            ==      데이터 타입을 구별하지 않는다
+            ===     데이터 타입을 구분한다.
+            !=      같지않다
+            !==     같지않다
+
+            비교 연산의 결과는 true 또는 false이다
+       */
+      document.write("비교연산" +'<br>'+'<br>');
+      document.write((a > b) + '<br>');
+      document.write((a < b) + '<br>');
+      document.write((a >= b) + '<br>');
+      document.write((a <= b)+ '<br>');
+      document.write((a == b) + '<br>');
+      document.write((a === b) + '<br>');
+      document.write((a != b )+ '<br>');
+      document.write((a !== b)+ '<br>');
+      
+      document.write('<hr>');
+
+        // 논리 ---------------------
+        /* 
+            &&      그리고
+            ||      또는
+            !       부정
+        */
+
+        /* 
+                연산자의 우선 순위
+                1. ()
+                2. ++, -- ,!
+                3. &,/
+                4. +,-
+                5. >, <, >=, <=
+                6. ===, !==
+                7. &&
+                8. ||
+                9. =, +=, -=, *=, /=, %=
+        */
+       let c = 1;
+       let d = 0;
+       
+    // c는 true반환, d는 false(0은 false값을 반환함.) 
+    //    document.write( c && d ); // false  
+
+       document.write("논리연산" + '<br>'+'<br>');
+       document.write( true && true );
+       document.write('<br>');       
+       document.write( true || false );
+       document.write('<br>');       
+       document.write( !true );
+       document.write('<br>');
+
+       
+ </script>
+</body>
+</html>

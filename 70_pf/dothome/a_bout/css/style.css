@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    color:#333;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:#333;
+}
+
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 100px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    width: 200px;
+    padding-left: 365px;
+}
+.logo img {
+    display: block;
+}
+
+nav {
+    position: absolute;
+    top:64px;
+    right: 335px;
+}
+nav ul a {
+    color:white;
+}
+nav a:hover {
+    color : #888;
+    transition: .3s;
+}
+nav >ul {
+    display: flex;
+}
+nav ul li {
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+}
+.gnb li:not(:first-child) {
+    margin-left: 70px;
+}
+.sub_menu {
+    width: 640px;
+    height: 200px;
+    display: none;
+    position: absolute;
+    top:100%;
+    left: 0%;
+    background: #000;
+    z-index:9999;
+    font-size: 14px;
+}
+.sub_menu ul li a {
+    display: block;
+    padding: 20px 0;
+}
+
+nav:hover .sub_menu{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+/* 콘텐츠 */
+.wrap {
+    margin: 0 auto;
+    width: 1200px;
+    height: 500px;
+}
+/* 슬라이드 */
+
+img {
+    vertical-align: top;
+}
+.slide {
+    height: 300px;
+    overflow: hidden;
+}
+.slide ul {
+    width: 100%;
+    height: 400%;
+    position: relative;
+    animation: slide 8s infinite;
+}
+.slide li {
+    height: 25%;
+}
+
+@keyframes slide {
+    0%{top: 0%;}
+    10%{top: -100%;}
+    33%{top: -100%;}
+    43%{top: -200%;}
+    66%{top: -200%;}
+    76%{top: -300%;}
+    99.99%{top: -300%;}
+    1000%{top: 0%;}
+}
+/* 콘텐츠 */
+.contents {
+    height: 200px;
+    display: flex;
+}
+
+.notice {
+    width: 400px;
+    border-right:1px solid #DDD;
+}
+.notice h2 {
+    padding: 15px 0px 5px 10px;
+}
+.notice a {
+    display: inline-block;
+    width: 300px;
+}
+.notice li {
+    /* display: flex;
+    justify-content: space-between; */
+    margin-left: 10px;
+    line-height: 30px;
+}
+.notice ul a:hover {
+    color: brown;
+    text-decoration: underline;
+}
+
+.notice span {
+    font-size: 14px;
+    margin-right: 10px;
+}
+.gallery {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+.gallery p {
+    text-align: center;
+}
+
+.gallery img {
+    border: 1px solid #AAA;
+}
+.link {
+    width: 400px;
+}
+
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 100px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer p {
+    color:gray;
+    font-size: 14px;
+}
+
+.family_site {
+    margin-top: 10px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="box1">
+        <ul>
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+        </ul>
+    </div>
+    <div id="box2">
+        <ul>
+            <li>내용4</li>
+            <li>내용5</li>
+            <li>내용6</li>
+        </ul>
+    </div>
+    <script>
+        /* 
+            DOM(Document Object Model, 문서 객체 모델)?
+                브라우저가 텍스트를 읽고, 각 태그를 객체(Object)로 만들어 트리처럼 구조화한 결과
+
+            
+            <태그명 속성=값>내용</태그명>
+
+
+            어디에 사용? 아래 내용을 동적으로 변경한다.
+                1. HTML을 동적 변경
+                    - 태그, 속성, 값, 내용
+                2. CSS를 변경
+                    - DOM객체.style.속성 = 값;
+                    -> 예) list1.style.background = "#ff6600";
+                5. 이벤트 처리
+
+            document 객체
+                요소 선택 메서드(매개변수)
+                    getElementById('아이디')
+                    querySelector('선택자')
+                        첫 번째 요소만 선택한다.
+
+                    getElementsByClassName('클래스')
+                    getElementsByTagName('태그이름')
+                    getElementsByName('네임값')
+                    querySelectorAll('선택자')[idx]
+                        모든 요소를 선택한다.
+                        idx는 0,1,2,...
+                    querySelectorAll('선택자').item(idx)
+        */
+
+        const list1 = document.querySelector('#box1 > ul > li');
+        const list2 = document.querySelectorAll('#box2 > ul > li');
+        console.log(list1); // li
+        console.log(list2); // NodeList(3) [li, li, li]
+        
+        list1.style.background = "#ff6600";
+        // 배열 선택 방법
+        list2[0].style.background = "#ccc";
+        // item() 메서드를 이용
+        list2.item(1).style.background = "#ddd";
+    </script>
+</body>
+
+</html>

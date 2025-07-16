@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        div {
+            position: fixed;
+            left: 100px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background: #718c00;
+        }
+    </style>
+</head>
+
+<body>
+    <button>요소 삭제</button>
+    <script>
+        /* 
+            DOM 요소 삭제
+            
+                메서드
+                    부모요소.removeChild(자식요소)
+                        - 부모 요소에 자식 요소 삭제
+        */
+
+        // 요소 생성
+        const btn = document.createElement('button');
+        const btnTit = document.createTextNode('요소 생성');
+        // 추가(append)
+        document.body.appendChild(btn);
+        btn.appendChild(btnTit);
+
+        // 동적으로 삽입한 요소 삭제
+        document.body.removeChild(btn);
+
+        // 정적으로 삽입한 요소를 찾아서 삭제
+        const btn2 = document.querySelector('button');
+        document.body.removeChild(btn2);
+
+    </script>
+</body>
+
+</html>

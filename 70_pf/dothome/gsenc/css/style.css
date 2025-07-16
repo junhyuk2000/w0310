@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font:15px/1.6 '돋움',sans-serif;
+    color:#333;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color:#333;
+}
+
+/* 전체 width 가운데정렬 */
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.main {
+    display: flex;
+}
+
+.main > li {
+    width: 150px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    transition: .5s;
+}
+.main>li>a{
+    transition: .3s;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main>li:hover {
+    background: #3D6ACA;
+}
+.main>li>a:hover {
+    color: #ffffff;
+}
+
+.sub {
+    width: 150px;
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    line-height: 2;
+    opacity: 0;
+    visibility: hidden;
+    padding: 20px 0 10px;
+    transition: .3s;
+    text-align: center;
+    z-index:2;
+}
+.sub li {
+    transition: .3s;
+}
+.sub a {
+    color:white;
+}
+.sub a:hover {
+    color:coral;
+}
+
+.sub li:hover {
+    background: #3D6ACA;
+}
+
+.gnb:hover .sub {
+    height: 150px;
+    visibility: visible;
+    opacity: 1;
+    background: rgba(0,0,0,0.5);
+}
+/* 슬라이드 */
+.slide {
+    width: 100%;
+    overflow: hidden;
+}
+.slide_list {
+    display: flex;
+    width: 400%;
+}
+.inner {
+    width: 100%;
+}
+
+/* 콘텐츠 */
+.contents {
+    display: flex;
+    height: 200px;
+}
+/* 탭 */
+.tab {
+    width: 400px;
+    border-left:1px solid gray;
+    border-right : 1px solid gray;
+}
+
+.tab h2 {
+    padding: 10px 0 0 10px;
+}
+.tab li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0 10px;
+}
+.tab span {
+    font-size: 13px;
+    padding-right: 10px;
+}
+
+.tab li a:hover{
+    color:#3D6ACA;
+    text-decoration: underline;
+}
+
+
+.banner {
+    width: 400px;
+    text-align: center;
+    line-height: 200px;
+    border-right:1px solid gray;
+}
+.link {
+    width: 400px;
+    text-align: center;
+    line-height: 200px;
+    border-right:1px solid gray;
+}
+
+/* 푸터 */
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background: #444;
+}
+.blogo {
+    width: 200px;
+}
+.copy {
+    width: 800px;
+}
+.copy p {
+    font-size: 12px;
+    color:#666;
+    text-align: center;
+}
+.sns {
+    width: 200px;
+}

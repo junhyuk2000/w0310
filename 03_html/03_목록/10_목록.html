@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 한 줄 삭제:ctrl + x -->
+    <!-- shiht+alt+f : 자동 들여쓰기 -->
+    <!-- h1은 전체코드중 한번만, 첫번째로 사용 -->
+    <h1>목록</h1>
+
+    <!--
+        ol의 자식은 li만 사용
+        ul의 자식은 li만 사용
+        dl의 자식은 dt,dd만 사용
+    -->
+
+    <!-- 순서없는 목록 -->
+    <h2>음료 메뉴</h2>
+    <ul> 
+        <li>
+            커피
+            <p>아래는 우리 회사에서 판매되는 커피 목록입니다.</p>
+            <ul>
+                <li>아이스 아메리카노</li>
+                <li>카페모카</li>
+                <li>카라멜 마끼아또</li>
+            </ul>
+        </li>
+        <li>우유</li>
+        <li>콜라</li>
+    </ul>
+
+
+
+    <!-- 순서있는 목록 -->
+    <h2>커피 판매 순위</h2>
+    <ol> 
+        <li>아이스 아메리카노</li>
+        <li>카페모카</li>
+        <li>카라멜 마끼아또</li>
+    </ol>
+
+
+
+
+    <!-- 
+        정의 목록 (description list) > dl
+        설명 항목 (description term) > dt
+        설명 항목에 대한 설명 (description description) > dd
+        dl안에 자식으로 dt와 dd를 사용하는데 
+        dt를 먼저쓰고 dd를 나중에 쓴다.
+    -->
+    <h2>약어 정의</h2>
+    <!-- div로 그룹핑 x -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hyper Text Markup Language의 약자로 웹페이지의 <i>구조와 내용</i>을 정의하는 언어이다.</dd>
+        
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheet의 약자로 HTML, XML같은 문서의 <b>스타일을 지정(디자인)</b>하는 언어이다.</dd>
+    </dl>
+    <!-- div로 그룹핑 -->
+    <!-- dt와 dd를 한 세트로 그룹핑한다 -->
+    <dl>
+
+        <div>
+            <dt>HTML</dt>
+            <dd>Hyper Text Markup Language의 약자로 웹페이지의 <i>구조와 내용</i>을 정의하는 언어이다.</dd>
+        </div>
+        
+        <div>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheet의 약자로 HTML, XML같은 문서의 <b>스타일을 지정(디자인)</b>하는 언어이다.</dd>
+        </div>
+    </dl>
+
+</body>
+
+</html>

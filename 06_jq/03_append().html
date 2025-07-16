@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>append()</title>
+</head>
+
+<body>
+
+    <ul>
+        <li>사과</li>
+        <li>바나나</li>
+    </ul>
+    <button type="button">더보기</button>
+
+    <div>dd</div>
+    <script>
+        /* 
+            객체 
+                $(document)
+                $(this) - 이벤트가 발생한 객체 자신
+
+            함수(function)
+                window.setInterval()
+
+            탐색메서드
+                eq()
+                find()
+                children()
+                first()
+                last()
+
+            효과메서드
+                hide()
+                show()
+                slideUp
+                slideDown()
+                animate({속성: 값, ...}, {시간}, {콜백함수})
+                    -시간 생략하면 400ms
+            조작메서드
+                css()
+                append()
+                prepend()
+                width()
+                height()
+
+                $(선택자).width() : 요소의 너비 크기 가져오기(get) // 매개변수 안 적으면 가져오기
+                $(선택자).width(200) : 요소의 너비 크기 값으로 지정하기(set)
+
+                $(선택자).height() : 요소의 높이 크기 가져오기(get) // 매개변수 안 적으면 가져오기
+                $(선택자).height(200) : 요소의 높이 크기 값으로 지정하기(set) 
+
+            HTML/css 메서드
+                $(부모요소).append(자식요소) -  자식요소를 부모요소 맨 뒤에 추가한다.
+                $(부모요소).prepend(자식요소) -  자식요소를 부모요소 맨 앞에 추가한다.
+        */
+        $(() => {
+            $('button').click(() => {
+                $('ul').append('<li>오렌지</li>');
+                $('ul').prepend('<li>냉면</li>');
+            });
+
+        });
+        $(()=>{
+            //가져오기 getter
+            let w = $('div').width();
+            console.log(w);
+
+            //지정하기 setter
+            $('div').width(200);
+            $('div').height(200);
+        })
+    </script>
+</body>
+
+</html>

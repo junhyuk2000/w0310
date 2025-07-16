@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        .vid1 {
+            width: 600px;
+        }
+        iframe {
+            border: none;
+            width: 600px;
+            height: 338px;
+        }
+    </style>
+</head>
+<body>
+    <!--         
+        속성
+            src: 오디오 파일 경로
+            autoplay: 자동 실행
+            muted: 음소거
+            loop: 무한 반복
+            controls: 컨트롤 표시
+            preload: 미리 로드 방식
+                auto: 일부 또는 전체를 미리 로드한다.(기본값)
+                metadata: 오디오의 메터데이터(길이, 제목 등)만 미리 로드한다.
+                none: 미리 로드하지 않음 
+    -->
+    <h1>비디오</h1>
+    <!-- 파일 이름에 공백 사용하지 말것!!! -->
+     <!-- autoplay 사용하려면 muted와 같이 -->
+    <video class="vid1" src="./assets/main_movie_new_250212.mp4" loop autoplay muted></video>
+    <video controls width="600" poster="./assets/naver.png" preload="none">
+        <source src="./assets/main_movie_new_250212.mp4" type="video/mp4">
+        <source src="./assets/main_movie_new_250212.webm" type="video/webnm">
+        <source src="./assets/city.ogv" type="video/ogv">
+        Your browser does not support the video element(당신의 브라우저는 오디오 요소를 지원하지 않습니다).
+    </video>
+    <!-- 
+        소스?파라미터1&파라미터2...
+        autoplay=1          자동재생
+        mute=1              음소거(autoplay시 함께 사용)
+        loop=1              반복 재생
+        controls=0          컨트롤바 숨김
+        start=30            30초 부터 재생
+        modestbranding=1    유튜브 로고 최소화
+        rel=0               영상 종료 시 다른 채널 표시 방지(같은 채널만 노출)
+    -->
+    <iframe src="https://www.youtube.com/embed/MKt3sp2R8dk?autoplay=1&mute=1&controls=0&loop=1" title="[Playlist] 커피향이 솔솔~ ☕️ 스타벅스 카페 매장 음악 | 중간광고없음 | Starbucks Jazz | Relaxing Background Music"></iframe>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        div {
+            position: fixed;
+            left: 100px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background: #718c00;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button>요소 생성</button> -->
+    <script>
+        /* 
+            DOM 요소 생성/추가
+            
+                메서드
+                    document.createElement(요소)
+                        - 요소 노드 생성
+                    document.createTextNode("텍스트")
+                        - 텍스트 노드 생성
+                    부모요소.appendChild(자식요소)
+                        - 부모 요소에 자식 요소를 연결
+        */
+
+        // 요소 생성
+        const btn = document.createElement('button');
+        const btnTit = document.createTextNode('요소 생성');
+        // 추가(append)
+        document.body.appendChild(btn);
+        btn.appendChild(btnTit);
+
+    </script>
+</body>
+
+</html>

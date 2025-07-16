@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+</head>
+    <style>
+        /* 
+            인접형제 선택자 -> 선택자를 ~ 으로 구분
+            선택자 ~ 선택자
+            형     ~ 제  
+            ex) 첫째자식 ~ 셋째자식 o
+                첫째자식 ~ 둘째자식 o
+                둘째자식 ~ 셋째자식 o
+            -> 제는 형의 아래에 있는 모든 동생
+        */
+
+        /* h1 바로 아래 동생 p를 선택하여 */
+        h1 ~ p {
+            color:blue
+        }
+    </style>
+<body>
+    <div class="abox">
+        <p>div의 첫번째 자식,h1의 형</p>
+        <p>div의 두번째 자식,h1의 형</p>
+        <h1>p는 div의 첫번째 자식</h1>
+        <p>h1의 첫번째 동생</p>
+        <p>h1의 두번째 동생</p>
+        <ul> <!-- h1의 세번째 동생 -->
+            <li><p>p는 첫번째 li의 자식, div의 손자</p></li>
+            <li><p>p는 두번째 li의 자식, div의 손자</p></li>
+        </ul>
+    </div>
+    <p>body의 자식</p>
+</body>
+</html>

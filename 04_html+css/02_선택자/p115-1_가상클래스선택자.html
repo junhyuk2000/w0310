@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+        /* 
+        가상 클래스 선택자(:)
+            a:link -> 방문 전 
+            a:visited -> 방문 후  
+            선택자:hover  -> 올렸을 때
+            선택자:active -> 눌렀을 때
+            선택자:focus 
+            
+            선택자:first-child
+            선택자:last-child
+            선택자:nth-child(n)
+    */
+
+    /* 
+        link -> visited -> hover -> active 순으로 기록해야 모두 적용된다.
+        :link와 visited는 a태그에만 적용된다.
+        :hover와  
+    */
+    a:link {
+        color:green;
+    }
+    a:visited {
+        color:violet;
+    }
+    a:hover {
+        color:aqua;
+    }
+    a:active {
+        color:brown;
+    }
+
+
+    p:hover {
+        color:aqua;
+        cursor: pointer;
+    }
+    p:active {
+        color:brown;
+    }
+
+    /* 
+        p76
+        Tab키로 이동 시 포커스를 받는 요소
+            a, input, textarea, select, button 등
+
+        tabindex 속성 (가급적 안쓰는게 좋음)
+        논리적으로 마크업 한 이동순서에 영향을 줄 수 있기 때문에 주의해서 사용한다.
+            1 : 가장 먼저 포커스를 받는다.
+            0 : 포커스를 갖지 않는 요소에 포커스를 적용
+            -1 : 포커스를 갖는 요소에 포커스를 적용하지 못하게
+    */
+    :focus {
+        outline: 2px solid red;
+        color:darkorange;
+    }
+
+</style>
+<body>
+    <ul class="df">
+        <li><a href="https://naver.com">네이버</a></li>
+        <li><a href="https://nate.com">네이트</a></li>
+        <li><a href="qwewqewe" tabindex="1">SERVICE</a></li>
+        <li><a href="#">CUSTOMER</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+    </ul>
+    <p tabindex="0">:hover와 :active는 다른 요소도 적용된다.</p>
+    <input type="text"> <br>
+    <input type="text">
+</body>
+</html>

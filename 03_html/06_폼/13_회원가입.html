@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+
+
+    <h1>폼</h1>
+    <h2>회원가입 페이지</h2>
+
+    <form action="member.jsp">
+
+        <label for="user_name">성명</label>
+        <input type="text" placeholder="성함을 입력하세요" id="user_name" ><br>
+
+        <label for="user_tel">전화번호</label>
+        <!-- select태그 안에 무조건 옵션 하나 이상 -->
+        <!-- 속성으로 지정 안해주면 맨위가 기본값 -->
+        <select name="" id="user_tel">
+            <option value="010">010</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+            <option value="018">018</option>
+            <option value="019">019</option>
+        </select>
+        <input type="text" placeholder="앞 자리">
+        <input type="text" placeholder="뒷 자리">
+
+
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+form : 폼(양식) 전체 그룹핑
+fieldset : 폼 양식 그룹핑
+legend : 필드셋의 제목
+
+input : 한줄 입력 라디오버튼, 체크박스 , 버튼(데이터 전송용)
+label : 글씨 눌러도 체크되게
+button : 버튼 (데이터 전송용) (input보다 늦게나옴)
+textarea : 여러줄 입력 
+select : 목록 (선택만 가능)
+  <optgroup>
+    <option>
+    <option>
+    <option>
+ 
+datalist : 목록 (select보다 나중에 나옴)(선택뿐만 아니라 기록까지 가능)
+-->

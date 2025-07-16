@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        /* 
+            overflow: 콘텐츠 넘침 처리
+                값:
+                    visible(기본값)
+                    hiddne
+                    auto
+                    scroll
+                overflow-x    
+                overflow-y    
+        */
+        p {
+            width: 550px;
+            height: 80px;
+            border: 1px solid #000;
+        }
+        /* 박스 크기가 콘텐츠보다 작으면 차이가 생긴다. */
+        .agree1 {
+
+            overflow-y: scroll;
+        }
+        .agree2 {
+
+            overflow: auto;
+        }
+        .agree3 {
+
+            overflow: hidden;
+        }
+        .agree4 {
+
+            overflow: visible;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>서비스 이용약관</h3>
+    <p class="agree1">
+        제 17조(서비스의 변경 및 내용수정) <br>
+        ① Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet vel ipsum laborum ipsa molestiae. <br>
+        ② perferendis necessitatibus id labore ea quis dolorum nobis aliquam quia commodi totam unde harum consequatur voluptates aliquid.<br>
+        ③ Minus excepturi laboriosam sapiente quibusdam. Amet commodi reprehenderit veritatis expedita fugiat at laboriosam
+    </p>
+    <p class="agree2">
+        제 17조(서비스의 변경 및 내용수정) <br>
+        ① Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet vel ipsum laborum ipsa molestiae. <br>
+        ② perferendis necessitatibus id labore ea quis dolorum nobis aliquam quia commodi totam unde harum consequatur voluptates aliquid.<br>
+        ③ Minus excepturi laboriosam sapiente quibusdam. Amet commodi reprehenderit veritatis expedita fugiat at laboriosam
+    </p>
+    <p class="agree3">
+        제 17조(서비스의 변경 및 내용수정) <br>
+        ① Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet vel ipsum laborum ipsa molestiae. <br>
+        ② perferendis necessitatibus id labore ea quis dolorum nobis aliquam quia commodi totam unde harum consequatur voluptates aliquid.<br>
+        ③ Minus excepturi laboriosam sapiente quibusdam. Amet commodi reprehenderit veritatis expedita fugiat at laboriosam
+    </p>
+    <p class="agree4">
+        제 17조(서비스의 변경 및 내용수정) <br>
+        ① Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet vel ipsum laborum ipsa molestiae. <br>
+        ② perferendis necessitatibus id labore ea quis dolorum nobis aliquam quia commodi totam unde harum consequatur voluptates aliquid.<br>
+        ③ Minus excepturi laboriosam sapiente quibusdam. Amet commodi reprehenderit veritatis expedita fugiat at laboriosam
+    </p>
+</body>
+</html>

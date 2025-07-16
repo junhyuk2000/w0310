@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML + CSS</title>
+</head>
+
+<style>
+    /* 
+        선택자의 종류
+        1. 기본(Simple) 선택자
+        2. combinator(결합자) 선택자
+        3. Pseudo(슈도,유사)-class 선택자
+        4. Pseudo(슈도,유사)-elements 선택자
+        5. 속성자(Attribute) 선택자
+    */
+    /* 
+        기본선택자
+        1. elememt(type,tag) 선택자 : 태그 이름을 선택자로 사용
+        2. class 선택자 : .이름 / 여러번 가능
+        3. id 선택자 : #이름 / 한 번만 써야함
+        4. 그룹 선택자 : ,()
+        5. 전체 선택자 : *()
+    */
+
+    /* 
+        id와 class의 이름 규칙
+            1. 첫 글자는 숫자 x
+            2. 주로 영문자 / 영문 대소문자 구별
+            3. 특수문자는 _와 - 사용가능
+            
+    */
+
+
+    .btxt{
+        color:red;
+    }
+    
+    .ctxt{
+       color: blue;
+    }
+    
+    .atxt{
+        font-weight: bold;
+    }
+
+
+</style>
+
+
+<body>
+    <!-- id의 값이 유일해야 한다. -->
+    <!-- class는 같은 값을 여러 번 사용할 수 있다. -->
+    <h1>선택자</h1>
+    <h2>요소(타입, 태그)선택자</h2>
+    <p class="btxt">Lorem ipsum dolor sit amet.</p>   
+    <p class="ctxt">Lorem ipsum dolor sit amet.</p>
+    <!-- 
+        class 값을 여러 개 쓸 수 있다. 
+        class="값 값 값"(o)
+        id="값 값 값"(x)
+    -->
+    <p class="ctxt atxt">Lorem ipsum dolor sit amet.</p>   
+</body>
+</html>

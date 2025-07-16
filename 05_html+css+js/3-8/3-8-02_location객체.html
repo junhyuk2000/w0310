@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>play pause Button</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    span {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#">페이지 이동 x</a>
+  <a href="https://github.com/JunHuyk/w0310">깃허브 페이지 이동 </a>
+  <span id="my_site_go">깃허브 페이지 이동 </span>
+  <span id="my_site_go2">깃허브 페이지 이동 </span>
+  <span id="refresh">새로고침 </span>
+
+  <script>
+    /*
+      location 객체
+        웹브라우저의 주소 URL관련 객체이다.
+      
+      URL(Uniform Resource Locator, 통합 자원 위치자)
+        인터넷 상에서 웹 페이지, 이미지, 파일 등 리소스의 위치를 나타내는 주소이다.
+ 
+      URL 형식
+        http://www.example.com:443/path/page.html?search=apple#section1
+        프로토콜://도메인:포트번호/경로?쿼리문자열#해시
+
+      URL 속성
+        href 
+          URL로 이동
+          -> 히스토리가 남음 -> 뒤로가기 가능
+          -> 일반적인 링크
+          -> http://www.example.com:443/path/page,html?search=apple#section1
+        protocol 
+          주소의 프로토콜명을 반환
+          -> http:,https:
+        host 
+          주소의 호스트명과 포트 번호 반환
+          ->  http://www.example.com:443
+        port 
+          주소의 포트번화 반환
+          -> /path/page.html
+        pathname 
+          주소의 패스명을 반환
+          -> /path
+        search 
+          주소의 쿼리 문자열을 반환
+          -> ?search=apple#section1
+        hash 
+          주소의 앵커명(#)을 반환
+          -> #section1
+
+        메서드
+          reload()
+            현재 페이지를 다시 로드
+          replace(URL)
+            URL로 교체
+            -> 히스토리가 남지않음 -> 뒤로가기 불가능
+            -> 로그인 후 이동
+    */
+
+    const mySiteGo = document.getElementById('my_site_go');
+    const mySiteGo2 = document.getElementById('my_site_go2');
+    const refresh = document.getElementById('refresh');
+
+    mySiteGo.onclick = () => location.href = "https://github.com/JunHuyk/w0310";
+    mySiteGo2.onclick = () => location.replace = "https://github.com/JunHuyk/w0310";
+    refresh.onclick = () => location.reload();
+  </script>
+</body>
+
+</html>

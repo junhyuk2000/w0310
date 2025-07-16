@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합예제</title>
+    <style>
+         html {
+            scroll-behavior: smooth;
+        }
+        body, h1, p, ul {
+            margin: 0;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        /* 글자 색은 상속 개념을 갖고있음 (a태그 제외) */
+        a {
+            text-decoration: none;
+            color: #444;
+        }
+        header {
+            /* 헤더 고정 */
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            background: cornflowerblue;
+            height: 40px;   
+            line-height: 40px;
+            display: flex;
+        }
+
+        section {
+            height: 800px;
+            padding-top: 20px;;
+        }
+        #s1 {
+            background: lightblue;
+        }
+        #s2 {
+            background: lightcoral;
+        }
+        #s3 {
+            background: lightcyan;
+        }
+        #s4 {
+            background: lightgreen;
+        }
+        #container {
+            width: 600px;
+            margin: 0 auto;
+            /* 
+                뷰포트 단위
+                    vh - viewport height
+                    vw - viewport width
+                    vmin - viewport minimum
+                    vmax - viewport maximum
+            */
+            min-height: calc(100vh - 80px);
+        }
+
+        .lnb li {
+            display: inline;
+        }
+        .lnb li a {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        footer {
+            background: lightgray;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <!-- h1은 font-size:2em; 그래서 현재는 32px-->
+            <h1><a href="#s1">로고</a></h1>
+            <!-- 
+            a태그의 기본값 
+                a {text-decoration:underline;}
+                a:link {color:blue;}
+                a:visited {color:magenta;}
+                a:active {color:red;}
+                a:hover {color:blue; color:magenta;}
+            -->
+            <ul class="lnb">
+                <!-- 회사소개 클릭하면 현재페이지 # 의 id=s2인 위치로 이동 -->
+                <li><a href="#s2">회사소개</a></li>
+                <li><a href="#s3">메뉴소개</a></li>
+                <li><a href="#s4">이벤트</a></li>
+            </ul>
+        </header>
+        <div id="container">
+            <section id="s1">
+                <h2>캐로셀 & 풀스크린 비디오</h2>
+            </section>
+            <section id="s2">
+                <h2>섹션2</h2>
+            </section>
+            <section id="s3">
+                <h2>섹션3</h2>
+            </section>
+            <section id="s4">
+                <h2>섹션4</h2>
+            </section>
+        </div>
+        <footer>
+            <p>copyright</p>
+            <a href="#">위로가기</a>
+        </footer>
+    </div>
+</body>
+</html>

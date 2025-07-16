@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex_box {
+            display: flex;
+            height: 200px;
+            background: teal;
+            flex-direction: row;
+            /* flex 아이템의 높이가 부모크기만큼 늘어난다 */
+            align-items: stretch;   
+        }
+        .flex_box div {
+            width: 200px;
+            flex:1; /* flex:1 1 0% */
+            flex:0; /* flex:0 1 % */
+            flex:200px; /* flex: 1 1 200px */
+            flex:200;   /* flex: 200 1 0% */
+
+        }
+        /* 
+
+            flex-direction : row > 주 축 가로 (기본값)
+                justify-content > 주축 정렬 (가로)
+                align-items > 교차축 정렬 (세로) 
+
+            flex-direction : column > 주 축 세로
+                justify-content > 주축 정렬(세로)
+                align-items > 교차축 정렬 (가로)
+
+            주축/교차축 정렬
+
+                justify-content
+                    값 : flex-start,flex-end, center
+                         space-between
+                         space-around
+                         space-evenly
+                align-content
+                    값 : flex-start,flex-end, center
+                         space-between, space-around, space-evenly
+                         stretch
+
+                align-items
+                    값 : flex-start,flex-end, center
+                         space-between, space-around, space-evenly
+                         stretch, baseline
+
+
+                align-self
+                    값 : flex-start,flex-end, center
+                         space-between, space-around, space-evenly
+                         stretch, baseline
+        */
+
+        /* 
+
+            개별속성
+            flex-grow : 0;
+                값 : 이 1이면 늘어남 0 이면 늘어나지 않음
+            flex: shrink 1;
+                값 : 이 1이면 줄어듬 0이면 줄어들지 않음
+            flex-basis :auto;
+                값 : 가로 크기의 초기값
+
+            속기 속성
+            flex : grow [shrink] [basis]; => 순서있다.
+            flex:1;
+            flex:1 1 0;
+
+            flex:0;
+            flex:0 1 0;
+        */
+    </style>
+</head>
+<body>
+    <div class="flex_box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

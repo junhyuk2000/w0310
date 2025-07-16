@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setInterval()</title>
+</head>
+
+<body>
+  <button id="btn">버튼</button>
+  <button id="btn2">버튼</button>
+  <script>
+    /*
+      window 객체
+
+      메서드
+        setInterval(함수, 시간)
+            일정 시간마다 함수를 반복
+        clearInterval()
+            setInterval 제거
+        setTimeout(함수, 시간)
+            시간 이후 함수를 1번 실행
+        clearTimeout()
+            setTimeout 제거
+    */
+
+    /*
+      setInterval(함수,시간);
+    */
+
+    let i = 0;
+    const increase = setInterval(() => {
+      i++;
+      console.log(i);
+    }, 2000);
+
+    let a = 0;
+    setTimeout(() => {
+      console.log('2초 뒤');
+    }, 2000)
+
+    const btn = document.getElementById('btn');
+    btn.onclick = () => {
+      clearInterval(increase);
+    }
+    const btn2 = document.getElementById('btn2');
+    btn2.onclick = () => {
+      increase();
+    }
+  </script>
+</body>
+
+</html>

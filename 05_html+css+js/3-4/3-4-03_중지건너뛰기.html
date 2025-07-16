@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <script>
+        /* 
+            break - 중지
+            continue - 건너뛰기
+        */
+       let flag = true;
+        let i = 0;
+       const looping = ()=>{
+        while(flag){
+            document.write(`무한루프${i}<br>`);
+            i++;
+            if(i>10) break;
+        }
+       }
+
+       const limitNum = 5;
+       let sum = 0;
+       for(let i=1; i<=5; i++) {
+        sum += i;
+        // if(i === limitNum) {
+        //     break;
+        // }
+       }
+       console.log(sum);
+       
+       for(let i=1; i<=5; i++){
+        console.log(`바깥 for${i}`);
+        for (let j=1; j<=5; j++){
+            if(i===3){
+                break;
+            }
+        console.log(`안쪽 for${j}`);
+        }
+       }
+       /* 
+            for (초기값, 조건식, 증감식) {
+                continue; // 아래 코드 건너뛰기
+                코드;
+            }
+       */
+      sum = 0;
+      let num = '3의 배수'
+      for(let i = 1; i<10;i++) {
+        if(i % 3 ===0) {
+            num += i + ' ';
+            continue; // if조건이 참이면 sum+= i;를 생략
+        }
+        sum += i;
+      }
+      console.log(num + '제외 총합 : '+ sum);
+    </script>
+
+</body>
+</html>

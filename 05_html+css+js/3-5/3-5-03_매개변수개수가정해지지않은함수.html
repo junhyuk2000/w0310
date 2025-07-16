@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      매개변수의 개수가 정해지지 않은 함수
+          -> arguments 객체를 사용해 매개변수를 받아올 수 있다.
+
+            function 함수명(매개변수1, 매개변수2){
+              코드;
+            }
+
+            함수명(값1, 값2);
+    */
+    function showSubject() {
+      for (let i = 0; i < arguments.length; i++) {
+        console.log(arguments[i]);
+      }
+    }
+    showSubject('html', 'css', 'javascript');
+  </script>
+</body>
+
+</html>

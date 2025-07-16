@@ -1,0 +1,102 @@
+@charset "UTF-8";
+body, h1, h2, p {
+    margin: 0;
+}
+
+body{
+    background: #fff;
+    font: 15px/1.5 "Noto Sans KR", sans-serif;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    height: 100px;
+}
+.logo {
+    width: 200px;
+    margin-top: 32px;
+}
+.gnb {
+    width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.main{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+    padding-right: 100px;
+}
+.slide {
+    height: 300px;
+}
+
+.contents {
+    display: flex;
+    height: 200px;
+}
+
+.notice{
+    width: 400px;
+}
+
+.notice h2{
+    margin:8px 0 8px 0;
+    padding: 0 0 0 20px;
+}
+
+ul span{
+    display: inline-block;
+    line-height: 1.8;
+    width: 300px;
+}
+
+.banner{
+    width: 400px;
+}
+
+.shortcut{
+    width: 400px;
+}
+
+.footer {
+    height: 100px;
+    display: flex;
+    background: #5e5e5e;
+}
+
+.blogo{
+    width: 200px;
+    padding-top: 24px;
+}
+
+.copy{
+    width: 800px;
+    text-align: center;
+    padding-top: 24px;
+}
+
+
+.sns{
+    display: inline-block;
+    width: 200px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 24px;
+}
+.sns li{
+    display: inline-block;
+    margin-left: 8px;
+}
+.sns a {
+    color:#cccccc
+}

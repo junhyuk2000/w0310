@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        /* 
+            position 속성
+                요소의 위치 지정
+                뜻 : 요소의 위치 지정
+                값 : 
+                    - static(기본값) 
+                    - relative : 자기 자신 기준
+
+                    - absolute : 부모 기준
+                    - fixed : 창(뷰 포트)기준
+
+                absolute와 fixed는 width가 요소크기로 지정된다.
+
+                fixed는 상단 고정 내비 제작 시 사용된다.
+
+                absolute도 부모 중에 position값이 static이 아닌 요소가 없으면 fixed와 같이 창(뷰 포트) 기준이다
+                부모를 지정하지 않았을 때(기준이 없을 때) absolute가 fixed와 같다.
+
+                static과 relative의 차이는 letf, top, right, bottom, z-index 5가지 속성의 적용 유무에 있다 
+
+                static을 제외하고 relative, absolute, fixed일 경우 left, top, right, bottom, z-index 5가지 속성을 지정할 수 있다.
+        */
+        body {
+            margin: 0;
+        }
+        .parent{
+            position: relative;
+            background: green;
+            width: 500px;
+            height: 500px;
+            /* margin-top: 200px; */
+        }
+
+        .child {
+            position: absolute;
+            left: 100px;
+            bottom: 100px;
+            width: 100%;
+            height: 100px;
+            background: yellow;
+        }
+        .nav {
+            position : fixed;
+            height : 150px;
+            background: blue;
+            width: 100%;
+        }
+        .he {
+            height: 4000px;
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav"></div>
+    <div class="parent">
+        <div class="child">박스</div>
+    </div>
+    <div class="he"></div>
+</body>
+</html>

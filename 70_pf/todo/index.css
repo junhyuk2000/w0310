@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+
+.todo_container {
+    background: #FFF1B9;
+    height: 100vh;
+}
+
+.todo_title {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.todo_input_box {
+    width: 600px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#todo_input {
+    width: 500px;
+    height: 50px;
+    margin-left: 50px;
+    border: none;  
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+    color:#222;
+}
+
+#add_btn {
+    width: 50px;
+    height: 50px;
+    background: #333;
+    color:#FFF1B9;
+    font-size: 40px;
+    border-radius: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+#todo_list {
+    width: 500px;
+    margin: 20px auto;
+}
+
+#todo_list li {
+    padding: 10px 0;
+}
+
+#todo_list button {
+    width:15px;
+    height: 15px;
+    background: #fff;
+    border: 1px solid #878787;
+    margin-right: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#todo_list li span:nth-of-type(1) {
+    display: inline-block;
+    width: 450px;
+}
+
+#todo_list li.complete span:nth-of-type(1){
+    color:#878787;
+    text-decoration: line-through;
+}
+
+#todo_list li.complete button {
+    background: #000
+}
+
+.delete_btn_wrap {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.delete_all,
+.delete_select {
+    width: 120px;
+    height: 40px;
+    color:#FFF1B9;
+    background: #333;
+    cursor: pointer;
+    transition: opacity .3s;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.delete_all:hover,
+.delete_select:hover {
+    opacity: .8;
+} 

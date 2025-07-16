@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내장 객체</title>
+</head>
+
+<body>
+  <script>
+    /*
+      내장 객체
+        1. Number
+        2. String
+        3. Array
+        4. Math
+        5. Date
+        6. RegExp
+    */
+
+    /* 
+      String 객체
+        const 객체 = new String('문자열');
+
+      속성
+        length
+          -> 문자열의 개수
+
+      메서드()
+        charAt(idx)
+          -> index에 해당하는 문자 출력
+          -> index를 생략하면 0
+          -> 0 이상의 숫자
+        
+        indexOf('문자열')
+          -> 왼쪽 문자부터 검색하여 일치하는 idx 반환
+          -> 데이터가 없으면 -1
+        
+        lastIndexOf('문자열')
+          -> 오른쪽 문자부터 검색하여 일치하는 idx 반환
+        
+        includes('문자열')
+          -> ES6
+          -> 문자열 포함 여부에 따라 boolean 값 반환
+        
+        substring(idx1,[idx2])
+          idx1만 지정한 경우
+            -> 넘겨준 idx1 부터 끝까지 문자열 반환
+          idx1,idx2 지정한 경우
+            -> idx1 부터 idx2 - 1까지 문자열 반환
+
+        substr(idx,length)
+          -> idx부터 legnth 만큼 반환
+
+        split(구분자)
+          -> 구분자를 기준으로 쪼개어 배열 형식으로 저장
+          -> 'javascript jquery' -> split('')
+          -> ['j','a','v','a','s',...'y']
+          -> 'javascript jquery' -> split(' ')
+          -> ['javascript','jquery']
+          -> 'javascript_jquery' -> split('_')
+          -> 'user_id=hong&user_pw=1234 -> split('&')
+          -> ['user_id=hong','user_pw=1234']
+          -> arr[0].toString() -> 'user_id=hong'
+          -> split('=') -> ['user_id','hong']
+
+        replace('찾을문자열', '교체문자열')
+          -> 찾은문자열을 교체문자열로 바꾸어 반환
+
+        concat()
+          -> 문자열 연결
+
+        trim()
+          -> 문자열의 앞/뒤 공백제거
+
+        toLowerCase()
+          -> 소문자로 변환
+        toUpperCase()
+          -> 대문자로 변환
+
+    */
+
+
+    const str1 = new String('javascript');
+    const str2 = 'javascript'
+    console.log(str1);
+    console.log(str2);
+
+    // length -> 문자 수
+    console.log(str1.length);
+    console.log(str2.length);
+    // charAt()
+    console.log(str2.charAt(0)); // j
+    console.log(str2.charAt(7)); // i
+
+    //indexOF()
+    console.log(str2.indexOf()); // -1
+    console.log(str2.indexOf('a')); // 1
+    console.log(str2.indexOf('t')); // 9
+    console.log(str2.indexOf('av')); // 1
+    console.log(str2.indexOf('as')); // 3
+
+    //lastIndexOf() : 오른쪽 > 왼쪽 검색
+    console.log(str2.lastIndexOf('a')); // 3
+
+    //includes()
+    console.log(str2.includes('script')); // true
+
+    // substring()
+    const str3 = 'http://icoxpublish.com';
+    // index 7부터 출력
+    // 객체지향프로그래밍언어의 다형성
+    console.log(str3.substring(7)); // http://icoxpublish.com
+    //index 0부터 4-1 까지 출력
+    console.log(str3.substring(0, 4)); // http
+    console.log(str3.substring(7, 4)); // ://
+    console.log(str3.substring(4, 7)); // ://
+    // 0보다 작은 값은 0으로 인식
+    console.log(str3.substring(-1)); // http://icoxpublish.com
+    console.log(str3.substring(-1, 2)); // ht
+
+    // substr()
+    console.log(str3.substr()); // http://icoxpublish.com
+    console.log(str3.substr(7, 4)); //icox
+
+    //split(구분자) : 쪼개다
+    const str4 = 'Javascript_jQuery';
+    const division = str4.split('_');
+    // division = [Javascript,jQuery]
+    console.log(division[0] + ' , ' + division[1]);
+
+    const str5 = 'm_out.png';
+    //replace 
+    console.log(str5.replace('out', 'over')); // out 문자열을 over로 변경
+
+    // concat() 
+    const str6 = 'nav';
+    const str7 = '_bg';
+    console.log(str6.concat(str7)); // nav_bg
+
+    // trim()
+    let str8 = ' removeblank';
+    console.log(str8.length);
+    console.log(str8.trim().length);
+
+    //toUpperCase()
+    console.log(str8.toUpperCase());
+    //toLowerCase()
+    console.log('ReMove'.toLowerCase());
+  </script>
+</body>
+
+</html>

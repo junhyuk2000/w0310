@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <!-- 
+    <table> 표 정의
+    <tr>  table row(행) 정의
+    <td>  table data -> 행 안의 셀(cell)
+    
+    <th>  table header -> 셀 제목
+    <caption>  표의 제목
+    <col>  column(열) 정의
+    <colgroup> 열 그룹핑
+    <thead>  제목 영역
+    <tbody>  본문 영역
+    <tfoot>  요약 영역
+    -->
+    <h1>표</h1>
+
+
+    <h2>확장표</h2>
+    <table>
+        <caption>2025년 상반기 웹디 평가 결과</caption>
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+        <!-- tr안에는 td와 th만 사용 -->
+        <tr> <!-- th의 scope는 선택속성이지만 웹 접근성을 위해 반드시 작성 -->
+            <th scope="col">교과목</th> <!-- 1행1열 -->
+            <th scope="col">점수</th> <!-- 1행2열 -->
+        </tr>
+        <tr>
+            <th scope="row">HTML</th> <!-- 2행1열 -->
+            <td>93</td> <!-- 2행2열 -->
+        </tr>
+        <tr>
+            <th scope="row">CSS</th> <!-- 3행1열 -->
+            <td>92</td> <!-- 3행2열 -->
+        </tr>
+        <tr>
+            <th scope="row">평균</th> <!-- 4행1열 -->
+            <td>92.5</td> <!-- 4행2열 -->
+        </tr>
+    </table>
+
+
+
+</body>
+</html>

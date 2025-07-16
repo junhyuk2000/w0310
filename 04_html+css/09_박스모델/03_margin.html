@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진</title>
+    <style>
+        
+
+            * {margin:0; padding:0}
+
+            body,h1,p {margin:0px}
+        /*
+            개별속성
+            margin-top
+            margin-right
+            margin-bottom
+            margin-left
+
+            속기속성
+            margin:10px; 상하좌우
+            margin:10px 20px; 상하 좌우
+            margin:10px 20px 30px; 상 좌우 하
+            margin:10px 20px 30px 40px; 상 우 하 좌
+            
+            음수 사용 가능
+        */
+        p {
+            background: rgba(200,200,0,0.5);
+            width: 600px;
+            margin: 50px 70px;
+        }
+        .center {
+            /* auto는 전체 가로 크기에서 요소 크기를 땐 나머지 좌우에 균등하게 처리한다. > 자동으로 남은 여백의 반으로 계산하여 배치 */
+            margin: 0 auto;
+        }
+        p:nth-of-type(2) {
+            margin-top: -66px;
+        }
+    </style>
+</head>
+<body>
+    <h1>마진</h1>
+    <!-- 블록레ㅔ벨 요소의 상하 margin은 큰 쪽으로 지정된다.(상하 margin 겹침) -->
+    <p>마진은 요소 바깥쪽의 여백을 말한다.</p>
+    <p>마진의 값은 숫자(단위)로 지정한다.</p>
+    <p class="center">가로 가운데 맞춤합니다</p>
+</body>
+</html>

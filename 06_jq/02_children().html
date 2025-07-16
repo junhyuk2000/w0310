@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <title>children()</title>
+</head>
+<body>
+
+        <div>
+            <p>사과</p>
+            <span>바나나</span>
+            <p><em>오렌지</em>입니다.</p>
+        </div>
+
+    
+    <script>
+        /*  
+            탐색메서드 
+            children() - 직계 자식(손자는 해당사항없음)
+            children(['선택자'])  - 선택자에 해당하는 직계자식
+        */
+        $(()=>{
+            $('div').children('').css({border: '1px solid black'});
+            $('div').children('p').css({border: '1px solid red'});
+        });
+    </script>
+</body>
+</html>

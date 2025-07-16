@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입연산자</title>
+</head>
+<body>
+    <script>
+        /* 
+            대입연산자
+                = 
+                -> 같다의 의미가 아닌 변수에 대입을 의미한다.
+        */
+        let num = 10; // 10을 num에 대입
+        let x = 0;
+        let y = 0;
+        // = 연산자는 연속 대입도 가능하다
+        // 연산의 방향이 오른쪽에서 왼쪽으로 계산된다.
+        x = y = num; // y = 10 -> x = 10
+        console.log(`x = ${x}, y = ${y}`);
+        /*
+            복합대입연산자
+                +=      i+=1 > i = i + 1
+                -=      i-=1 > i = i - 1
+                *=      i*=1 > i = i * 1
+                /=      i/=1 > i = i / 1
+                %=      i%=1 > i = i % 1
+                **=     i**=1 > i = i ** 1
+                    let i = 4;
+                    i**=3 
+                    -> i=i**3 
+                    -> i = i * i * i; 
+                    -> i = 4 * 4 * 4;
+
+        */
+        // +=, -=, *=, /=, %=
+        let num1 = 5;
+        let num2 = 15;
+        let num3 = 5;
+        let num4 = 20;
+        let num5 = 10;
+        let num6 = 2;
+
+        num1 += 10;
+        num2 -= 10;
+        num3 *= 10;
+        num4 /= 10;
+        num5 %= 10;
+        num6 **= 10;
+
+        console.log(num1+','+num2+','+num3+','+num4+','+num5+','+num6);
+        console.log(`${num1},${num2},${num3},${num4},${num5},${num6}`);
+
+
+        let str = "자바스크립트";
+            str += "제이쿼리"; // str = '자바스크립트' + '제이쿼리'
+            console.log(str);
+
+        let table = '<table>';
+            table += '<tr>';
+            table += '<td> 자바스크립트</td><td>제이쿼리</td>';
+            table += '</tr>';
+            table += '</table>';
+        document.write(table);
+    </script>
+</body>
+</html>

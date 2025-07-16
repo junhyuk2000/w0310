@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 15px/1.6 '돋움',sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+
+a {
+    color:#333;
+    text-decoration: none;
+}
+img {
+    vertical-align: middle;
+}
+/* ========================= */
+
+.wrap {
+    width: 1920px;
+    height: 800px;
+    display: flex;
+}
+
+header {
+    position: relative;
+    width: 200px;
+    border: 1px solid #000;
+}
+.gnb {
+    margin-top: 100px;
+}
+
+.main>li {
+    position: relative;
+}
+.main {
+    position: relative;
+}
+.main::before {
+    content:"";
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 200px;
+}
+
+.main:hover::before {
+    width: 800px;
+}
+.main>li>a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: lightgreen;
+    color:darkblue;
+    font-weight: bold;
+}
+
+.main>li>a:hover {
+    background: darkblue;
+    color:lightgreen;
+}
+
+.sub {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.main:hover .sub {
+    height: 200px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+}
+
+.sub a:hover {
+    background: lightgreen;
+    color:darkblue;
+}
+/* 콘텐츠 */
+.contents {
+    width: 400px;
+}
+
+/* tab */
+.tabs {
+    position: relative;
+}
+.tabs input {
+    display: none;
+}
+.tabs label {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: lightcoral;
+    color:white;
+    cursor: pointer;
+}
+
+.tabs input:checked+label {
+    background: lightblue;
+    color:black;
+}
+.tab_contents {
+    position: absolute;
+    display: none;
+}
+
+.tabs input:checked+label+.tab_contents{
+    display: block;
+}
+.tabs li {
+    padding: 20px;
+}
+.tabs .tab1 a:hover {
+    color:blue;
+    text-decoration: underline;
+}
+
+.tabs input:checked+label+.tab2 {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    text-align: center;
+}
+
+.tabs img {
+    width: 120px;
+    height: 120px;
+}
+
+/* 모달 */
+
+.modal {
+    z-index: 9999;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.modal:target {
+    display: block;
+}
+.modal_contents {
+    margin: 15% auto;
+    width: 400px;
+    height: 400px;
+    background: #fff;
+}
+
+
+/* 슬라이드 */
+.slide {
+    position: relative;
+    width: calc(100% - 600px);
+    overflow: hidden;
+}
+
+.slide img {
+    width: 1320px;
+    height: 800px;
+}
+
+
+
+.inner {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.active {
+    opacity: 1;
+}

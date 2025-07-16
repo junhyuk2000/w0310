@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 번호 생성기</title>
+</head>
+
+<body>
+  <h1>로또 번호 생성기</h1>
+  <button id="btn">번호생성하기</button>
+  <p id="result"></p>
+  <script>
+
+    /*
+      1. Math.random()으로 1~45 사이 숫자를 무작위로 생성
+      2. 중복되지 않게 includes로 체크
+      3. 6개가 모이면 sort로 오름차순 정렬
+      4. 버튼을 클릭하면 결과를 화면에 출력
+     */
+
+    const btn = document.getElementById('btn');
+    const res = document.getElementById('result');
+
+    let num = Math.random();
+    const generateLotto = () => {
+      const numbers = []
+      while (numbers.length < 6) {
+        num = Math.floor(Math.random() * 45 + 1);
+        if (!numbers.includes(num)) {
+          numbers.push(num);
+        }
+      }
+      const sortNum = numbers.sort((a, b) => a - b);
+      res.textContent = sortNum;
+    }
+
+
+    btn.addEventListener('click', () => {
+      generateLotto();
+    });
+
+  </script>
+</body>
+
+</html>

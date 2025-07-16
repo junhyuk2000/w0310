@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexable 방식</title>
+
+    <style>
+        /* 
+        vendor prefix (접두사, 안써도됨)
+            
+            -webkit-크롬
+            -webkit-사파리
+            -ms- IE (현재는 chrome)
+            -moz-파이어폭스
+            -o-오페라
+
+         */
+
+        /* 
+            부모요소에 지정 (flex container : 전체적인 정렬 및 흐름속성) 
+                display: flex; (flex container로 만듦)
+                flex-direcion : 방향 지정(기본적으로 row)
+                justify-content : align (정렬,맞춤)
+                flex-wrap - 줄 바꿈 방식
+                align-items - 정렬
+                align-content - 여러 행 정렬
+                
+                속기속성
+                flex-flow  : direction + wrap
+                
+                
+                자식요소에 지정 (flex item : 크기나 순서에 관련된 속성) 
+                    개별속성
+                    align-self - 정렬
+                    flex-glow - 성장
+                    flex-shrink - 수축
+                    flex-basis - 가로 크기 초기값
+                    order - 자식 요소의 순서
+                속기속성
+                flex : 1;
+         */
+         /* 부모 */
+        .flexbox{
+            display: flex;  /*df*/
+            /* display: -webkit-flex;
+            display: -ms-flexbox; */
+            flex-direction: row; /* 기본값이 row */ /* fld */
+            flex-wrap: nowrap;  /* fp */
+            height: 200px;      /* h200 */
+            background: #ccc; /* bg */
+        }
+
+        .flexbox > div{
+            /* 개별 속성 */
+            /* 1,2,0 == 1,1,auto */
+            flex-grow : 1;      /* flg */
+            flex-shrink : 1;    /* fls */
+            flex-basis : 0;     /* flb */
+            
+            /* 속기 속성 */
+            flex: 1;
+            flex: 1 1 0;
+            flex: 0 0 100px; /* 수축 팽창 x 초기크기 100px = 100px고정 */
+            flex: 1 1 auto; /* 수축 팽창 0 초기크기 auto = 100px*/
+
+            /* -webkit-flex: 1;
+            -ms-flex: 1; */
+            background: darkcyan;
+            margin: 10px; /*m10*/
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem facere tempora perferendis eaque. Minima quis laboriosam sint, magnam nesciunt commodi amet earum. Ea, repellat dolorum ipsam aliquam corporis iste.</div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem facere tempora perferendis eaque. Minima quis laboriosam sint, magnam nesciunt commodi amet earum. Ea, repellat dolorum ipsam aliquam corporis iste.</div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem facere tempora perferendis eaque. Minima quis laboriosam sint, magnam nesciunt commodi amet earum. Ea, repellat dolorum ipsam aliquam corporis iste.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <!-- 
+        label - id 연결
+        label의 for 속성값과 input의 id속성값은 같아야한다. 
+
+        name은 input을 구별하는 이름이면서 DB(database)처리
+
+        title은 말풍선 (스크린 팁) -> 웹 접근성 향상
+
+        placeholder는 사용자가 입력 내용에 대한 힌트
+
+        required는 사용자가 필수 입력해야하는 내용
+
+        autocomplete는 자동 완성 기능으로 사용자가 입력한 내용이
+        목록으로 표시되게 한다. 값은 on(기본값) 또는 off
+    -->
+    <!-- title은 마우스 올렸을 때 나타나는 글자 -->
+    <!-- placeholder 입력창에 처음 나타나는 글자  -->
+    <!-- required 필수작성요소에 작성, 작성 안하면 못넘어감 -->
+    <!-- autocomplete="off"는 아이디 같은거 자동저장 하는거 끌 수 있음 -->
+    <h1>label 요소</h1>
+    <form action="#" method="post">
+        <table>
+            <caption>회원가입 입력</caption>
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row"><label for="id">아이디</label></th>
+                    <td><input type="text" id="id" name="id" title= "아이디 입력" required placeholder="아이디 입력"
+                        autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="pw">비밀번호</label></th>
+                    <td><input type="password" id="pw" title="비밀번호 입력"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="r_pw" >비밀번호 재입력</label></th>
+                    <td><input type="password" id="r_pw" title="비밀번호 재입력"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="email">이메일</label></th>
+                    <td>
+                       <input type="text" name="email" id="email" title="이메일 아이디입력">@ 
+                        
+                        <select id="email_domain" name="email_domain">
+                            <option  value="" selected>선택하세요</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                        </select>
+
+                        <!-- datalist는 select와 다르게 input이 반드시 있어야 함 (select는 없어도 됨)-->
+                        <!-- datalist는 선택란에 직접 입력도 가능 / 콤보상자라고도 부름 (콤보상자 = 입력상자 + 목록상자) -->
+                        <!-- 지원을 잘 안해서 아직은 사용하면 x -->
+                        <!-- <input type="text" list="email_domain"title="목록에 없는 메일은 직접 입력하세요."> --> <!-- input의 list 속성에는 datalist의 id와 같은 속성 값을 적어야함 -->
+                        <!--<datalist id="email_domain" name="email_domain">
+                            <option value="gmail.com">  option태그 생략 가능
+                            <option value="naver.com">
+                        </datalist> -->
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="hp">휴대폰 번호</label></th>
+                    <td>
+                        <select id="hp">
+                            <option selected>선택하세요</option>
+                            <option>010</option>
+                            <option>001</option>
+                        </select> -
+                        <input type="ttel" id="hp" title="휴대폰 앞번호 입력">-<input type="ttel" id="hp" title="휴대폰 뒷번호 입력">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div><input type="submit" value="회원가입"><input type="reset" value="취소"></div>
+    </form>
+</body>
+</html>

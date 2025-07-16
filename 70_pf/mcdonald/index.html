@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery 풀페이지</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            overflow: hidden;
+        }
+
+        #header {
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width:100%;
+            height: 100px;
+            color:#fff;
+            background: #add8e6;
+            transition: .3s;
+            text-align: center;
+            line-height: 100px;
+            background: transparent;
+        }
+
+        #header.scrolled {
+            background: #79f0a7;
+        }
+
+        #container div {
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.5s;
+        }
+
+        #section1:nth-child(1) {
+            background: #3498db;
+        }
+
+        #section2:nth-child(2) {
+            background: #e67e22;
+        }
+
+        #section3:nth-child(3) {
+            background: #2ecc71;
+        }
+        #section4:nth-child(4) {
+            background: #fc82f2;
+        }
+
+        #footer {
+            height: 300px;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>상단 고정 헤더</h1>
+    </header>
+    <div id="container">
+        <div id="section1">Section 1</div>
+        <div id="section2">Section 2</div>
+        <div id="section3">Section 3</div>
+        <div id="section4">Section 4</div>
+    </div>
+    <div id="footer">Footer Area</div>
+
+<script>
+    $(() => {
+        let now = 0;
+        const speed = 500;
+        const sections = $('#container div');
+        const headerHeight = $('#header').height();
+        const total = sections.length + 1;
+
+        /* 
+            선언적 함수
+                function 함수명(매개변수,...){실행코드};
+        */
+
+        function scrollTo(index) {
+            let pos = 0;
+            if (index < sections.length) {
+                pos = sections.eq(index).offset().top - headerHeight;
+            } else {
+                // offset().top - 요소의 문서 기준 세로위치
+                // position().top - 요소의 부모요소 기준 세로위치
+                pos = $('.footer').offset().top - headerHeight;
+            }
+                //scrollTop - jQuery 속성
+            $('html,body').stop().animate({ scrollTop: pos }, speed);
+        };
+
+        $(window).on('wheel', function (e) {
+            // is(): ~있다.
+            // :animate - 애니메이트가 적용된 요소 jQuery선택자
+            // return - 반환 또는 이벤트 종료
+            // return 표현식; -> 표현식의 결과를 반환
+            // html,body안의 애니메이션되는 요소가 있으면 이벤트를 탈출
+            if ($('html, body').is(':animated')) return; // 중복 스크롤 방지
+
+            const delta = e.originalEvent.deltaY;
+            if (delta > 0 && now < total - 1) {
+                now++;
+            } else if (delta < 0 && now > 0) {
+                now--;
+            }
+            scrollTo(now);
+        });
+    });
+
+    $(window).on('scroll',()=>{
+    let windowScrollTop = $(window).scrollTop();
+        if($(window).scrollTop() > 1){
+            $('#header').addClass('scrolled');
+        } else {
+            $('#header').removeClass('scrolled');
+        }
+    });
+</script>
+
+</body>
+
+</html>

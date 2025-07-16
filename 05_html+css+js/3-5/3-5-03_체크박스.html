@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return과 매개변수</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>확인란 선택 유무 체크</h1>
+    <input type="checkbox" id="chk1" checked>
+    <label for="chk1">(필수) Lorem ipsum dolor sit amet.</label><br>
+    <input type="checkbox" id="chk2" checked>
+    <label for="chk2">(필수) Lorem ipsum dolor sit amet.</label><br>
+    <input type="checkbox" id="chk3">
+    <label for="chk3">(선택) Lorem ipsum dolor sit amet.</label><br>
+    <input type="checkbox" id="chk4">
+    <label for="chk4">(선택) Lorem ipsum dolor sit amet.</label><br>
+    <a href="#" id="link_btn">회원 가입 완료</a>
+
+    <script>
+        // 요소 탐색
+        const chk1 = document.getElementById('chk1');
+        const chk2 = document.getElementById('chk2');
+        const link_btn = document.getElementById('link_btn');
+
+        // 이벤트
+        // :checked -> CSS 선택자
+        link_btn.onclick = function (e) {
+            //e.preventDefault(); // a태그의 기본 이벤트를 제거
+            console.log(chk1.checked);
+            console.log(chk2.checked);
+
+            if (chk1.checked && chk2.checked) {
+                location.href = 'https://naver.com';
+            } else {
+                alert('필수 확인란은 반드시 선택해 주세요.')
+            }
+        };
+
+    </script>
+</body>
+
+</html>

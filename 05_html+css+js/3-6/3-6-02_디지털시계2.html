@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>디지털시계</title>
+  <style>
+    .box {
+      width: 1200px;
+      height: 200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+
+    p:nth-of-type(1) {
+      font-size: 60px;
+    }
+
+    p:nth-of-type(2) {
+      font-size: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>디지털 시계</h1>
+    <p id="currentDate"></p>
+    <p id="currentTime"></p>
+  </div>
+  <script>
+    const currentDate = document.getElementById("currentDate");
+    const currentTime = document.getElementById("currentTime");
+    const week = ['일', '월', '화', '수', '목', '금', '토'];
+
+    function digitalClock() {
+      const nowDate = new Date();
+      const year = nowDate.getFullYear();
+      const month = nowDate.getMonth() + 1;
+      const date = nowDate.getDate();
+      const day = nowDate.getDay();
+      let hours = nowDate.getHours();
+      let minutes = nowDate.getMinutes();
+      let seconds = nowDate.getSeconds();
+
+      hours = hours < 10 ? '0' + hours : hours;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      currentDate.textContent = `${year}년 ${month}월 ${date}일 ${week[day]}요일`
+      currentTime.textContent = `${hours} :  ${minutes} : ${seconds}`
+    }
+
+    setInterval(() => {
+      digitalClock();
+    }, 1000);
+  </script>
+</body>
+
+</html>

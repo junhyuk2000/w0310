@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="content">내용</div>
+  <script>
+    /*
+      CSS변경
+        요소.style.속성 = 값;
+      
+        예) 요소.style.color:'red';
+        예) 요소.style.backgroundColor:'red';
+          ->'-'는 카멜표기법 사용
+
+    */
+    const content = document.getElementById('content');
+    content.style.width = "200px";
+    content.style.height = "200px";
+    content.style.textAlign = "center";
+    content.style.lineHeight = "200px";
+    content.style.border = "1px solid #000";
+    content.style.background = "skyblue";
+    content.style.color = "#fff";
+    content.style.cursor = "pointer";
+
+
+  </script>
+</body>
+
+</html>

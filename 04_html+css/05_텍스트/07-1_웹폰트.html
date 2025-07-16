@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML + CSS</title>
+    <style>
+        /* 
+            구글폰트 : https://fonts.google.com/ 
+            
+        */
+        /* 외부 폰트 가져오기 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        
+        /* 
+            제주 한라산체
+            글꼴 : ttf/otf(true type font), woff(wen open font format), woff2, eot
+         */
+        @import url('https://fonts.googleapis.com/earlyaccess/jejuhallasan.css');
+
+        /* 
+            제주돌담채 
+            @font-family{
+                font-family : 폰트명; -> 폰트명은 사용자가 임의로 지정
+                src : url('글꼴주소'); format은 생략가능
+                font-weight , font-style은 기본값이 normal이라 생략가능
+
+            }
+        */
+        @font-face {
+            font-family: 'EF_jejudoldam';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        /* 현재 문서에 폰트 적용하기 */
+        .p1{
+            font-family: 'Jeju Hallasan';
+        }
+        .p2{ 
+            font-family: 'EF_jejudoldam';
+        }
+    </style>
+</head>
+<body>
+    <h1>웹 폰트</h1>
+    <p class="p1">웹폰트는 컴퓨터에 기본적으로 설치되어 있지 않은 글꼴도 인터넷을 통해 웹브라우저에서 보여주는 기술을 의미한다. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="p2">웹폰트는 컴퓨터에 기본적으로 설치되어 있지 않은 글꼴도 인터넷을 통해 웹브라우저에서 보여주는 기술을 의미한다. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</body>
+</html>

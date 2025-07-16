@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        table{
+            width: 100%;
+            border: 1px solid #000; /* bd */
+            border-collapse: collapse; /* bdcl */
+        }
+
+        th{
+            height: 50px;
+        }
+        td, th{
+            border: 1px solid #000;
+        }
+
+
+        .c1{
+            background: #ff0;
+        }
+
+        .c2{
+            background: #0ff;
+        }
+        caption{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    <table> 표 정의
+    <tr>  table row(행) 정의
+    <td>  table data -> 행 안의 셀(cell)
+    <th scope="row|col"> 웹 접근성을위해 속성을 기록 
+    
+    <th>  table header -> 셀 제목
+    <caption>  표의 제목
+    <col>  column(열) 정의
+    <colgroup> 열 그룹핑
+    <caption> 표의 제목
+        웹 접근성을 위해 caption 태그로 제목을 기록
+
+    scope는 th에만
+    
+    표의 영역을 제목, 본문, 요약 부분으로 세분화하여 그룹핑할 때 주로 데이터가 많은 큰 표를 만들 때 사용한다
+    <thead>  제목 영역
+    <tbody>  본문 영역
+    <tfoot>  요약 영역
+    -->
+    <h1>표</h1>
+    <!-- 
+        하나의 표에서 table태그는 하나,
+        tr과 td는 여러개 사용할 수 있다.
+    -->
+
+    <table>
+        <caption>2025 웹디자인과 과목 별 점수</caption>
+        <colgroup>
+            <col class="c1">
+            <col class="c2">
+        </colgroup>
+        <!-- tr안에는 td와 th만 사용 -->
+        <thead>
+            <tr>
+                <!-- th는 볼드체+텍스트 중앙 정렬 -->
+                <th>교과목</th> <!-- 1행1열 -->
+                <th>점수</th> <!-- 1행2열 -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>HTML</th> <!-- 2행1열 -->
+                <td>93</td> <!-- 2행2열 -->
+            </tr>
+            <tr>
+                <th>CSS</th> <!-- 3행1열 -->
+                <td>92</td> <!-- 3행2열 -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>평균</th> <!-- 4행1열 -->
+                <td>92.5</td> <!-- 4행2열 -->
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

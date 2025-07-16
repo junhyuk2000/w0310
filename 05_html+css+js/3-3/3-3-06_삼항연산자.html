@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항연산자</title>
+</head>
+<body>
+    <script>
+        /* 
+
+            리터럴 (literal)
+                값 자체를 코드에 직접 써 넣은것
+                있는 그대로의 고정된 값
+                프로그래머가 코드에 직접 써놓은 값
+
+            변수 (variable)
+                값을 담는 이름표, 저장 공간
+
+            삼항 연산자 형식
+            
+                조건식 > 실행문1 : 실행문2
+                -> 조건식이 true이면 실행문1을 실행
+                -> 조건식이 false이면 실행문2를 실행
+        */
+        let num1 = 10;
+        let num2 = -10;
+        
+        console.log(num1 > 0 ? '양수' : '음수');
+        console.log(num2 > 0 ? '양수' : '음수');
+        
+        // if문
+        let result;
+        
+        if (num1 > 0) {
+            result = '양수';
+        } else {
+            result = '음수';
+        }
+        console.log(result);
+
+
+    </script>
+</body>
+</html>

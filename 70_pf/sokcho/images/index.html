@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            /* 
+                개별속성
+                background-color
+                background-image
+                    background-position
+                    background-repeat
+                    background-attachment
+                    background-size
+
+                속기속성
+                background : 색 url(이미지) x위치 y위치/크기 반복여부 고정여부
+            */
+            background: url(./bg.jpg) repeat-x 0 5px;
+        }
+        .wrap{
+            width: 1235px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="wrap">
+            <header>
+                <img src="./header.png" alt="헤더">
+            </header>
+            <div class="slide">
+                <img src="./banner.jpg" alt="베너">
+                <footer>
+                    <img src="./footer.png" alt="푸터">
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

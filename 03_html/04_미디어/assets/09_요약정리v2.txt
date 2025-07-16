@@ -1,0 +1,20 @@
+<!DOCTYPE html> 문서 타입을 html5로 선언
+<html></html> html 문서의 시작과 종료
+<head></head> head의 시작과 종료
+<body></body> body의 시작과 종료
+<meta>  문서의 정보
+<hn></hn> 콘텐츠 제목, n은 1~6
+<p></p> 단락
+<img> 이미지 연결
+<title></title> 웹 브라우저 제목표시줄에 표시할 제목
+<a></a> 링크
+<br> 줄바꿈
+<span></span> 인라인요소 그룹핑
+<b></b> 볼드체
+<i></i> 이텔릭체
+
+&nbsp; 공백
+&lt; <
+&gt; >
+&copy; ⓒ
+

@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/* typo */
+body {
+  font-family: Georgia, serif;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: url(./../images/bg-light.png) no-repeat 50% 50%/cover fixed;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃_최준혁</title>
+
+    <style>
+        .wrap {
+            margin: 0 auto;
+            width: 1208px;
+        }
+
+        /* 상단 컨테이너 */
+        .main_container {
+            display: flex;
+            width: 1208px;
+            height: 858px;
+        }
+
+        /* 네비게이션 */
+        nav {
+            width: 200px;
+            background: #999;
+            margin-right: 4px;
+        }
+
+        /* 오른쪽 컨테이너 */
+        .right_container {
+            width: 1004px;
+            height: 858px;
+        }
+
+        /* 슬라이드 */
+        .slide {
+            width: 1000px;
+            height: 400px;
+            background: #999;
+            margin-bottom: 4px;
+        }
+
+        /* 배너 */
+        .banner {
+            width: 1000px;
+            height: 200px;
+            background: #999;
+            margin-bottom: 4px;
+        }
+
+        /* 갤러리 */
+        .gallery {
+            display: flex;
+            height: 250px;
+        }
+
+        .notice{
+            width: 498px;
+            background: #999;
+            margin-right: 4px;
+        }
+
+        .contents {
+            width: 498px;
+            background: #999;
+        }
+
+
+
+        /* 푸터 */
+        .footer {
+            display: flex;
+            width: 1208px;
+            height: 100px;
+            margin-top: 4px;
+        }
+
+        .blogo {
+            width: 198px;
+            background: #999;
+            margin-right: 4px;
+        }
+
+        .copy {
+            width: 800px;
+            background: #999;
+            margin-right: 4px;
+        }
+
+        .sns {
+            width: 198px;
+            background: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="main_container">
+            <!-- 네비게이션 -->
+            <nav></nav>
+            
+            <div class="right_container">
+                <!-- 슬라이드 -->
+                <div class="slide"></div>
+                <!-- 배너 -->
+                <div class="banner"></div>
+                <!-- 갤러리 -->
+                <div class="gallery">
+                    <!-- 공지사항 -->
+                    <div class="notice"></div>
+                    <!-- 콘텐츠 -->
+                    <div class="contents"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터 -->
+        <footer class="footer">
+            <!-- 하단로고 -->
+            <div class="blogo"></div>
+            <!-- 저작권표시 -->
+            <div class="copy"></div>
+            <!-- sns -->
+            <div class="sns"></div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

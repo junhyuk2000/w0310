@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date 객체</title>
+</head>
+
+<body>
+  <script>
+    /* 
+      Date 객체
+        날짜와 시간에 대한 정보 값을 얻거나 설정할 수 있다.
+        const date = new Date();
+        const date = new Date('년/월/일');
+        const date = new Date(년,월,일,시,분,초,밀리초);
+
+        메서드
+          getFullYear()
+            년
+          getMonth() + 1
+            월
+          getDate()
+            일
+          getDay()
+            요일(숫자로 반환) 0(일)~6(토)
+          getHours()
+            시
+          getMinutes()
+            분
+          getSeconds()
+            초
+          getMilliseconds()
+            ms(1/1000초) 반환
+          getTime()
+            1970년 1월 1일 자동 이후부터 경과한 밀리초값을 반환
+
+          toURCString()
+            UTC(국제 표준시) 날짜. 시간 정보를 문자열로 반환한다.  
+          toLocaleString()
+            지역의 Date 정보를 문자열로반환
+          toLocaleTimeString()
+            지역의 시간 정보를 문자열로반환
+          toLocaleDateString()
+
+    */
+    const nowDate = new Date();
+    const dayArr = ['일', '월', '화', '수', '목', '금', '토'];
+    const day = nowDate.getDay();
+
+    const dateInfo = {
+      year: nowDate.getFullYear(),
+      month: nowDate.getMonth() + 1,
+      date: nowDate.getDate(),
+      week: dayArr[day],
+      hours: nowDate.getHours(),
+      minutes: nowDate.getMinutes(),
+      seconds: nowDate.getSeconds(),
+      locale: nowDate.toLocaleDateString(),
+      localeDate: nowDate.toLocaleTimeString(),
+      localeTime: nowDate.toLocaleString()
+    }
+    for (let i in dateInfo) {
+      console.log(i + ":" + dateInfo[i]);
+    }
+  </script>
+</body>
+
+</html>

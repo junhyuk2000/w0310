@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    button {
+      width: 180px;
+      height: 70px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btn">클릭</button>
+  <button id="btn2">클릭</button>
+  <script>
+    /*
+        표준 이벤트 모델 
+          객체.adEventListner('이벤트',함수);
+    */
+    const btn = document.getElementById('btn');
+    const btn2 = document.getElementById('btn2');
+
+    btn.addEventListener('click', () => {
+      alert('dd');
+    });
+
+
+
+    const view = () => {
+      console.log('view');
+    };
+
+    btn2.addEventListener('click', () => {
+      view();
+    });
+
+    //표준 이벤트 모델
+    // -> 객체에 동일한 이벤트가 여러번 적용할 수 있다.
+    const win1 = () => {
+      console.log('win1');
+    };
+    const win2 = () => {
+      console.log('win2');
+    };
+
+    // window 객체는 생략 가능
+    addEventListener('load', win1());
+    window.addEventListener('load', win2());
+  </script>
+</body>
+
+</html>

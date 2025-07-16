@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <script>
+        /* 
+            제어문
+                1. 조건문(선택문) :if, switch
+                2. 반복문 : for, do, while
+                3. 기타 : continue, break
+
+
+            if문 형식1
+                if (조건식) {
+                    실행문;
+                }
+
+            if문 형식2
+                if(조건식) {
+                    실행문1;
+                } else {
+                    실행문2; 
+                }
+
+            if문 형식3 
+                if (조건식) {
+                    실행문1
+                } else if (조건식) {
+                    실행문2; 
+                } else {
+                    실행문3; 
+                }
+
+            if문안에 또 다른 if문을 중첩하여 사용할 수 있다.
+            -> 중첩 if문
+            if문 형식4
+                if(조건식1) {
+                    if(조건식2){
+                        실행문1;
+                    } else {
+                        실행문2;
+                    }
+                } else {
+                    실행문3; 
+                }
+
+
+            
+            if문 형식5
+
+            if(조건식) {
+                실행문1;
+            } else if (조건식2) {
+                실행문2;
+            }
+            } else if (조건식3) {
+                실행문3;
+            }
+            } else if (조건식4) {
+                실행문4; 
+            } else {
+                실행문5;
+            }
+
+        */
+
+
+        let age = 10;
+        let admissionFee = '';
+
+        if(age<13) {
+            admissionFee = '2,000원';
+        } 
+        console.log(admissionFee);
+
+        
+        age = 20;
+        if(age<13) {
+            admissionFee = '2,000원';
+        } else if (age>=13 && age<20) {
+            admissionFee = '4,000원';
+        } else {
+            admissionFee = '6,000원';
+        }
+        console.log(admissionFee);
+
+        const test = () =>{
+            let html = Number(prompt('html 점수입력'));
+            let css = Number(prompt('css 점수입력'));
+            let js = Number(prompt('js 점수입력'));
+
+            if ((html+css+js)/3 >= 60){
+                document.write('합격');
+            } else {
+                if(html<40) {
+                    document.write('html 40점 미만 불합격');
+                } else if(css < 40) {
+                    if( html < 40 ){
+                        document.write('html,css 40점 미만 합격불가')
+                    } else {
+                        document.write('css 40점 미만 불합격');
+                    }
+                } else if(js < 40) {
+                    document.write('js 40점 미만 불합격');
+                } else {
+                    document.write('전과목 40점 미만 불합격');
+                }
+            }
+        };
+
+        test();
+
+
+
+
+
+        /* 
+            switch / case 문
+
+            switch(변수) {
+                case 값 :
+                    실행문1;
+                    breack
+                case 값 :
+                    실행문2;
+                    break;
+                case 값 :
+                    실행문3;
+                    break;
+                defalut :
+                    실행문4;
+            }
+        */
+
+        let subject = 'javascript';
+
+        switch(subject){
+            case 'html':
+                subject += '은 1학점입니다.';
+                break;
+            case 'css':
+                subject += '은 2학점입니다.';
+                break;
+            case 'javascript' :
+                subject += '은 3학점입니다.';
+                break;
+            default :
+                subject += '해당과목이 없습니다.';
+        }
+        console.log(subject);
+    </script>
+</body>
+</html>

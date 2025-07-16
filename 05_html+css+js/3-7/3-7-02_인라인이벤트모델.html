@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    button {
+      width: 180px;
+      height: 70px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 인라인 이벤트 모델 -->
+  <!-- 인라인 스크립트 -->
+  <!-- onclick은 HTML의 이벤트 속성 -->
+  <!-- <button onclick="sum(10);" id="btn">click</button> -->
+  <button id="btn1">익명함수 클릭</button>
+  <button id="btn2">선언적 함수 클릭</button>
+  <button onmouseover="console.log('over ok');">over</button>
+  <button onmouseout="console.log('out ok');">out</button>
+
+  <script>
+    /* 
+      기본 이벤트 모델
+        HTML 요소를 취득한 후
+          document.getElementById('아이디');
+          document.querySelector('.선택자');
+
+          document.getElementsByClassName('클래스');
+          document.getElementsByTagName('태그명');
+          document.querySelectorAll('.선택자');
+        
+        이벤트를 '객체의 메서드' 형식으로 연결
+          객체.메서드 = ()=>{};
+    */
+
+
+    const btn1 = document.getElementById('btn1');
+    const btn2 = document.getElementById('btn2');
+
+    //익명 함수
+    btn1.onclick = () => {
+      console.log('ok');
+    };
+
+    // 선언적 함수
+    const view = () => {
+      console.log('view')
+    }
+
+    btn2.onclick = () => {
+      view();
+    }
+    // btn2.onclick = view;   function 제외 가능 / ()붙히면 바로 실행되기때문에 제외 
+
+  </script>
+</body>
+
+</html>

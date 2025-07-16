@@ -1,0 +1,117 @@
+font-size : 12px 또는 150% 또는 1.5em 또는 1.5rem
+font-weight
+font-size
+font-variant
+line-height:1.4; -> 부모 요소의 글자크기 기준
+font: weight|style|variant size/line-height family -> 순서있음
+@font-face {font-family:이름; src:url('폰트');} -> 눈누, 구글, 네이버
+color : rgba(R,G,B,alpha); -> 알파는 0~1
+letter-spacing   레  터  스  페  이  싱
+word-spacing    레터    스페이싱
+text-decoration: none; underline
+text-transform
+text-shadow: x위치 y위치 blur color;
+text-align > 블록레벨 요소에 적용하여 인라인 요소 수평 맞춤
+vertical-align > 인라인 요소의 수직맞춤
+text-indent
+word-wrap
+word-break: break-all; >text-align:justify(양쪽 맞춤), 영문자
+white-space: nowrap; (줄바꿈 안함)
+text-overfliw: ellipsis (말줄임)
+display: block|inline|inline-block|none|
+visibility
+overflow:hidden;
+background
+background-color
+background-image
+background-repeat
+background-position
+background-attachment
+background-size
+background-origin
+background-clip
+width
+height
+padding : 패딩; 음수x
+margin: 여백;   음수o
+border: 두께 종류 색; -> 순서없다
+
+border-width
+border-style
+border-color
+
+// 위 or 아래 먼저 작성 한 후 좌우
+border-radius
+border-top-left-radius
+border-top-right-radius
+border-bottom-left-radius
+border-bottom-right-radius
+
+border-image
+
+outline:1px solid red; < 위아래 좌우 따로 지정 못함
+
+box-sizing:border-box;
+box-shadow: x위치 y위치 blur spread color; > 순서있음
+resize:none > 마우스로 크기조절 못하게
+appearance
+
+transform: 변형;
+확대 (scale)
+회전 (rotate)
+기울기 (skew)
+대칭(flip)
+이동(translate)
+
+transition: 1s;(전환 시간)
+transition-property
+transition-duration
+transition-timing-function
+transition-delay
+
+animation
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-count: infinite;
+animation-direction
+animation-fill-mode:backwords;
+animation-play-state;
+@keyframes 이름 {}
+
+float
+clear
+
+position
+left
+right
+top
+bottom
+z-index
+
+@media
+@import
+
+display:flex;
+flex-direction
+flex-wrap
+flex-flow
+
+justify-content
+align-items
+align-content
+align-self
+
+flex-grow
+flex-shrink
+flex-basis
+flex
+order
+
+grid-template-columns
+grid-template-rows
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end

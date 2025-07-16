@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML + CSS</title>
+    <style>
+        p {
+            margin: 20px;
+            border: 1px solid red;
+            height: 30px;
+            /* 
+                text-align은 블록레벨 요소에 지정해야하며, 블록레벨요소의 하위요소가(자식 / 손자 다 포함) 인라인 요소 또는 텍스트 일 경우 정렬된다.(자식이 블록레벨요소면 적용안됨)
+            */
+            text-align: center;
+        }
+        span{
+            /* span은 인라인요소 */
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+            background: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>가로 정렬</h1>
+    <p>글자</p>
+    <p><span>aaaaaa</span></p>
+</body>
+</html>

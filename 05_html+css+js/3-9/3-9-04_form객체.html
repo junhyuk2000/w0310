@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <form action="#" name="form1">
+    <input type="search" name="search" placeholder="검색어 입력"><br>
+    <input type="submit" value="확인">
+  </form>
+  <form action="#" name="form2">
+    <input type="text" name="subject" placeholder="과목 입력"><br>
+    <input type="password" name="credit" placeholder="학점"><br>
+    <input type="submit" value="확인">
+  </form>
+  <script>
+    /*
+        폼 객체 선택
+          document.폼명.요소명
+
+            document.forms[idx].element[idx]
+            document.forms[idx][idx]
+            document.forms['폼명'].element['요소명']
+            document.forms['폼명']['요소명']
+
+        속성
+          value
+          checked
+          disabled
+          defaultValue
+          length
+
+        메서드
+          focus()
+          blur()
+          submit()
+          reser()
+    */
+
+    const form1 = document.form1;
+    const form1_1 = document.querySelectorAll('form')[0];
+    const form1_2 = document.querySelectorAll('form')[1];
+
+    // 폼명.요소명.속성명 -> 속성 값 출력
+    console.log(form1.search.placeholder);
+    console.log(form1_1.search.placeholder);
+
+    const form2 = document.form2;
+    const form2_2 = document.form2[1];
+    console.log(form2.subject.placeholder);
+    console.log(form2.credit.placeholder);
+
+    console.log(form1_2);
+    console.log(form1_2.elements[1].placeholder);
+
+  </script>
+</body>
+
+</html>

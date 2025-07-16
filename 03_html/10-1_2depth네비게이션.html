@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+</head>
+<body>
+    <!-- 
+        > 자식
+        * 형제 개수 
+        .속성값 class
+        [속성=값] 속성
+        {콘텐츠} 콘텐츠
+        $ 자동 순번(1,2,3,4,5,....)
+        + 더하기(형제)
+    -->
+
+    <h1>2depth 내비게이션</h1>
+    <h2>에밋 사용</h2>
+    <!-- ctrl + spacebar => 닫힌 에밋창 열기 -->
+
+    <!-- ul>li*3 -->
+    <!-- ul>li>a*3 -->
+    <!-- ul>li.item$*3 -->
+    <!-- ul>li*3>a[href=#]{메인메뉴$} -->
+    <!-- h1+h2+p -->
+    <!-- ul>li*3>a{메인메뉴$}+ul>li*3>a[href=#]{서브메뉴$} -->
+    <ul class="main">
+        <li>
+            <a href="">메인메뉴1</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">메인메뉴2</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">메인메뉴3</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- nav#gnb>ul.main>li*3>a{메인메뉴$}+ul.sub>li*3>a[href=#] -->
+     <nav id="gnb">
+        <ul class="main">
+            <li>
+                <a href="">메인메뉴1</a>
+                <ul class="sub">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">메인메뉴2</a>
+                <ul class="sub">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">메인메뉴3</a>
+                <ul class="sub">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+        </ul>
+     </nav>
+    
+    
+
+
+
+
+    <h2>직접기록</h2>
+    <ul>
+    <!-- 메인메뉴 -->
+        <li><a href="#">메가 스토리</a>
+        <!-- 서브메뉴 -->
+            <ul>
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">BI</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+        </li>
+        <li><a href="#">메뉴소개</a>
+            <ul>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">푸드</a></li>
+                <li><a href="#">상품</a></li>
+            </ul>
+        </li>
+        <li><a href="#">매장</a>
+            <ul>
+                <li><a href="#">매장찾기</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+
+</body>
+</html>

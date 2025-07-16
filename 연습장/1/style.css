@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color:#333;
+  text-decoration: none;
+}
+
+/* 보여질 탭 메뉴 */
+.tabs {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background: teal;
+}
+/* input 디자인제거 */
+.tabs input {
+  display: none;
+}
+
+/* 탭 버튼 인라인블럭으로 바꾸고 박스처럼 사용 */
+.tabs label {
+  display: inline-block;
+  padding: 12px 8px;
+  background: #a3a3a3;
+  color: #838383;
+  cursor: pointer;
+}
+
+/* 체크된 탭버튼 색변경 */
+.tabs input:checked+label {
+  background: #404040;
+  color:#eeebeb;
+}
+
+/* 탭 콘텐츠 박스 겹치기 */
+.tabs .tab_contents {
+  position: absolute;
+  display: none;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #000;
+}
+/* 선택된 탭 콘텐츠 보이기 */
+.tabs input:checked+label+.tab_contents {
+  display: block;
+}
+
+.tabs .tab1 {
+  line-height: 2;
+}
+
+.tabs .tab1 a {
+  display: inline-block;
+  width: 300px;
+}
+
+.tabs .tab1 a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+
+.modal {
+  display: none;
+}
+.modal:target {
+  display: block;
+  background: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal_contents {
+  margin: 15% auto;
+  width: 300px;
+  height: 300px;
+  background: white;
+}
+
+.close {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: gray;
+  margin-left: 260px;
+  text-align: center;
+  line-height: 20px;
+}
+.close:hover {
+  background: darkgray;
+}

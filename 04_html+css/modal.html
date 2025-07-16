@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "굴림", Arial, sans-serif;
+            font-size: 13px;
+            line-height: 22px;
+        }
+
+        h2 {
+            background-color: orange;
+        }
+
+        ul {
+            list-style: none;
+            background-color: aqua;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #333;
+        }
+
+
+        /* 모달 팝업 창 */
+        .modal {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal:target {
+            display: block;
+        }
+        .modal_contents {
+            width: 500px;
+            margin: 200px auto 0;
+            background: lightcoral;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .modal_content {
+            margin: 15px 0;
+        }
+
+        .modal_content a {
+            float: right;
+            padding: 5px 10px;
+            margin-top: 50px;
+        }
+        .close {
+            display: inline-block;
+            width: 70px;
+            height: 30px;
+            background: lightskyblue;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="notice">
+        <h2>공지사항</h2>
+        <ul>
+            <li><a href="#"><span>설 연휴 국내/해외 항공 업무 안내</span>2022.01.27</a></li>
+            <li><a href="#"><span>&lt;하나LIVE&gt;스타벅스 기프티콘 이벤트 당첨자 안내</span>2022.01.14</a></li>
+            <li><a href="#"><span>[플래너 공모전]대상~장려상 수장자 마일리지 ...</span>2022.01.13</a></li>
+            <li><a href="#"><span>[국내항공]12월 국내항공 구매자 이벤트 당첨자 안내</span>2021.12.30</a></li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal_contents">
+            <a href="#" class="close">&times;</a>
+            <h3>모달내용</h3>
+            <p>모달내용입니다.</p>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    // 준비 이벤트
+    $(document).ready(() => {
+        $('li:first-child').click(()=>{
+            $('.modal').show();
+        });
+        $('.modal_contents a').click(()=>{
+            $('.modal').hide();
+        });
+    });
+</script>
+
+</html>

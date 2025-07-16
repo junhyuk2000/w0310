@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+body {
+    font: 15/1.6 '돋움', sans-serif;
+    color:#333;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+header {
+    border: 1px solid #000;
+    position: relative;
+    width: 1320px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 auto;
+}
+/* GNB */
+/* 폰트 위계 */
+/* 1depth */
+.main { 
+    display: flex;
+    margin-right: 20px;
+}
+
+.main::before {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: -1;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    content:"";
+    background: rgba(0,0,0,0.6);
+    transition: .3s;
+}
+
+.main:hover::before {
+    width: 100%;
+    height: 200px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.main>li {
+    border: 1px solid #000;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color:#999;
+}
+
+.main li a:hover {
+    color:skyblue;
+}
+/* 2depth */
+.sub {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    line-height: 2;
+    transition: .3s;
+    padding: 10px 0 20px;
+}
+.main:hover .sub{
+    height: 200px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.gnb .sub a {
+    font-size: 14px;
+    color: #fff;
+}

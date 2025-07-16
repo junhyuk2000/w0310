@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>전역변수와 지역변수</title>
+</head>
+
+<body>
+  <script>
+    /* 
+
+      변수의 scope
+
+      1. function level scope -> function(){}
+        -> var는 함수 블록에서만 지역 변수 선언 가능
+
+      2. block level scope -> {블록}
+        -> let, const는 블록{}이나 제어문 블록{} 에서도 지역변수 선언 가능
+
+
+      - 전역변수는 블록 밖에 선언 
+        -> 블록 안에서도 사용 가능 
+        -> 변수 이름이 같으면 지역변수가 우선 적용
+      - 지역변수는 블록 안에 선언 -> 블록 밖에서는 사용 못함
+
+        */
+
+    let i = 2; // 전역변수
+    for (let i = 0; i < 5; i++) {
+      console.log('첫 번째 지역변수' + i); // 4
+    }
+
+    for (let j = 0; j < 10; j++) {
+      console.log('두 번째 지역변수 + j'); // 9
+    }
+    console.log('전역변수', i); // 2
+
+    /*
+        const 변수;
+          function 함수(){
+        };
+
+        function 함수(){
+          const 변수;
+        };
+    */
+
+    let kor = 90;
+    function getScore() {
+      kor = 100;
+      console.log(kor);
+    }
+    getScore();
+    console.log(kor);
+
+    let eng = 90;
+    function getScore2() {
+      let eng = 60;
+      kor = 100;
+      console.log(eng);
+    }
+    getScore2();
+    console.log(eng);
+    // 지역변수는 블록 밖에서 사용 불가
+
+    // ===========================================================================
+
+    // var
+    var num = 10;
+    {
+      var num = 20; // num은 전역변수
+      console.log(num); // 20
+    }
+    console.log(num); // 20
+
+    // let
+    let num2 = 10; // 전역변수
+    {
+      let num2 = 20; // 지역변수
+      console.log(num2); // 20
+    }
+    console.log(num2); // 10
+
+    // const
+    const num3 = 10; // 전역변수
+    {
+      const num3 = 20; // 지역변수
+      console.log(num3); // 20
+    }
+    console.log(num3); // 10
+    // =========================================================================
+
+    // var
+    var num = 10; // 전역변수
+    if (num === 10) {
+      var sum = 20; // 전역변수
+    }
+    console.log(sum); // 20
+
+    // let
+    let num4 = 10; // 전역변수
+    if (num4 === 10) {
+      let sum4 = 20; // 지역변수
+    }
+    console.log(sum4); // 오류
+
+    // =========================================================================
+
+    // 함수의 전역변수
+
+    var number1 = 10;
+    function add1() {
+      number1 = 20;
+      console.log('지역변수' + number1);
+    }
+    add1();
+    console.log('전역변수' + number1);
+
+
+    //블록의 지역변수
+    var number2 = 50;
+    if (number2 === 50) {
+      var number2 = 80;
+      console.log('지역' + number2);
+    }
+    console.log('전역' + number2);
+
+
+  </script>
+</body>
+
+</html>

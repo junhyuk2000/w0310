@@ -1,0 +1,14 @@
+repository(레파지토리) - github 저장소
+
+https://github.com/
+
+
+깃허브 데스크탑(GUI방식)
+업로드 : commit > push
+집에서 다운로드 : pull
+
+VS Code
+remote(서버) site
+업로드 : commit > push
+
+명령어 (CLI방식)

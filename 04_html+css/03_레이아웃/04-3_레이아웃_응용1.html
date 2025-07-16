@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 - 응용1</title>
+
+
+    <style>
+        /* shift + alt + f : 들여쓰기(정렬) */
+        /* 
+            선택자 {
+            속성 : 값
+            속성 : 값
+            ...
+            }
+
+            선택자의 종류
+            1. 태그(요소, 타입)선택자
+            2. 클래스 선택자( . )
+            
+        */
+
+        .wrap {
+            /* 자식 요소 가로 배치하기 위해서 */
+            display: flex;
+        }
+
+        .header {
+            width: 100px;
+            background: #ccc;
+        }
+
+        .right_contents {
+            width: 500px;
+        }
+        .slide{
+            height: 200px;
+            background: #89fc89;
+        }
+
+        .contents{
+            height: 100px;
+            background: #84c8ff;
+        }
+
+        .footer{
+            height: 50px;
+            background: rgb(255, 199, 116);
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="header">헤더</div>
+        <div class="right_contents">
+            <div class="slide">슬라이드</div>
+            <div class="contents">콘텐츠</div>
+            <div class="footer"> 푸터 </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

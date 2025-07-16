@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML + CSS</title>
+    <style>
+        /* 
+            ~child
+            :nth-child()
+            :nth-last-child()
+            :first-child
+            :last-child
+            
+            ~of-type
+            :nth-of-type()
+            :nth-last-type()
+            :first-of-type()
+            :last-of-type()
+        */
+
+        /* p태그의 첫번째 요소 */
+        p:first-letter {
+            font-size: 150%;
+        }
+        /* div의 첫번째 자식 p */
+        /* p:nth-child(1)이랑 같음 > first-child보다 이걸 더 많이씀*/
+        p:first-child {
+            color: red;
+        }
+        /* body안의 전체 p */
+        p {
+            background: lightgray;
+        }
+        /* div의 마지막 자식 p */
+        /* p:nth-last-child(1)와 같음 last는 뒤에서 부터 세는거 */
+        p:last-child {
+            color:blue;
+            background: palegoldenrod;
+        }
+        /* div의 2번째 자식 p */
+        p:nth-child(2) {
+            color: orange;
+        }
+        /* div의 3번째 자식 p */
+        p:nth-child(3) {
+            color: yellow;
+        }
+        /* div의 4번째 자식 p */        
+        p:nth-child(4) {
+            color: green;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>COMPANY</p>
+        <p>PRODUCT</p>
+        <p>SERVICE</p>
+        <p>CUSTOMER</p>
+        <p>COMMUNITY</p>
+    </div>
+</body>
+
+</html>

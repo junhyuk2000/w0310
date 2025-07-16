@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>replace()</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <img src="https://picsum.photos/id/400/200/150" alt="">
+    <a href="#">400</a>
+    <a href="#">401</a>
+    <a href="#">402</a>
+  </div>
+  <script>
+    let arr = [
+      "https://picsum.photos/id/400/200/150",
+      "https://picsum.photos/id/401/200/150",
+      "https://picsum.photos/id/402/200/150"
+    ]
+    const img = $('img');
+    const btn = $('a');
+
+    btn.eq(0).click(() => {
+      console.log(arr[0]);
+      img.attr({ src: arr[0] });
+    });
+    btn.eq(1).click(() => {
+      console.log(arr[1]);
+      img.attr({ src: arr[1] });
+    });
+    btn.eq(2).click(() => {
+      console.log(arr[2]);
+      img.attr({ src: arr[2] });
+    });
+
+
+  </script>
+</body>
+
+</html>

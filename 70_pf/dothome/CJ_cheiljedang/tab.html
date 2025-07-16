@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 공통 */
+/* 초기화 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px/1.5 "굴림", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* 탭 */
+.tabs {
+  width: 400px;
+  height: 200px;
+  padding-top: 12px;
+}
+.tabBtn li {
+  float: left;
+  border-left: 1px solid #333;
+  border-top: 1px solid #333;
+  padding: 5px 15px;
+  background: #333;
+}
+.tabBtn li a {
+  color: #fff;
+}
+
+.tabBtn li.active {
+  background: #fff;
+}
+.tabBtn li.active a {
+  color: #333;
+}
+
+.tabBtn li:first-of-type {
+  margin-left: 20px;
+}
+.tabBtn li:last-of-type {
+  border-right: 1px solid #333;
+}
+.tabs > div {
+  height: 145px;
+  border: 1px solid #333;
+  padding: 15px;
+  margin-top: -1px;
+}
+
+/* 탭 - 공지사항 */
+#tabs1 span {
+  display: inline-block;
+  width: 290px;
+  line-height: 28px;
+  padding-right: 10px;
+  vertical-align: middle;
+
+  /* 줄임표(...) */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 탭 - 겔러리 */
+#tabs2 {
+  display: none;
+  text-align: center;
+}
+#tabs2 a {
+  margin-right: 10px;
+}
+#tabs2 a:last-of-type {
+  margin-right: 0;
+}
+    </style>
+</head>
+<body>
+    <!-- 탭 -->
+<div class="tabs">
+  <ul class="tabBtn clearfix">
+    <li class="active"><a href="#tabs1">공지사항</a></li>
+    <li><a href="#tabs2">겔러리</a></li>
+  </ul>
+  <div id="tabs1">
+    <ul>
+      <li><a href="#"><span>설 연휴 국내/해외 항공 업무 안내</span>2022.01.27</a></li>
+      <li><a href="#"><span>[하나LIVE]스타벅스 기프티콘 이벤트 당첨자 안내</span>2022.01.14</a></li>
+      <li><a href="#"><span>[플래너 공모전]대상~장려상 수상자 마일리지 추가</span>2022.01.13</a></li>
+      <li><a href="#"><span>[국내항공]12월 국내항공 구매자 이벤트 당첨자 안내</span>2021.12.30</a></li>
+    </ul>
+  </div>
+  <div id="tabs2">
+    <a href="#"><img src="image/gallery1.jpg" alt="겔러리이미지1"></a>
+    <a href="#"><img src="image/gallery2.jpg" alt="겔러리이미지2"></a>
+    <a href="#"><img src="image/gallery3.jpg" alt="겔러리이미지3"></a>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+    /* 
+    이벤트 메서드
+        ready(function(){})
+        click(function(){})
+
+    탐색 메서드
+        .siblings() -> 형제들을 선택한다.
+        index() -> 순번을 가져온다
+        (".tabs > div").eq(0) < 메서드 (.)
+    */
+    $(document).ready(function () {
+        // 1. 탭 버튼을 클릭하면 함수실행
+        $(".tabBtn li").click(function () {
+            // .addClass('클래스명') -> 클래스를 추가한다
+            // 2. 갤러리 버튼에 .active 클래스 추가
+            $(this).addClass("active");
+            // .removeClass('클래스명') -> 클래스를 제거한다
+            // .siblings() -> 형제들을 선택한다.
+            // 3. this의 형제의 .active 클래스 제거
+            $(this).siblings().removeClass("active");
+
+    // 클릭한 li의 순번을 가져와서 idx변수 저장
+            // index() -> 순번을 가져온다
+            // 4. 클릭한 버튼의 순번을 idx 변수에 저장
+            var idx = $(this).index();
+
+            // eq = jquery 선택자 / eq(n) : n은 0번부터  -> n번째 요소를 선택한다.
+            // (".tabs > div:eq(0)") < 선택자 (:)
+            // (".tabs > div").eq(0) < 메서드 (.)
+            // css(속성:값,속성:값, ...) -> css를 적용시킨다.
+            // 5. idx 순번에 해당하는 div를 보여준다.
+            $(".tabs > div").eq(idx).css({ display: "block" });
+            // 6. idx 순번에 해당하는 div의 형제는 숨긴다.
+            $(".tabs > div").eq(idx).siblings("div").css({ display: "none" });
+        });
+    });
+
+</script>
+</body>
+</html>

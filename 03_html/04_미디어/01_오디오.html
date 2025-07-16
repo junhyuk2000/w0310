@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <!-- 
+        1bit(binary digit): 0, 1
+        8bit = 1byte
+
+        깃허브 1개 레파지토리: 2GB
+
+        6,846KB -> 7MB
+        저장 용량: B(btye, 바이트)
+        1000byte = 1KB
+        1000KB = 1MB(메가)
+        1000MB = 1GB(기가)
+        1000GB = 1TB(테라)
+
+        https://convertio.co/kr/mp3-wav/
+
+        속성
+            src: 오디오 파일 경로
+            autoplay: 자동 실행
+            muted: 음소거
+            loop: 무한 반복
+            controls: 컨트롤 표시
+            preload: 미리 로드 방식
+                auto: 일부 또는 전체를 미리 로드한다.(기본값)
+                metadata: 오디오의 메터데이터(길이, 제목 등)만 미리 로드한다.
+                none: 미리 로드하지 않음
+    -->
+    <h1>오디오</h1>
+    <!-- 파일 이름에 공백 사용하지 말것!!! -->
+    <audio src="./assets/MasCafe-CasaRosa.mp3" loop autoplay muted></audio>
+    <audio controls>
+        <source src="./assets/MasCafe-CasaRosa.mp3" type="audio/mp3">
+        <source src="./assets/MasCafe-CasaRosa.ogg" type="audio/ogg">
+        <source src="./assets/MasCafe-CasaRosa.wav" type="audio/wav">
+        Your browser does not support the audio element(당신의 브라우저는 오디오 요소를 지원하지 않습니다).
+    </audio>
+</body>
+</html>

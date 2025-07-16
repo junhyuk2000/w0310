@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* 전체 */
+/* 0만 단위 생략 가능 */
+* {
+    margin: 0; 
+}
+body{
+    color: #333;
+    background: #fff;
+}
+.wrap{
+    margin: 0 auto;
+    width: 1200px;
+}
+/* 헤더 */
+.header{
+    display: flex;
+    height: 100px;
+}
+/* 로고 */
+.logo{
+    width: 280px;
+    height: 40px;
+}
+/* 내비게이션 */
+
+/* 슬라이드 */
+.slide{
+    height: 300px;
+}
+/* 콘텐츠 */
+.contents{
+    display: flex;
+    height: 200px;
+}
+
+.notice, .banner, .shortcut{
+    width: 400px;
+}
+
+/* 푸터 */
+.footer{
+    display: flex;
+    height: 100px;
+}
+/* 하단로고 */
+.blogo {
+    width: 247px;
+}
+/* 저작권 */
+.copy{
+    width: 691px;
+}
+/* sns */
+.sns{
+    width: 262px;
+}

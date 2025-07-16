@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열</title>
+</head>
+
+<body>
+  <script>
+    /*
+      사용자 정의 객체
+      const obj = {
+        속성 : 값,
+        메서드 : function(){},
+        ...
+      };
+
+      Array 객체
+        객체 리터럴 처럼 변수에 데이터값을 필요한 대로 저장할 수 있다.
+        객체 리터럴은 데이터 값을 '이름:값'으로 저장하는 반면, 저장된 값에 자동으로 index를 부여한다.
+
+      배열 생성
+        const arr = [
+          10,
+          '값',
+          true,
+          function(){}
+          {}
+          []
+          ...
+        ];
+        배열 참조
+          변수[idx];
+          -> idx는 0,1,2,...
+
+        속성
+          length
+        메서드
+        concat()
+        -> 배열 연결
+        toString()
+        -> 배열을 문자열로 변환
+        
+        slice()
+        join()
+        shift()
+        unshift()
+        pop()
+        push()
+        splice()
+
+        reverse()
+        sort(function(){})
+
+        =============================
+
+        forEach()
+        객체.forEach(콜백함수)
+        -> 반복문의 역할
+        
+        콜백함수 : 함수의 매개변수로 전달되어 실행되는 함수
+
+
+        map()
+        filter()
+
+        제어문 
+          for ~ of
+
+          iterable (이터러블) : 반복 가능한 객체
+            배열, 문자열
+            Set(데이터유형), Map
+          for(let 변수 of iterable){
+            코드;
+          }
+
+    */
+
+    //배열 생성
+    const arr1 = new Array(10, 20, 'javascript', 'jquery');
+    const arr2 = [10, 20, 'javascript', 'jquery'];
+    console.log(typeof arr1); //object
+    console.log(typeof arr2); //object
+
+    //배열 참조
+    console.log(arr1[0]); // 10
+    console.log(arr1[1]); // 20
+    console.log(arr1[2]); // javascript
+    console.log(arr1[3]); // jquery
+
+
+    const info = [45, 11, 7, 32, 20, 19];
+    console.log(info.length); // 6
+
+    // sort() -> 오름차순 정렬
+    info.sort(function (a, b) { // 콜백함수
+      // < 0 -> a가 앞으로
+      // > 0 -> b가 앞으로
+      // === 0 -> 위치 변경 없음 
+
+      // ex)
+      // step1 : a=11,b=45 -> a-b = -34 -> [11,45]
+      // step2 : a=7, b=45 -> a-b = -38 -> [11,7,45]
+      // step3 : a=11, b=7 -> a-b = 4 -> [7,11,45]
+      // ...
+
+      return a - b; // 값이 양수면 위치를 바꿈, 음수면 제자리, b - a는 내림차순
+    });
+    console.log(info); // [7,11,19,20,32,45]
+    console.log(info.toString()); // 7,11,19,20,32,45
+    console.log(info.toString().split()); // ['7','11','19','20','32','45'] 문자열 배열
+
+
+
+    const city = ['서울', '대구', '대전', '부산'];
+    for (let i in city) {
+      console.log(i) // 0 1 2 3  -> index번호
+      console.log(city[i]) // 서울 대구 대전 부산
+    }
+
+    for (let i of city) {
+      console.log(i) // 서울 대구 대전 부산
+    }
+
+    // for of
+    const person = {
+      name: '홍길동',
+      age: 16,
+      isBig: false,
+      printOut: () => {
+        //화살표 함수를 사용하면 this는 window이다.
+        console.log(`나는 ${this.name}입니다`);
+      },
+      printOut2: function () {
+        // this는 person
+        console.log(`나는 ${this.name}입니다`);
+      }
+    };
+    person.printOut();
+    person.printOut2();
+
+    for (let i in person) {
+      console.log(i);
+      console.log(person['name']);
+    }
+
+    //문자열 형태도 for of 사용가능
+    const str = 'script';
+    for (let i of str) {
+      console.log(i); // j a v a s c r i p t
+    }
+
+    const nums = [1, 2, 3];
+    nums.forEach((elm, idx, arr) => {
+      console.log(`${elm},${idx},${arr}`);
+    }) 
+  </script>
+</body>
+
+</html>

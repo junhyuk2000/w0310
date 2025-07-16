@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>컬렉션 객체: ver.ES6</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    /* 
+        Set 객체
+          객체 리터럴을 보완해주는 객체
+
+            객체 생성
+                const 변수 = new Set();
+
+                const 변수 = new  Set([값 , 값 , ...])
+
+            메서드
+                add(값)
+                    객체에 값을 추가
+                has(키)
+                    객체에 키가 존재하면 true, 없으면 false
+
+                values()
+                    객체의 모든 값을 가져오기
+
+                delete(키)
+                    객체의 키를 삭제
+                clear()
+                    모든 요소 삭제
+    */
+    //Set 객체 생성
+    const sub = new Set();
+
+    //Set 객체에 값 추가
+    // -> Set객체.add(값)
+    sub.add('a');
+    sub.add('b');
+    sub.add('c');
+
+    console.log(sub);
+
+    // Set 객체 생성 및 할당
+    const sub2 = new Set(['a', 'b', 'c']);
+    console.log(sub2);
+
+
+    //size 속성 (length와 같은 기능)
+    console.log(sub.size);
+    console.log(sub2.size);
+
+    //has(키)
+    console.log(sub.has('c')); //true
+    console.log(sub.has('react')); //false
+
+
+
+    //values()
+    console.log('value======================')
+    for (let val of sub.values()) {
+      console.log(val); // a b c
+    }
+
+
+    //delete(키)
+    sub.delete('a');
+    console.log(sub.has('a')); // false
+
+    //clear
+    sub.clear();
+    console.log(sub.size);
+
+
+  </script>
+</body>
+
+</html>

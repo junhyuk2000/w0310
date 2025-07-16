@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeof</title>
+</head>
+<body>
+    <script>
+        var num = 10;
+        var str = '문자';
+        var bool = true;
+        var unde
+        var temp = null;
+        var obj = {};
+        var arr = [];
+        var fn = function(){};
+
+        document.write(typeof num + '<br>'); //number
+        document.write(typeof str + '<br>'); //string
+        document.write(typeof bool + '<br>'); //boolean
+        document.write(typeof unde + '<br>'); //undefined
+        document.write(typeof temp + '<br>'); //object
+        document.write(typeof obj + '<br>'); //object
+        document.write(typeof arr + '<br>'); //object
+        document.write(typeof fn + '<br>'); //function
+
+
+        //number
+        var num1 = 1,
+            num2 = 10,
+            num3 = 100;
+        document.write(num1 + ',' + num2  + ',' + num3 + '<br>');
+
+        //string
+        var str1 = '문자',
+            str2 = "문자는 '문자'",
+            str3 = '문자는"문자"',
+            str4 = 'you\'re too smart...';
+        document.write (str1 + ',' + str2 + ',' + str3 + ',' + str4 + '<br>');
+
+        //boolean
+        var com1 = (5 > 4),
+            com2 = (5 < 4);
+        document.write(com1 + ',' + com2 + '<br>');
+        
+        //undefined
+        var storage;
+        document.write(strong + '<br>');
+
+        //null
+        var gnb = document.getElementById('gnb');
+        document.write(gnb);
+    </script>
+</body>
+</html>

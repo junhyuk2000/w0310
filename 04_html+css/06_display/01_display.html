@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        /* 
+            display 속성
+                값: block, inline, inline-block, none, ...
+                    flex
+                    grid  
+                
+            visibility : 가시성
+                값: visible(기본값)
+                    hidden
+
+            opacity : 불투명도
+                값: 1(기본값), 0~1 사이 값 (소수점 사용)
+                
+            overflow : 넘침
+                값 : hidden,auto, visible, scroll
+
+            말줄임(...)
+                width:200px;
+                text-overflow: elipsis;
+                overflow: hidden;
+                white-space: rowrap;
+        */
+        li {
+            list-style-type: none;
+        }
+        .gnb li {
+            display: inline;
+        }
+        .gnb li a {
+            display: inline-block;
+            background: brown; color:#fff;
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            text-decoration:none;
+        }
+        .gnb li a:hover {
+            text-decoration: underline;
+            background: #369;
+        }
+    </style>
+</head>
+<body>
+    <ul class="gnb">
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Community</a></li>
+
+    </ul>
+    
+</body>
+</html>

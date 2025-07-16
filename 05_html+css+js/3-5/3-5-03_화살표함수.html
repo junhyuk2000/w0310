@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>화살표함수</title>
+</head>
+
+<body>
+  <script>
+    /*
+      화살표 함수(ES6)
+        익명 함수의 function 대신 =>
+
+        const 변수명 = function (){
+          return 반환값;
+
+        }
+
+        //단일 명령문의 경우
+        // {} , return 생략 가능
+        const 변수명 = () => 반환값;
+        
+
+    */
+
+    // const doMultiplication = function (s1, s2) {
+    //   return s1 * s2;
+    // }
+    // console.log(doMultiplication(2, 4));
+
+    const doMultiplication = (s1, s2) => s1 * s2;
+    console.log(doMultiplication(2, 4));
+
+
+    // const doAverage = function (s1, s2) {
+    //   const avg = (s1 + s2) / 2;
+    //   return avg;
+    // };
+    const doAverage = (s1, s2) => {
+      const avg = (s1 + s2) / 2;
+      return avg;
+    };
+    console.log(doAverage(2, 5));
+
+    //매개 변수가 1개
+    // -> () 생략 가능
+
+    // const isEven = function (n) {
+    //   return n % 2;
+    // }
+
+    const isEven = n => n % 2;
+
+    console.log(isEven(3));
+  </script>
+</body>
+
+</html>

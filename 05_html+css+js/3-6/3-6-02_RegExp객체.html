@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>디지털시계</title>
+</head>
+
+<body>
+  <script>
+    /*
+
+      RegExp객체
+        정규 표현식 객체는 정해진 문자의 패턴을 만들 때 사용한다.
+
+      // 리터럴
+      const reg = /Javascript/;
+
+      // new 키워드
+      const reg = new RegExp('Javascript');
+
+      메서드
+        test()
+          정규표현식과 일치하는 문자열이 있으면 true, 없으면 false
+        
+        match()
+          정규표현식과 일치하는 문자열을 배열로 반환
+          일치하는 문자열이 없으면 null
+
+      정규표현식 객체 플래그
+        i
+          대소문자 구분 없이 정규표현식과 문자열을 비교
+        g
+          문자열 전체를 정규표현식과 비교
+        m
+          여러 행의 문자열을 정규표현식과 비교
+
+      정규표현식 객체 주요 패턴
+        abc
+          abc 문자열을 검색한다.
+          /abc/는 'abc'
+          [abc]는 'a','b','c' 중 문자 하나를 검색
+          /[abc]d/는 'ad','bd','cd' 중 문자 하나를 검색
+          [^abc]는 'a','b','c' 를 제외한 문자 하나를 검색
+          /[^abc]d/는 'ed','fd','gd' , ....
+          
+          [A-Z]
+            알파벳 대문자를 검색
+          [a-z]
+            알파벳 소문자를 검색
+          [0-9]
+            0~9까지의 숫자를 검색
+          .
+            하나의 문자를 검색
+            만약'마침표' 문자 그대로의 의미를 사용할 경우 '\.'으로 표현해야한다.
+          \w
+            알파벳,숫자,_를 검색
+          \W
+            알파벳,숫자,_를 제외하고 검색
+          \d
+            숫자를 검색
+          \D
+            숫자를 제외하고 검색
+          \s
+            하나의 공백을 검색
+          \S
+            공백을 제외하고 검색
+          
+          ^
+            행의 첫 문자가 일치해야 함을 의미
+          $
+            행의 끝 문자가 일치해야 함을 의미
+          *
+            * 앞의 문자가 0번 이상 반복을 의미
+            /a*b/
+    */
+
+    const hpReg = /^\d{10,11}$/;
+    const emailReg = /^[A-Za-z0-9!#$%^&*_] + @[A-Za-z0-9_-] + (\.[A-Za-z0-9_-]+){1,2}$/;
+
+
+  </script>
+</body>
+
+</html>

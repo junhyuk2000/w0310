@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>폼</h1>
+    <h2>get vs post</h2>
+    <h3>get</h3>
+    <!-- 
+    method를 생략하면 get방식이다. 
+    get방식은 아이디 비번이 url에 노출
+    로그인창은 post방식으로 구현해야함
+    -->
+    <form action="method.jsp" method="get">
+        <!-- text는 autocomplete=on이다 -->
+        <!-- 네임은 반드시 적어야함. 없으면 데이터 전송안댐 -->
+        아이디 <input type="text" name="user_id" autocomplete="off"> <br>
+        <!-- password타입은 autocomplete가 지정되지 않는다. -->
+        패스워드 <input type="password" name="user_pw"> <br>
+        <input type="submit" value="로그인">
+    </form>
+
+    <h3>post</h3>
+    <!-- 
+        post방식
+        데이터 전송위치 : http 메세지의 body에 담겨 전송(url에는 안보임)
+        특징 : 데이터가 주소창에 노출안됨
+                데이터 길이 제한 거의없음
+                북마크 불가능
+                캐싱안됨
+                보안에 유리함
+    -->
+    <!-- 로그인 회원가입은 post방식으로 -->
+    <form action="method2.jsp" method="post">
+        아이디 <input type="text" name="user_id" autocomplete="off"> <br>
+        패스워드 <input type="password" name="user_pw"> <br>
+        <input type="submit" value="로그인">
+    </form>
+</body>
+</html>

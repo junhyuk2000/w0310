@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    color: #333;
+    margin: 0;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+h1,h2,p {
+    margin: 0;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+img {
+    vertical-align: middle;
+}
+.wrap {
+    display: flex;
+    width: 100%;
+}
+
+/* 헤더 */
+.header {
+    position: relative;
+    width: 200px;
+}
+.header h1 {
+    margin-top: 20px;
+}
+nav {
+    position: absolute;
+    margin-top: 50px;
+}
+/* 글로벌 내비게이션 */
+.main::before {
+    position: absolute;
+    display: none;
+    width: 1720px;
+    top: 0;
+    left: 100%;
+    background: rgba(0,0,0,0.5);
+    content:"";
+}
+.main:hover::before {
+    width: 1720px;
+    height: 200px;
+    display: block;
+}
+.main>li {
+    display: flex;
+    position: relative;
+}
+.main>li>a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: .3s;
+    font-weight: bold;
+}
+.main>li>a:hover {
+    background: #000;
+    color:#fff;
+}
+.sub {
+    position: absolute;
+    top: 0;
+    left:100%;
+    z-index: 2;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    line-height: 2;
+}
+
+.main:hover .sub {
+    height: 200px;
+    opacity: 1;
+    visibility: visible;
+}
+.sub a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color:#fff;
+}
+.sub a:hover {
+    background: #fff;
+    color:#000;
+}
+
+/* 컨텐츠 */
+.contents {
+    width: calc(100% - 200px);
+}
+
+/* 슬라이드 */
+.slide {
+    z-index: -3;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.inner {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.inner.show {
+    opacity: 1;
+}
+
+
+/* 바로가기 */
+.slide_link {
+    position: absolute;
+    top:0; 
+    right: 0; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.slide_link div {
+    padding: 0 10px 10px 10px;
+    background: #b0def8;
+}
+
+
+
+/* 배너 */
+.banner {
+    width: 100%;
+    display:flex;
+    height: 200px;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    background: #e9e9e9;
+    justify-content: space-evenly;
+}
+
+.banner img {
+    margin-left: 40px;
+}
+
+.banner_txt h2{
+    margin-bottom:20px;
+}
+/* 공지사항/갤러리 */
+.tab {
+    width: 1720px;
+    height: 250px;
+    background: #e9e9e9;
+    position: relative;
+}
+.tab input {
+    display: none;
+}
+.tab label {
+    margin: 10px 0 0 10px;
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: lightcoral;
+    cursor: pointer;
+}
+.tab_contents {
+    position: absolute;
+    display: none;
+}
+.tab li a {
+    display: inline-block;
+    width: 800px;
+}
+.tab li a:hover {
+    color:darkolivegreen;
+    text-decoration: underline;
+}
+.tab input:checked+label+.tab_contents {
+    display: block;
+}
+.tab input:checked+label {
+    background: #333;
+    color:#fff;
+}
+.tab li {
+    padding: 15px 0 10px 10px;
+}
+.tab input:checked+label+.tab2.tab_contents {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.tab p {
+    text-align: center;
+}
+/* 모달 */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+}
+.modal:target {
+    display: block;
+}
+.modal_contents {
+    position: relative;
+    margin: 15% auto;
+    width: 400px;
+    height: 200px;
+    background: #fff;
+    padding: 20px;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: lightgreen;
+    text-align: center;
+    line-height: 30px;
+}
+/* 푸터 */
+
+.footer {
+    display: flex;
+    width: 1920px;
+    height: 120px;
+    align-items: center;
+    background: #333;
+    font-size: 12px;
+}
+.blogo {
+    width: 200px;
+}
+
+.ft_contents {
+    flex:1;
+    height: 100%;
+}
+.ft_menu {
+    height: 60px;
+    line-height: 60px;
+    margin-left: 30px;
+}
+.ft_menu ul{
+    display: flex;
+}
+
+.ft_menu li:not(:last-child)::after {
+    color:#fff;
+    content: "|";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.ft_menu a {
+    color:#fff;
+}
+.copy {
+    height: 60px;
+    line-height: 30px;
+    margin-left: 30px;
+    color: #fff;
+}

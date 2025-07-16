@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 응용3</title>
+    <style>
+        /* 
+            display:flex; 는 부모 요소(플렉스 컨테이너)에 적용한다.
+            자식은 플렉스 아이템이 되면서 가로 배치된다.
+         */
+        *{
+            margin: 0 auto;
+        }
+        div, header {
+            background: #999999;
+        }
+        .container{
+            display: flex;
+            width: 1200px;
+
+        }
+        .container, .wrap, .contents{
+            background: transparent;
+        }
+
+        .header{
+            width: 200px;
+            margin-right: 4px;
+        }
+        .wrap{
+            width: 1000px;
+        }
+        .slide{
+            height: 400px;
+        }
+        .banner{
+            height: 200px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+        .contents{
+            display: flex;
+            height: 250px;
+        }
+
+        .notice{
+            width: 496px;
+            margin-right: 4px;
+        }
+
+        .gallery{
+            width: 500px;
+        }
+        /* 부모 height 자식이 받으려면 flex써야함 */
+        .footer{
+            display: flex;
+            width: 1200px;
+            height: 100px;
+            margin-top: 4px;
+        }
+        .blogo , .sns{
+            width: 200px;
+        }
+        .copy{
+            width: 796px;
+            margin: 0 4px;
+        }
+
+
+    </style>
+</head>
+<body>
+        <div class="container">
+            <header class="header">헤더</header>
+            <div class="wrap">
+                <div class="slide"></div>
+                <div class="banner"></div>
+                <div class="contents">
+                    <div class="notice">1</div>
+                    <div class="gallery">2</div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="blogo"></div>
+            <div class="copy"></div>
+            <div class="sns"></div>
+        </footer>
+</body>
+</html>

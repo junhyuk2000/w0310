@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            익명(이름없는)함수 생성
+                const 변수 = () =>{
+                    코드;
+                };
+
+                함수호출
+                    변수();
+
+        */
+       
+        const compute = () =>{
+            const x = 0.5;
+            const y = 10;
+            const result = x * y;
+            console.log(result);
+        };
+
+        compute(); // 익명함수는 반드시 생성하고 호출
+
+        /* 
+            즉시 실행 함수
+                (function () {});
+                
+                    호출문x
+        */
+       (function(){
+        iife();
+       })();
+
+       function iife(){
+        console.log('즉시 실행 함수');
+       };
+
+       const instant = (function(){
+            console.log('즉시 실행 함수2');
+            return 10;
+        })();
+
+       console.log(instant);
+    </script>
+</body>
+
+</html>

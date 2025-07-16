@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컬렉션 객체: ver.ES6</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /* 
+            Map 객체
+                객체 리터럴을 보완해주는 객체
+                
+                객체 생성
+                    const 변수 = new Map();
+
+                    const 변수 = new  Map([
+                        [키, 값],
+                        [키, 값],
+                        ...
+                    ])
+
+                메서드
+                    set(키,값)
+                        객체에 값을 추가
+                    get(키)
+                        객체에 키에 해당하는 값을 가져오기
+                    has(키)
+                        객체에 키가 존재하면 true, 없으면 false
+                    keys()
+                        객체의 모든 키를 가져오기
+                    values()
+                        객체의 모든 값을 가져오기
+                    entries()
+                        객체의 모든 키와 값을 가져오기
+                    delete(키)
+                        객체의 키를 삭제
+                    clear()
+                        모든 요소 삭제
+        */
+        //Map 객체 생성
+        const sub = new Map();
+
+        //Map 객체에 값 추가
+        // -> Map객체.set(키,값)
+        sub.set('html', 1);
+        sub.set('css', 2);
+        sub.set('javascript', 3);
+
+        console.log(sub);
+
+        //객체 생성 및 할당
+        const sub2 = new Map([
+            ['html', 1],
+            ['css', 2],
+            ['javascript', 3]
+        ]);
+        console.log(sub2);
+
+
+        //size 속성 (length와 같은 기능)
+        console.log(sub.size);
+        console.log(sub2.size);
+
+        //get
+        console.log(sub.get('html')); // 1
+        console.log(sub2.get('javascript')); // 1
+
+        //has(키)
+        console.log(sub.has('css')); //true
+        console.log(sub.has('react')); //false
+
+        //keys()
+        console.log('key======================')
+        for (let key of sub.keys()) {
+            console.log(key);
+        }
+
+        //value()
+        console.log('value======================')
+        for (let key of sub.value()) {
+            console.log(key);
+        }
+        //entries()
+        console.log('entries======================');
+        for (let key of sub.entries) {
+            console.log(key);
+        }
+
+        //delete(키)
+        sub.delete('html');
+        console.log(sub.has('html')); // false
+
+        //clear
+        sub.clear();
+        console.log(sub.size);
+
+
+    </script>
+</body>
+
+</html>

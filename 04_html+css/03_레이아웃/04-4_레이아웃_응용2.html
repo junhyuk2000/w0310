@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 - 응용2</title>
+
+
+    <style>
+        /* shift + alt + f : 들여쓰기(정렬) */
+        /* 
+            선택자 {
+            속성 : 값
+            속성 : 값
+            ...
+            }
+
+            선택자의 종류
+            1. 태그(요소, 타입)선택자
+            2. 클래스 선택자( . )
+            
+        */
+
+
+        
+        
+        .header {
+            width: 100px;
+            background: #ccc;
+        }
+        
+        .wrap {
+            /* 부모 요소 */
+            display: flex;
+            height: 300px;
+        }
+        
+        
+        .right_contents {
+            width: 500px;
+        }
+        
+        
+        .slide{
+            height: 150px;
+            background: #89fc89;
+        }
+        
+        .banner{
+            height: 70px;
+            background: rgb(238, 202, 102);
+        }
+        
+        .contents{
+            height: 80px;
+            background: #84c8ff;
+        }    
+
+        .footer {
+            width: 600px;
+            height: 50px;
+            background: #000;
+        }
+
+
+
+        </style>        
+
+
+</head>
+
+<body>
+    <!-- 부모인 .wrap에 display:flex;  -->
+    <div class="wrap">
+        <!-- 자식이 가로 배치 // header,right_contents -->
+        <div class="header">헤더</div>
+        <div class="right_contents">
+            <div class="slide">슬라이드</div>
+            <div class="banner">배너</div>
+            <div class="contents">콘텐츠</div>
+        </div>
+    </div>
+
+    <div class="footer"> 푸터 </div>
+
+</body>
+
+</html>

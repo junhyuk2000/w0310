@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            변수란 데이터를 담는 저장공간
+
+            변수 이름 정의
+                1. 띄어쓰기 할 수 없다.
+                2. 첫글자는 영문자, _, $
+                3. 두 번째 글자부터는 영문자, _, $, 숫자 조합
+                4. 예약어는 변수명 사용 x
+                5. 카멜표기법(관례)
+
+            데이터
+                1.숫자 (number) : 10  
+                    문자(char) : 'j'
+                2. 문자열 (string) : "javascript" 
+                3. 불리안 (boolean) : true,false    
+            
+            예약어 (키워드):
+                1. 논리값 : true, false 
+                2. 변수 키워드 : var, let, const 
+                3. 제어문 : break, continue
+
+            변수(variable)선언 키워드            
+                var -> let, const (엄격)
+                let
+                const
+
+
+
+            연산자
+                1. 산술연산자 : + - * /
+                2. 비교연산자 : > < >= <=
+                2. 비교연산자 : != !== 같지않다
+                2. 비교연산자 : == === 같다
+                3. 대입(할당) : =
+        */
+        // 오른쪽의 데이터를 왼쪽 변수에 할당한다.
+        var num = 1; //변수 선언 및 할당
+        var str = "javascript";
+        var temp = true;
+
+        // 1. 여러개의 변수를 ,로 연속하여 선언
+
+         /* 
+        변수 선언
+            var 변수명;
+        변수에 값 할당
+            변수명 = 값;
+            -> 오른쪽의 값을 왼쪽 변수명에 할당한다.
+            변수명 = 변수; 도 가능
+            변수명 = 변수명 + 변수명;
+
+            값 = 변수명 은 안됨
+        */
+        var num, str, temp  // 변수 선언
+        num = 1000 // 변수 할당
+        str = "Javascript" // 문자열(string) 데이터는 "" 또는 '' 로 묶는다.
+        temp = "true" // true를 "" 로 묶으면 문자열로 처리
+        // 여러개의 변수를 ,로 연속하여 선언 및 할당
+        var str2 = '자바스크립트', temp2 = false;
+
+        // 2. 변수는 새로운 데이터가 저장되면 기존 데이터는 사라진다.
+        num = 3000;
+        num = 5000;
+        num = 8000;
+
+        //출력
+        console.log(num);
+        console.log(str);
+        console.log(temp);
+    </script>
+</body>
+
+</html>

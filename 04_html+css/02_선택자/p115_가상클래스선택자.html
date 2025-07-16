@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 
+        가상 클래스 선택자(:)
+            a:link -> 방문 전 
+            a:visited -> 방문 후  
+            선택자:hover  -> 올렸을 때
+            선택자:active -> 눌렀을 때
+            선택자:focus 
+            
+            선택자:first-child
+            선택자:last-child
+            선택자:nth-child(n)
+    */
+    a {
+        color: dodgerblue;
+        text-decoration: none;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    a:hover {
+        color:red;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+    .df {
+        display: flex;
+    }
+    li {
+        margin-left: 20px;
+    }
+</style>
+<body>
+    <ul class="df">
+        <li><a href="#">COMPANY</a></li>
+        <li><a href="#">PRODUCT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a href="#">CUSTOMER</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+    </ul>
+</body>
+</html>

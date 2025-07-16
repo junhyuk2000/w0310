@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>랜덤 이미지</title>
+</head>
+
+<body>
+  <h1>랜덤 이미지 생성기</h1>
+  <button id="btn">이미지 보기</button>
+  <img src="https://picsum.photos/id/237/200/300" alt="1" id="randomImg">
+  <script>
+    const btn = document.getElementById('btn');
+    const randomImg = document.getElementById('randomImg');
+
+    const imgs = [
+      "https://picsum.photos/id/337/200/300",
+      "https://picsum.photos/id/338/200/300",
+      "https://picsum.photos/id/339/200/300",
+      "https://picsum.photos/id/340/200/300",
+      "https://picsum.photos/id/341/200/300"
+    ];
+
+    const showRandomImg = () => {
+      const randomIndex = Math.floor(Math.random() * imgs.length); // 0,1,2,3,4
+      const selectedImg = imgs[randomIndex];
+      randomImg.src = selectedImg;
+    };
+
+    btn.addEventListener('click', () => {
+      showRandomImg();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>링크(link)</h1>
+    <!-- 
+        anchor(닻) 
+        <a href="URL" target="타깃">클릭</a> 
+            href는 필수 속성
+                URL > http://~, https://~
+                파일 > 경로/파일명
+                메일 > mailto:
+                전화번호 > tel:~
+
+            프로토콜(protocal,통신규약)
+            컴퓨터나 전자 기기 간의 통신 방식을 정의하는
+                http, https, mailto,tel, FTP(파일), SMTP(메일), POP3(메일), IMAP(메일)
+
+    target는 선택 속성
+        작성 안하면 target="_self"가 생략되어 기본값으로 들어간다. 
+        target="_blank" -> 새 창으로 열린다.
+        target="_top" -> 최상위(루트 root) 페이지로 열린다.
+        target="_parents" -> 부모 페이지로 열린다
+        
+
+
+        href (hyper refernce)
+    -->
+        <!-- 네이버는 현재 창으로 뜬다. -> 타깃 사이트-->
+    <a href="https://naver.com">네이버</a> <br>
+        <!-- 구글은 새창으로 뜬다. -> 타 사이트 -->
+    <a href="https://google.com" target="_blank">구글</a> <br>
+        <!-- 이메일 -->
+    <a href="mailto:wnscjcj2000@naver.com" target="_blank">이메일</a> <br>
+        <!-- 전화번호 -->
+    <a href="tel:010-9912-6742" target="_blank">번호</a> <br>
+        <!-- 파일 -->
+    <a href="./11_이미지.html">페이지</a> <br>
+    <a href="./../70_pf/mcdonald/img/logo.png">로고</a> <br>
+    <h2>이미지에 링크걸기</h2>
+    <a href="https://naver.com" target="_blank">
+        <img src="./assets/네이버.png" alt="네이버로고"></a>
+</body>
+</html>

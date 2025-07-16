@@ -1,0 +1,52 @@
+@charset "UTF-8";
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+}
+.main-nav {
+  position: relative;
+  width: 800px; /* 내비게이션 너비만큼만 */
+  margin: 0 auto;
+}
+
+.gnb {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: #333;
+}
+
+.gnb > li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.gnb > li > a {
+  display: block;
+  padding: 20px;
+  color: white;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%; /* gnb 너비만큼 */
+  background: yellow;
+  opacity: 0.6;
+  z-index: 10;
+}
+
+.gnb:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+

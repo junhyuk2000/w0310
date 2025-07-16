@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+</head>
+<body>
+    <script>
+        /* 
+            논리 연산자 (Logical Operator)
+                && 
+                    -> and(그리고)
+                        피연산자 값이 모두 true면 true 반환
+                        아니면 false
+                        (false값을 반환하는 피연산자를 먼저 적으면 계산속도가 더 빠름)
+
+                ||  -> or(또는)
+                        피연산자 값 중 하나라도 true면 true 반환
+                        모든 값이 false면 false 
+                        
+                !   -> not(부정)
+                        피연산자의 값이 true면 false반환, false면 true 반환
+
+            ex) x의 값이 20보다 크고, 30보다 작다
+                20 < x && x < 30
+                x > 20 &&  x < 30
+        */
+
+        console.log(3>2 && 5>3); // true && true => true
+        console.log(3<2 && 5>3); // false && true => false
+        console.log(3>2 || 5>3); // true || true => true
+        console.log(3<2 || 5<3); // false || false => false
+        console.log(!(3<2)); // !false => true
+        console.log(!(3>2)); // !true => false
+
+    </script>
+</body>
+</html>

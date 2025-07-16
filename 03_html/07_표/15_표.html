@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+
+    <style>
+        /*  선택자 {속성 : 값 값 값;}*/
+        /* 본문에 있는 td,th태그에 테두리를 두께1px, 선종류 solid, 선 색은 검정으로 지정한다. */
+        th , td {
+            border:1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <h1>표(table, 테이블)</h1>
+    <h2>1행1열</h2>
+    <table style="border:1px solid black;">
+        
+        <tr><th>1행1열의 표</th></tr>
+    </table>
+    <br><br><br><br><br><br><br>
+
+
+
+    <!-- 인라인스타일 : html의 style속성으로 기록하는 방식 -->
+    <table style="border:1px solid black; border-collapse: collapse;">
+    <!-- tr은 행, td는 셀 -->
+    <!-- 
+        table은 자식으로 하나 이상의 tr이 무조건 있어야한다.
+        tr은 자식으로 하나 이상의 td가 무조건 있어야한다.
+    -->
+    <tr>
+        <th> 1행1열 </th>
+        <th> 1행2열 </th>
+        <th> 1행3열 </th>
+        <th> 1행4열 </th>
+    </tr>
+    <tr>
+        <td> 2행1열 </td>
+        <td> 2행2열 </td>
+        <td> 2행3열 </td>
+        <td> 2행4열 </td>
+    </tr>
+    <tr>
+        <td> 3행1열 </td>
+        <td> 3행2열 </td>
+        <td> 3행3열 </td>
+        <td> 3행4열 </td>
+    </tr>
+    <tr>
+        <td> 4행1열 </td>
+        <td> 4행2열 </td>
+        <td> 4행3열 </td>
+        <td> 4행4열 </td>
+    </tr>
+    </table>
+
+
+
+
+
+
+</body>
+</html>

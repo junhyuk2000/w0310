@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상단 고정 헤더</title>
+    <style>
+        /*
+                fixed는 상단 고정 내비 제작 시 사용된다.
+        */
+        body {
+            margin: 0;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            left: 0;
+            top: 0;
+            background: red;
+        }
+        section {
+            height: 900px;
+            border: 2px solid black;
+        }
+        .sec1 {
+            background: orange;
+        }
+        .sec2 {
+            background: yellow;
+        }
+        .sec3 {
+            background: green;
+        }
+        .sec4 {
+            background: blue;
+        }
+        footer {
+            background: coral;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>헤더</header>
+    <section class="sec1">1</section>
+    <section class="sec2">2</section>
+    <section class="sec3">3</section>
+    <section class="sec4">4</section>
+    <footer>푸터</footer>
+</body>
+</html>
