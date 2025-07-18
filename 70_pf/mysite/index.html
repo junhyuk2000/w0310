@@ -1,195 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Made by JunHyuk</title>
+  <link rel="icon" href="/favicon.png" type="image/svg+xml">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
   <!-- SNS와 GitHub -->
-  <nav class="container w-50">
+  <nav class="container pt-5 pb-4 text-end ">
     <!-- 부트스트랩에서 row는 display:flex -->
-    <div class="row justify-content-end pt-5 pb-4">
-      <ul class="row col-3 list-unstyled">
-        <li class="col-5"><a href="https://www.instagram.com/"
-            class="text-secondary text-decoration-none fs-4 fst-italic">instagram</a>
+    <div>
+      <ul class="d-inline">
+        <li class="d-inline">
+          <a href="https://www.instagram.com/" class="text-secondary fst-italic">instagram</a>
         </li>
-        <li class="col-5"><a href="https://github.com/junhyuk2000"
-            class="text-secondary text-decoration-none fs-4 fst-italic">GitHub</a>
+        <li class="d-inline"><a href="https://github.com/junhyuk2000" class="text-secondary fst-italic">GitHub</a>
         </li>
       </ul>
     </div>
   </nav>
   <!-- about me -->
   <header class="py-5 mb-5">
-    <div class="container w-50">
+    <div class="container px-4">
       <h1 class="display-4 text-white fw-bold fst-italic my-4">JunHyuk Wallace</h1>
     </div>
   </header>
+
   <!-- portfolio -->
-  <main class="container w-50">
-    <div>
+  <main class="p-5">
+    <div class="container px-4">
       <!-- 팀 프로젝트 -->
       <h2 class="display-6 fw-bold fst-italic my-5">Team Project</h2>
 
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="./images/steam_thumb.jpg" alt="스팀썸네일" class="rounded rounded-3">
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="./images/steam_thumb.jpg" alt="스팀썸네일" class=" w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
+        <div class="col-md-10 col-9">
           <h3 class="fs-4 fst-italic">Steam <span> (2025)</span></h3>
-          <!-- 
-            lh-1    1rem
-            lh-sm   1.25rem   
-            lh-base 1.5rem -> 기본값
-            lh-lg   2rem
-          -->
           <p class="my-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit veniam dicta quasi
             error
             nisi corporis
             asperiores laborum dolore enim accusantium? Ad reprehenderit tenetur dolore qui ab?
           </p>
-          <p><a href="https://junhyuk2000.github.io/w0310/70_pf/steam/" class="text-secondary fs-6">Steam
+          <p><a href="https://junhyuk2000.github.io/w0310/70_pf/steam/" target="_blank" class="text-secondary">Steam
               바로가기</a></p>
         </div>
       </div>
 
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="./images/steam_thumb.jpg" alt="스팀썸네일" class="rounded rounded-3">
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="./images/lunest_thumb.png" alt="스팀썸네일" class="w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
-          <h3 class="fs-4 fst-italic">Steam <span>(2025)</span></h3>
-          <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia blanditiis suscipit illo
-            magnam itaque
-            possimus perspiciatis alias commodi molestias vitae?
+        <div class="col-md-10 col-9">
+          <h3 class="fs-4 fst-italic">Lunest <span>(2025)</span></h3>
+          <p>Steam 플랫폼을 클론한 팀 프로젝트입니다. 게임 목록, 상세 정보, 검색 기능 등 실제 서비스에 가까운 UI를 직접 구현하며 사용자 흐름을 고려한 웹 구조를 설계했습니다.
+            특히 로컬스토리지를 이용한 로그인 및 회원가입 기능을 구현하여 사용자 계정 정보를 저장하고 인증 흐름을 직접 구성했습니다.
+            이를 통해 백엔드 없이도 사용자 상태 관리와 간단한 세션 유지 기능을 체험할 수 있도록 만들었습니다.
           </p>
-          <p><a href="https://junhyuk2000.github.io/w0310/70_pf/steam/" class="text-secondary fs-6">Steam 바로가기</a>
+          <p><a href="https://junhyuk2000.github.io/w0310/70_pf/steam/" target="_blank" class="text-secondary">Steam
+              바로가기</a>
           </p>
         </div>
       </div>
 
       <!-- 개인 프로젝트 -->
-      <h2 class="display-6 fw-bold fst-italic my-5">Personal Project</h2>
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="https://placehold.co/100x100?text=WIP" alt="Todo-list썸네일" class="rounded rounded-3">
+      <h2 class="display-6 fw-bold fst-italic my-5 pt-5">Personal Project</h2>
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="./images/todo_thumb.PNG" alt="Todo-list썸네일" class="w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
+        <div class="col-md-10 col-9">
           <h3 class="fs-4 fst-italic">Todo-list <span>(2025)</span></h3>
-          <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia blanditiis
-            suscipit illo magnam itaque
-            possimus perspiciatis alias commodi molestias vitae?
+          <p>간단한 할 일 관리 기능을 제공하는 개인 프로젝트입니다. 로컬스토리지를 활용해 사용자의 데이터를 저장하며, 체크박스, 삭제, 필터 등의 기능을 통해 기본적인 CRUD 동작을 구현했습니다.
           </p>
-          <p><a href="#" class="text-secondary fs-6">Todo-list 바로가기</a></p>
+          <p><a href="#" target="_blank" class="text-secondary">Todo-list 바로가기</a></p>
         </div>
       </div>
 
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="https://placehold.co/100x100?text=WIP" alt="썸네일" class="rounded rounded-3">
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="https://placehold.co/100x100?text=WIP" alt="Todo-list썸네일" class="w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
-          <h3 class="fs-4 fst-italic">Work In Progress ... <span>(2025)</span></h3>
-          <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia blanditiis
-            suscipit illo magnam itaque
-            possimus perspiciatis alias commodi molestias vitae?
+        <div class="col-md-10 col-9">
+          <h3 class="fs-4 fst-italic">Todo-list <span>(2025)</span></h3>
+          <p>간단한 할 일 관리 기능을 제공하는 개인 프로젝트입니다. 로컬스토리지를 활용해 사용자의 데이터를 저장하며, 체크박스, 삭제, 필터 등의 기능을 통해 기본적인 CRUD 동작을 구현했습니다.
           </p>
-          <p><a href="#" class="text-secondary fs-6">WIP 바로가기</a></p>
+          <p><a href="#" target="_blank" class="text-secondary">Todo-list 바로가기</a></p>
         </div>
       </div>
 
       <!-- C.W.D.D -->
       <h2 class="display-6 fw-bold fst-italic my-5">C.W.D.D</h2>
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="./images/aboutcoffee_thumb.png" alt="에이바우트 썸네일" class="rounded rounded-3">
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="./images/aboutcoffee_thumb.png" alt="에이바우트 썸네일" class="w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
+        <div class="col-md-10 col-9">
           <h3 class="fs-4 fst-italic">About Coffee <span>(2025)</span></h3>
-          <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia blanditiis
-            suscipit illo magnam itaque
-            possimus perspiciatis alias commodi molestias vitae?
+          <p>커피 브랜드 웹사이트를 제작한 프로젝트로, 브랜드 소개, 제품 정보, 이벤트 섹션으로 구성되어 있습니다. 정적인 웹사이트이지만 디자인 구성과 폰트, 여백, 레이아웃 배치에 집중하여 시각적인
+            완성도를 높였습니다.
           </p>
           <p><a href="https://junhyuk2000.github.io/w0310/70_pf/dothome/a_bout" target="_blank"
               class="text-secondary fs-6">About Coffee
               바로가기</a></p>
         </div>
       </div>
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="./images/daewoo_thumb.png" alt="대우 썸네일" class="rounded rounded-3">
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="./images/daewoo_thumb.png" alt="대우 썸네일" class=" w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
+        <div class="col-md-10 col-9">
           <h3 class="fs-4 fst-italic">DaeWoo <span>(2025)</span></h3>
-          <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia blanditiis
-            suscipit illo magnam itaque
-            possimus perspiciatis alias commodi molestias vitae?
+          <p>건설회사 웹사이트를 제작한 프로젝트입니다. 기업 이미지와 안정감을 전달하기 위해 컬러톤과 그리드 레이아웃을 조절했고, 주요 프로젝트 소개 섹션을 중심으로 신뢰성을 강조한 콘텐츠 배치를
+            진행했습니다.
           </p>
           <p><a href="https://junhyuk2000.github.io/w0310/70_pf/dothome/daewooenc" target="_blank"
               class="text-secondary fs-6">DaeWoo
               바로가기</a></p>
         </div>
       </div>
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="./images/dankook_thumb.png" alt="단국대 썸네일" class="rounded rounded-3">
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="./images/dankook_thumb.png" alt="단국대 썸네일" class="w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
+        <div class="col-md-10 col-3">
           <h3 class="fs-4 fst-italic">DanKook <span>(2025)</span></h3>
-          <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia blanditiis
-            suscipit illo magnam itaque
-            possimus perspiciatis alias commodi molestias vitae?
+          <p>단국대학교를 기반으로 한 웹사이트 리디자인 프로젝트입니다. 학과 소개, 공지사항, 학사일정 등의 섹션을 구성하며 사용자들이 정보를 빠르게 찾을 수 있도록 구조화했습니다.
           </p>
           <p><a href="https://junhyuk2000.github.io/w0310/70_pf/dothome/dankook" target="_blank"
               class="text-secondary fs-6">DanKook
               바로가기</a></p>
         </div>
       </div>
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="./images/eunsung_thumb.png" alt="은성 썸네일" class="rounded rounded-3">
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="./images/eunsung_thumb.png" alt="은성 썸네일" class="w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
+        <div class="col-md-10 col-3">
           <h3 class="fs-4 fst-italic">EunSung <span>(2025)</span></h3>
-          <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia blanditiis
-            suscipit illo magnam itaque
-            possimus perspiciatis alias commodi molestias vitae?
+          <p>기업 홈페이지를 목표로 제작된 프로젝트입니다. 브랜드 아이덴티티를 살린 색상 구성과 폰트 선택, 이미지 배치를 통해 기업의 전문성과 친근한 이미지를 함께 담았습니다.
           </p>
           <p><a href="https://junhyuk2000.github.io/w0310/70_pf/dothome/eunsung" target="_blank"
               class="text-secondary fs-6">EunSung
               바로가기</a></p>
         </div>
       </div>
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="./images/gsenc_thumb.png" alt="gs이엔씨썸네일" class="rounded rounded-3">
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="./images/gsenc_thumb.png" alt="gs이엔씨썸네일" class="w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
+        <div class="col-md-10 col-3">
           <h3 class="fs-4 fst-italic">GS E&C <span>(2025)</span></h3>
-          <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia blanditiis
-            suscipit illo magnam itaque
-            possimus perspiciatis alias commodi molestias vitae?
+          <p>GS건설 웹사이트 리디자인 프로젝트입니다. 실제 웹사이트의 섹션을 참고하여 메인 페이지, 사업 영역, 뉴스 등으로 구성하였고, 사용자의 탐색 흐름을 고려한 네비게이션과 콘텐츠 배치에
+            집중했습니다.
           </p>
           <p><a href="https://junhyuk2000.github.io/w0310/70_pf/dothome/gsenc" target="_blank"
               class="text-secondary fs-6">GS E&C 바로가기</a>
           </p>
         </div>
       </div>
-      <div class="row mb-5">
-        <div class="col-2">
-          <img src="./images/samsung_thumb.png" alt="삼성 썸네일" class="rounded rounded-3">
+      <div class="row mb-4">
+        <div class="col-md-2 col-3">
+          <img src="./images/samsung_thumb.png" alt="삼성 썸네일" class="w-100 rounded rounded-3">
         </div>
-        <div class="col-10">
+        <div class="col-md-10 col-3">
           <h3 class="fs-4 fst-italic">SamSung <span>(2025)</span></h3>
-          <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia blanditiis
-            suscipit illo magnam itaque
-            possimus perspiciatis alias commodi molestias vitae?
+          <p>삼성 기업 홈페이지를 클론한 프로젝트입니다. 글로벌 대기업의 이미지를 유지하면서 정보 전달에 중점을 둔 구조로, 배너, 뉴스, 제품 소개 등 다양한 UI 패턴을 실습했습니다.
           </p>
           <p><a href="https://junhyuk2000.github.io/w0310/70_pf/dothome/samsung" target="_blank"
               class="text-secondary fs-6">SamSung
@@ -201,12 +186,17 @@
 
 
   <!-- contact me -->
-  <footer class="container w-50">
-    <div>
-      <div class="tothetop"><a href="#top" To The Top</a></div>
-      <ul>
-        <li><a href="tel:010-9912-6742">010-9912-6742</a></li>
-        <li><a href="mailto:wnscjcj2000@naver.com">wnscjcj2000@naver.com</a></li>
+  <footer class="bg-dark text-white py-5 mt-5 text-center">
+    <div class="container px-4">
+      <div>
+        <a href="#top" class="text-white btn btn-danger btn-sm rounded-1 fs-5 py-2 px-3"> ▲ To The
+          Top</a>
+      </div>
+      <ul class="mt-4 mb-5">
+        <li class="d-inline"><a href="tel:010-9912-6742" class="text-white fs-3 fst-italic">010-9912-6742</a></li>
+        <li class="d-inline"><a href="mailto:wnscjcj2000@naver.com"
+            class="text-white fs-3 fst-italic">wnscjcj2000@naver.com</a>
+          </liss=>
       </ul>
     </div>
     <p>&copy; 2025 Jun-Hyuk Choi. All right reserved.</p>

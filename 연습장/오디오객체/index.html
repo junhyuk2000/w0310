@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="playBtn">재생</button>
+
+  <script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const gainNode = audioCtx.createGain();
+    gainNode.connect(audioCtx.destination);
+
+    let audioBuffer = null;
+    let sourceNode = null;
+
+    //mp3 파일 불러오기
+    async function loadAudio() {
+      const res = await fetch('GlassChinchilla.mp3');
+      const arrayBuffer = await res.arrayBuffer();
+      audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
+    }
+
+    // 재생 함수
+    function playAudio() {
+      if (!audioBuffer) return;
+      sourceNode = audioCtx.createBufferSource();
+      sourceNode.buffer = audioBuffer;
+      sourceNode.connect(gainNode);
+      sourceNode.start(0);
+    }
+
+    const play = document.getElementById('platBtn');
+    play.addEventListener('click', async () => {
+      if (audioCtx.state === 'suspended') {
+        await audioCtx.resume();
+      }
+      if (!audioBuffer) {
+        await loadAudio();
+      }
+      playAudio();
+    })
+    window.addEventListener('load', async () => {
+      await loadAudio();
+      console.log('음원 로딩 완료')
+    });
+  </script>
+</body>
+
+</html>

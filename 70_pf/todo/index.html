@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,20 @@
     <link rel="stylesheet" href="index.css">
     <title>Todo</title>
 </head>
+
 <body>
     <div class="todo_container">
         <h1 class="todo_title">ToDo</h1>
+        <div class="date_box">
+            <p>📆 오늘의 날짜는</p>
+            <p class="date"></p>
+        </div>
         <div class="todo_input_box">
             <input type="text" id="todo_input" placeholder="할 일 추가" onkeydown="enterAdd()">
             <button type="button" id="add_btn"> + </button>
         </div>
         <ul id="todo_list">
-            
+
         </ul>
         <div class="delete_btn_wrap">
             <button class="delete_all">전체 삭제</button>
@@ -25,4 +31,5 @@
         <script src="index.js"></script>
     </div>
 </body>
+
 </html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .floaty {
+      font-size: 40px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .typewriter {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #fff;
+      width: 0;
+      animation: typing 3s steps(20, end) forwards, blink 0.7s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
+    }
+
+    .flip-card {
+      width: 200px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .flip-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .flip-card:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front,
+    .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+    }
+
+    .flip-front {
+      background: #f5f5f5;
+    }
+
+    .flip-back {
+      background: #333;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    .card {
+      width: 250px;
+      height: 300px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-bg {
+      width: 250px;
+      height: 300px;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #2c3e50, #34495e);
+      transition: 0.5s;
+      color: white;
+      padding: 16px;
+
+    }
+
+    .card-bg:hover {
+      background: linear-gradient(145deg, #4b6cb7, #182848);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .section {
+      padding: 100px 20px;
+    }
+
+    .card {
+      background: #f2f2f2;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 초기 상태 (숨김) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    /* 보일 때 활성화 */
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .list-fadein li {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .list-fadein li:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .list-fadein li:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    .list-fadein li:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+
+    .list-fadein li:nth-child(4) {
+      animation-delay: 0.7s;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .accordion-list .desc {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion-list li:hover .desc {
+      max-height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="floaty">🌙</div>
+  <h2 class="typewriter">이 소리에 집중해보세요...</h2>
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">앞면</div>
+      <div class="flip-back">뒷면</div>
+
+    </div>
+  </div>
+
+  <div class="card">🎵 카드 내용</div>
+  <div class="card-bg">
+    <h3>오늘의 소리</h3>
+    <p>당신을 위한 힐링 사운드</p>
+  </div>
+  <section class="section">
+    <h2 class="reveal">오늘의 추천 사운드</h2>
+    <p class="reveal">지친 하루를 위한 힐링 소리</p>
+  </section>
+
+  <div class="df">
+    <section class="section">
+      <div class="card reveal">
+        🎧 바다 파도 소리
+      </div>
+      <div class="card reveal">
+        🌲 숲속 새소리
+      </div>
+    </section>
+    <ul class="list-fadein">
+      <li>🌊 파도 소리</li>
+      <li>🌲 숲속 새소리</li>
+      <li>🔥 모닥불</li>
+      <li>🎧 화이트 노이즈</li>
+    </ul>
+    <ul class="accordion-list">
+      <li>
+        <span class="title">🌧️ 빗소리</span>
+        <div class="desc">비 오는 날의 분위기를 그대로 담은 사운드입니다.</div>
+      </li>
+      <li>
+        <span class="title">🔥 벽난로</span>
+        <div class="desc">따뜻한 벽난로 앞에서 들려오는 불꽃 튀는 소리.</div>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (top < windowHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.slide_box {
+  width: 500vw;
+  display: flex;
+}
+
+.left_btn,
+.right_btn {
+  position: absolute;
+}
+
+.left_btn {
+  top: 341px;
+  left: 140px;
+}
+
+.right_btn {
+  top: 341px;
+  right: 140px;
+}
+
+.right_btn button,
+.left_btn button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.indicator {
+  position: absolute;
+  top: 700px;
+  left: 900px;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  justify-content: space-around;
+}
+
+.ellipse {
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background: #fff;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.choice {
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  background: #999;
+}
