@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Ownglyph_Memo_Okja-Rg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 24px/1.5 'Ownglyph_Memo_Okja-Rg', 'Noto sans kr', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+}

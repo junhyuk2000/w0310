@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+
+#section2 {
+  height: 825px;
+}
+
+#section2 h2 {
+  margin-top: 72px;
+  text-align: center;
+  font-size: 45px;
+}
+
+#section2>p {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 37px;
+}
+
+.ranking {
+  display: flex;
+  /* border: 1px solid #000; */
+  width: 1400px;
+  height: 433px;
+  margin: 60px auto 0;
+}
+
+#tabs {
+  margin-left: 33px;
+  position: relative;
+}
+
+#tabs ul {
+  display: flex;
+}
+
+#tabs li {
+  margin: 0 10px;
+}
+
+#ranking1 img {
+  width: 580px;
+  height: 433px;
+  vertical-align: middle;
+  /* border: 1px solid #000; */
+}
+
+
+
+#tabs h3 {
+  margin-top: 27px;
+  margin-bottom: 112px;
+  font-size: 36px;
+}
+
+#ranking2 img,
+#ranking3 img {
+  width: 225px;
+  height: 170px;
+  border: 1px solid #878787;
+}
+
+#ranking3 {
+  margin-left: 33px;
+}
+
+.ranking2_3 {
+  display: flex;
+}
+
+.ranking2_3 p {
+  margin-top: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+#tabs-1,
+#tabs-2,
+#tabs-3,
+#tabs-4 {
+  position: absolute;
+  top: 24px;
+  left: 0;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 가시성 필터 선택자</title>
+    <style>
+        #vis {
+            display: none;
+            /* visibility: hidden; */
+            /* opacity: 0; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="vis">내용이 콘솔에 출력된다.</div>
+    <div>2</div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            가시성 필터 선택자
+                :hidden
+                    display:none;으로 숨긴 요소 선택
+                :visible
+                    보이는 요소 선택
+
+        */
+        $(() => {
+
+            console.log($('div:hidden').text());
+            $('div:visible').css({background: 'orange'});
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>
