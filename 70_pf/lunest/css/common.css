@@ -11,8 +11,12 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
 body {
-  font: 24px/1.5 'Ownglyph_Memo_Okja-Rg', 'Noto sans kr', sans-serif;
+  font-family: 'Ownglyph_Memo_Okja-Rg', 'Noto sans kr', sans-serif;
 }
 
 body,

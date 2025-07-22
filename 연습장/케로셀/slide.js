@@ -1,8 +1,11 @@
 const slide = document.querySelector(".slide_box");
 const inner = document.querySelectorAll(".inner");
 const ellipse = document.querySelectorAll(".ellipse");
+const leftBtn = document.querySelector(".left_btn");
+const rightBtn = document.querySelector(".right_btn");
 let indicatorIdx = 0;
 let i = 1;
+
 slide.style.transition = "none";
 slide.style.transform = `translateX(-${i * 100}vw)`;
 
@@ -20,32 +23,91 @@ const slideMove = () => {
   }
 };
 
+//  setInterval 정지 및 동작
 let slideInterval = setInterval(slideMove, 3000);
 
-slide.addEventListener("mouseover", () => {
+const stopSlide = () => {
   clearInterval(slideInterval);
   clearInterval(indicatorInterval);
-});
+};
 
-slide.addEventListener("mouseout", () => {
-  clearInterval(slideInterval);
-  clearInterval(indicatorInterval);
+const moveSlide = () => {
+  stopSlide();
   slideInterval = setInterval(slideMove, 3000);
   indicatorInterval = setInterval(indicator, 3000);
+};
+
+[slide, rightBtn, leftBtn].forEach((elm) => {
+  elm.addEventListener("mouseover", stopSlide);
 });
+
+[slide, rightBtn, leftBtn].forEach((elm) => {
+  elm.addEventListener("mouseout", moveSlide);
+});
+// slide.addEventListener("mouseover", () => {
+//   clearInterval(slideInterval);
+//   clearInterval(indicatorInterval);
+// });
+
+// slide.addEventListener("mouseout", () => {
+//   clearInterval(slideInterval);
+//   clearInterval(indicatorInterval);
+//   slideInterval = setInterval(slideMove, 3000);
+//   indicatorInterval = setInterval(indicator, 3000);
+// });
 
 // 인디케이터
 const indicator = () => {
   ellipse[indicatorIdx].classList.remove("choice");
   indicatorIdx++;
-  ellipse[indicatorIdx].classList.add("choice");
-  if (indicatorIdx === ellipse.length - 1) {
-    setTimeout(() => {
-      ellipse[indicatorIdx].classList.remove("choice");
-      indicatorIdx = 0;
-      ellipse[indicatorIdx].classList.add("choice");
-    }, 3300);
-  }
-};
 
+  if (indicatorIdx === ellipse.length) {
+    indicatorIdx = 0;
+    ellipse[indicatorIdx].classList.add("choice");
+  }
+
+  ellipse[indicatorIdx].classList.add("choice");
+};
 let indicatorInterval = setInterval(indicator, 3000);
+
+// 버튼 슬라이드 이동
+let isSlideMove = false;
+
+rightBtn.addEventListener("click", () => {
+  if (isSlideMove) return;
+  isSlideMove = true;
+  i++;
+  slide.style.transition = ".3s";
+  slide.style.transform = `translateX(-${i * 100}vw)`;
+
+  ellipse[indicatorIdx].classList.remove("choice");
+  indicatorIdx++;
+  if (indicatorIdx === ellipse.length) indicatorIdx = 0;
+  ellipse[indicatorIdx].classList.add("choice");
+
+  if (i === inner.length - 1) {
+    setTimeout(() => {
+      slide.style.transition = "none";
+      i = 1;
+      slide.style.transform = `translateX(-${i * 100}vw)`;
+    }, 300);
+  }
+  isSlideMove = false;
+});
+
+leftBtn.addEventListener("click", () => {
+  if (isSlideMove) return;
+  isSlideMove = true;
+  i--;
+  slide.style.transition = ".3s";
+  slide.style.transform = `translateX(-${i * 100}vw)`;
+  if (i === 0) {
+    setTimeout(() => {
+      slide.style.transition = "none";
+      i = inner.length - 2;
+      slide.style.transform = `translateX(-${i * 100}vw)`;
+    }, 300);
+    isSlideMove = false;
+  }
+  isSlideMove = false;
+});

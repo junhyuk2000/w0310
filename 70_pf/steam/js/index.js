@@ -44,7 +44,7 @@ function nextSlide() {
       slides.style.transform = `translateY(0px)`;
       idx = 0;
       rects.forEach((r, i) => r.classList.toggle("choice", i === 0));
-    }, 850); // transition 시간보다 살짝 크게
+    }, 850);
   }
 }
 

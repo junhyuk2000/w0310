@@ -50,8 +50,8 @@ img {
 
 .indicator {
   position: absolute;
-  top: 700px;
-  left: 900px;
+  top: 70vh;
+  left: 50vw;
   display: flex;
   align-items: center;
   width: 120px;

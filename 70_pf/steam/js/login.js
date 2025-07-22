@@ -6,14 +6,13 @@ const open = document.getElementById("open");
 const close = document.getElementById("close");
 const save = document.getElementById("save");
 
-// 보이기 토글
+// 보이기 /숨기기 토글
 open.addEventListener("click", () => {
   inputPw.type = "password";
   open.classList.remove("show");
   close.classList.add("show");
 });
 
-//숨기기 토글
 close.addEventListener("click", () => {
   inputPw.type = "text";
   close.classList.remove("show");
