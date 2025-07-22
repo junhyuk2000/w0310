@@ -44,17 +44,6 @@ const moveSlide = () => {
 [slide, rightBtn, leftBtn].forEach((elm) => {
   elm.addEventListener("mouseout", moveSlide);
 });
-// slide.addEventListener("mouseover", () => {
-//   clearInterval(slideInterval);
-//   clearInterval(indicatorInterval);
-// });
-
-// slide.addEventListener("mouseout", () => {
-//   clearInterval(slideInterval);
-//   clearInterval(indicatorInterval);
-//   slideInterval = setInterval(slideMove, 3000);
-//   indicatorInterval = setInterval(indicator, 3000);
-// });
 
 // 인디케이터
 const indicator = () => {
@@ -90,9 +79,13 @@ rightBtn.addEventListener("click", () => {
       slide.style.transition = "none";
       i = 1;
       slide.style.transform = `translateX(-${i * 100}vw)`;
+      isSlideMove = false;
     }, 300);
-  }
-  isSlideMove = false;
+  } else {
+      setTimeout(() => {
+        isSlideMove = false;
+      }, 300);
+    }
 });
 
 leftBtn.addEventListener("click", () => {
@@ -101,13 +94,22 @@ leftBtn.addEventListener("click", () => {
   i--;
   slide.style.transition = ".3s";
   slide.style.transform = `translateX(-${i * 100}vw)`;
+
+  ellipse[indicatorIdx].classList.remove("choice");
+  indicatorIdx--;
+  if (indicatorIdx < 0) indicatorIdx = ellipse.length-1;
+  ellipse[indicatorIdx].classList.add("choice");
+
   if (i === 0) {
     setTimeout(() => {
       slide.style.transition = "none";
       i = inner.length - 2;
       slide.style.transform = `translateX(-${i * 100}vw)`;
+      isSlideMove = false;
     }, 300);
-    isSlideMove = false;
-  }
-  isSlideMove = false;
+  } else {
+      setTimeout(() => {
+        isSlideMove = false;
+      }, 300);
+    }
 });
