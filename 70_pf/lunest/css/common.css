@@ -17,6 +17,7 @@ html {
 
 body {
   font-family: 'Ownglyph_Memo_Okja-Rg', 'Noto sans kr', sans-serif;
+  overflow-x: hidden;
 }
 
 body,

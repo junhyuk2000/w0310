@@ -7,6 +7,16 @@
   height: 100vh;
 }
 
+:root {
+  --333: #333;
+  --main: #ffDB00;
+}
+
+::selection {
+  color: var(--333);
+  background: var(--main);
+}
+
 /* 
 .inner {
   position: absolute;

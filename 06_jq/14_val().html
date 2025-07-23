@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="초기값">
+    <input type="button" value="버튼">
+    <div></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            $('선택자').val()
+                -> 가져오기
+            $('선택자').val(값)
+                -> 지정하기
+
+            요소: input, textarea, select
+          
+        */
+        $(() => {
+
+            $('input[type="button"]').click(()=>{
+                // 가져오기
+                let val = $('input[type="text"]').val();
+                // 지정하기
+                $('input[type="text"]').val(100);
+                // 출력
+                $('div').text(val);
+            });
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

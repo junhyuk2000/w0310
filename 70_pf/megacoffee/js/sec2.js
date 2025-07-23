@@ -1,4 +1,4 @@
-// import data from "data.js";
+import data from "data.js";
 
 const tabMenu = document.querySelectorAll("#tabs>ul>li");
 const tab = document.querySelectorAll("#tabs>div");

@@ -30,7 +30,6 @@ const stopSlide = () => {
   clearInterval(slideInterval);
   clearInterval(indicatorInterval);
 };
-
 const moveSlide = () => {
   stopSlide();
   slideInterval = setInterval(slideMove, 3000);
@@ -39,9 +38,6 @@ const moveSlide = () => {
 
 [slide, rightBtn, leftBtn].forEach((elm) => {
   elm.addEventListener("mouseover", stopSlide);
-});
-
-[slide, rightBtn, leftBtn].forEach((elm) => {
   elm.addEventListener("mouseout", moveSlide);
 });
 
@@ -82,10 +78,10 @@ rightBtn.addEventListener("click", () => {
       isSlideMove = false;
     }, 300);
   } else {
-      setTimeout(() => {
-        isSlideMove = false;
-      }, 300);
-    }
+    setTimeout(() => {
+      isSlideMove = false;
+    }, 300);
+  }
 });
 
 leftBtn.addEventListener("click", () => {
@@ -97,7 +93,7 @@ leftBtn.addEventListener("click", () => {
 
   ellipse[indicatorIdx].classList.remove("choice");
   indicatorIdx--;
-  if (indicatorIdx < 0) indicatorIdx = ellipse.length-1;
+  if (indicatorIdx < 0) indicatorIdx = ellipse.length - 1;
   ellipse[indicatorIdx].classList.add("choice");
 
   if (i === 0) {
@@ -108,36 +104,25 @@ leftBtn.addEventListener("click", () => {
       isSlideMove = false;
     }, 300);
   } else {
-      setTimeout(() => {
-        isSlideMove = false;
-      }, 300);
-    }
+    setTimeout(() => {
+      isSlideMove = false;
+    }, 300);
+  }
 });
 
+const slideClickMove = () => {
+  slide.style.transition = ".3s";
+  ellipse.forEach((elm, idx) => {
+    elm.addEventListener("click", () => {
+      ellipse.forEach((e) => {
+        e.classList.remove("choice");
+      });
+      // i값 수정하기
+      slide.style.transform = `translateX(-${(idx + 1) * 100}vw)`;
+      indicatorIdx = idx;
+      elm.classList.add("choice");
+    });
+  });
+};
 
-
-// const slideClickMove = () =>{
-//   slide.style.transition = ".3s"
-//   ellipse.forEach((elm,idx)=>{
-//     elm.addEventListener('click',()=>{
-//       elm.classList.remove("choice");
-//       if(idx === 0){
-//         slide.style.transform = `translateX(-${(idx+1)*100}vw)`;
-//         indicatorIdx = idx;
-//         ellipse[idx].classList.add("choice");
-//       }
-//       if(idx === 1){
-//         slide.style.transform = `translateX(-${(idx+1)*100}vw)`;
-//         indicatorIdx = idx;
-//         ellipse[idx].classList.add("choice");
-//       }
-//       if(idx === 2){
-//         slide.style.transform = `translateX(-${(idx+1)*100}vw)`;
-//         indicatorIdx = idx;
-//         ellipse[idx].classList.add("choice");
-//       }
-//     })
-//   });
-// }
-
-// slideClickMove();
+slideClickMove();

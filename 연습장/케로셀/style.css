@@ -10,6 +10,7 @@ img {
   vertical-align: middle;
 }
 
+
 .slide img {
   width: 100%;
 }
@@ -24,6 +25,10 @@ img {
 .slide_box {
   width: 500vw;
   display: flex;
+}
+
+.inner img {
+  pointer-events: none;
 }
 
 .left_btn,
