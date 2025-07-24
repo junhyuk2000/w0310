@@ -8,9 +8,9 @@ tabMenu.forEach((menu, index) => {
   menu.addEventListener("click", () => {
     tab.forEach((elm, idx) => {
       if (index === idx) {
-        elm.classList.remove("hide");
-      } else {
         elm.classList.add("hide");
+      } else {
+        elm.classList.remove("hide");
       }
     });
     tabA.forEach((a, i) => {

@@ -1,3 +1,4 @@
+// section1
 const slide = document.querySelector(".slide_box");
 const inner = document.querySelectorAll(".inner");
 const ellipse = document.querySelectorAll(".ellipse");
@@ -9,7 +10,7 @@ let i = 1;
 slide.style.transition = "none";
 slide.style.transform = `translateX(-${i * 100}vw)`;
 slide.style.transition = ".3s";
-// 슬라이드 움직임
+// 슬라이드 동작
 const slideMove = () => {
   i++;
   slide.style.transition = "transform .3s ease";
@@ -23,7 +24,7 @@ const slideMove = () => {
   }
 };
 
-//  setInterval 정지 및 동작
+// 호버 시 setInterval 정지 및 동작 이벤트
 let slideInterval = setInterval(slideMove, 3000);
 
 const stopSlide = () => {
@@ -41,7 +42,7 @@ const moveSlide = () => {
   elm.addEventListener("mouseout", moveSlide);
 });
 
-// 인디케이터
+// 인디케이터 동작
 const indicator = () => {
   ellipse[indicatorIdx].classList.remove("choice");
   indicatorIdx++;
@@ -109,14 +110,13 @@ leftBtn.addEventListener("click", () => {
     }, 300);
   }
 });
-
+// 인디케이터 클릭 시 이동
 const slideClickMove = () => {
   ellipse.forEach((elm, idx) => {
     elm.addEventListener("click", () => {
       ellipse.forEach((e) => {
         e.classList.remove("choice");
       });
-
       slide.style.transform = `translateX(-${(idx + 1) * 100}vw)`;
       indicatorIdx = idx;
       elm.classList.add("choice");
@@ -125,3 +125,20 @@ const slideClickMove = () => {
 };
 
 slideClickMove();
+
+// section3
+const tabBtn = document.querySelectorAll(".tab>ul>li");
+const tabCard = document.querySelectorAll(".tabs");
+
+tabBtn.forEach((elm, index) => {
+  elm.addEventListener("click", () => {
+    tabBtn.forEach((btn) => {
+      btn.classList.remove("choice_tab");
+    });
+    tabCard.forEach((card) => {
+      card.classList.remove("tabs_show");
+    });
+    elm.classList.add("choice_tab");
+    tabCard[index].classList.add("tabs_show");
+  });
+});
