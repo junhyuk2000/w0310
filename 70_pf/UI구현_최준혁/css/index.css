@@ -34,7 +34,7 @@
 }
 
 #sec1 {
-  background: #fcfcdb;
+  background: #fff;
   position: relative;
 }
 
@@ -42,8 +42,7 @@
 .slide {
   position: relative;
   width: 100%;
-  height: 46rem;
-  padding-top: 12.5rem;
+  height: 800px;
   overflow: hidden;
 }
 
@@ -58,12 +57,12 @@
 }
 
 .left_btn {
-  top: 40vh;
+  top: 35vh;
   left: 5vw;
 }
 
 .right_btn {
-  top: 40vh;
+  top: 35vh;
   right: 5vw;
 }
 
@@ -82,7 +81,7 @@
 
 .indicator {
   position: absolute;
-  top: 60vh;
+  top: 80vh;
   left: 48vw;
   display: flex;
   align-items: center;
@@ -106,35 +105,42 @@
   background: #999;
 }
 
+/* section2 */
 #sec2 {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f8f899;
+  background: url(./../images/sec2_bg.jpg);
 }
 
 .brand_intro {
   width: 37.5rem;
   text-align: right;
   margin-right: 56.25rem;
-  margin-top: 7rem;
+  margin-top: 4rem;
+  padding:2rem 10rem 2rem 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .brand_intro h2 {
   letter-spacing: 0.625rem;
   margin-bottom: 1.875rem;
+  color:#fff;
+  
 }
 
 .brand_intro span {
   display: block;
-  font-size: 3.75rem;
+  font-size: 3.5rem;
 }
 
 .brand_intro p {
-  padding-right: 0.4375rem;
-  letter-spacing: 0.1875rem;
+  padding-right: 0.5rem;
+  letter-spacing: 0.15rem;
   line-height: 2;
+  color:#ddd;
+  font-weight: bold;
 }
 
 .section2_img {
@@ -205,27 +211,29 @@
 
 .btn {
   background: transparent;
-  border: 0.1875rem solid #C8102E;
+  border: 0.1875rem solid #ddd;
   width: 8.75rem;
   height: 3.125rem;
   margin: 1.875rem 0.625rem 0 0;
   border-radius: 0.625rem;
   font-size: 1rem;
-  color: #333;
+  color: #ddd;
   cursor: pointer;
 }
 
 .btn:hover {
-  border: 0.1875rem solid #f3536e6b;
+  border: 0.1875rem solid #ff0000;
 }
 
+/* section3 */
+
 #sec3 {
-  background: #fcfcdb;
+  background: #fff;
 }
 
 #sec3 h2 {
   text-align: center;
-  padding-top: 8.125rem;
+  padding-top: 2rem;
   font-size: 2.5rem;
 }
 
