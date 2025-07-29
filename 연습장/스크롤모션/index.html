@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 400vh;
+      /* 데모용 스크롤 길이 */
+      margin: 0;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease;
+      height: 100vh;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="reveal">섹션 1</section>
+  <section class="reveal">섹션 2</section>
+  <section class="reveal">섹션 3</section>
+  <section class="reveal">섹션 4</section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active'); // 다시 사라지게 하고 싶으면 유지
+        }
+      });
+    }, { threshold: 0.4 }); // 요소의 20%가 보일 때 발동
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+
+  </script>
+</body>
+
+</html>

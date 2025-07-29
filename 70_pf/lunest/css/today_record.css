@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+body {
+  height: 200vh;
+
+}
+
+.section {
+  height: 200vh;
+}
+
+.calendar_info {
+  width: 80%;
+  height: 36%;
+  background: rgba(2, 2, 2, 0.4);
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.month {
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 48px;
+}
+
+
+.calendar_wrap {
+  width: 80%;
+  height: 60%;
+  background: transparent;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table th {
+  height: 50px;
+}
+
+table tr {
+  border: 1px solid #333;
+}
+
+table td {
+  height: 70px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calendar_wrap table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.empty {
+  background: transparent;
+}
+
+
+.gauge {
+  position: relative;
+  width: 400px;
+  height: 20px;
+  margin: 5% auto 0;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.gauge_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #8bc7ff;
+  height: 20px;
+  border-radius: 8px;
+}
+
+.today_diary {
+  width: 80%;
+  height: 38%;
+  background: rgba(2, 2, 2, 0.4);
+  margin: 140px auto 0;
+}
+
+.today_info {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 24px;
+}
+
+.diary_input_box {
+  width: 600px;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#diary_input {
+  width: 500px;
+  height: 50px;
+  margin-left: 50px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  border: 2px solid #777;
+  background: transparent;
+}
+
+#add_btn {
+  width: 50px;
+  height: 50px;
+  background: #333;
+  color: #FFF;
+  font-size: 14px;
+  border-radius: 10px;
+  margin-left: 30px;
+  cursor: pointer;
+  border: none;
+}
+
+#diary_list {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+
+/* 스크롤바 전체 */
+#diary_list::-webkit-scrollbar {
+  width: 10px;
+  /* 스크롤 두께 */
+}
+
+/* 스크롤 트랙 (배경) */
+#diary_list::-webkit-scrollbar-track {
+  background: #222;
+  /* 어두운 톤 배경 */
+  border-radius: 10px;
+}
+
+/* 스크롤 thumb (움직이는 부분) */
+#diary_list::-webkit-scrollbar-thumb {
+  background: #999;
+  /* 눈에 확 띄게 빨강 */
+  border-radius: 10px;
+}
+
+/* thumb hover 시 색 변경 */
+#diary_list::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+}
+
+#diary_list li {
+  width: 600px;
+  height: 80px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 80px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin: 30px auto;
+  padding-left: 30px;
+}

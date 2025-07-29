@@ -16,29 +16,8 @@ html {
 }
 
 body {
+  background: url(../images/index/bg.jpg);
   font-family: 'Ownglyph_Memo_Okja-Rg', 'Noto sans kr', sans-serif;
   overflow-x: hidden;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-
-a {
-  text-decoration: none;
   color: #fff;
 }
