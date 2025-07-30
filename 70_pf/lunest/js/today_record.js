@@ -68,15 +68,6 @@ const gaugeBar = document.querySelector(".gauge_bar");
 
 monthInfo.textContent = monthName[currentMonth];
 
-// let gauge = 0;
-// btn.addEventListener("click", () => {
-//   gauge++;
-//   const percent = (gauge / 31) * 100;
-//   gaugeBar.style.width = `${percent}%`;
-//   if (percent > 100) {
-//     gaugeBar.style.width = 0;
-//   }
-// });
 
 const diaryInput = document.querySelector("#diary_input");
 const diaryList = document.querySelector("#diary_list");

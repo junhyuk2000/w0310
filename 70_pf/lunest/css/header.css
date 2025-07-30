@@ -69,7 +69,7 @@ header {
 }
 
 .sub>li>a:hover {
-  color: #00C2FF;
+  color: #777;
 }
 
 .main:hover .sub {
