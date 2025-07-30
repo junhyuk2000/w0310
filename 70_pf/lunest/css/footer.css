@@ -6,7 +6,7 @@
   background-color: #0b1e2d;
   color: #fff;
   padding: 40px 60px;
-  font-size: 30px;
+  font-size: 1.3rem;
 }
 
 .footer-left {
@@ -73,7 +73,7 @@
   text-align: right;
   white-space: nowrap;
   align-self: flex-end;
-  font-size: 25px;
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 

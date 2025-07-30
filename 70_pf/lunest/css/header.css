@@ -4,7 +4,7 @@ header {
   z-index: 9999;
   background: #0D2235;
   height: 120px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +63,7 @@ header {
   height: 80px;
   line-height: 80px;
   text-align: center;
-  font-size: 28px;
+  font-size: 1.3rem;
   transition: .3s;
   margin: 10px 0;
 }

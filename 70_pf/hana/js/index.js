@@ -11,21 +11,18 @@ kakao.maps.load(() => {
     position: options.center,
   });
   marker.setMap(map);
-  // 4. 인포윈도우 생성
   const infowindow = new kakao.maps.InfoWindow({
     content: '<div class="info_marker">교보문고 광화문점 </div>',
   });
 
-  // 5. 토글 상태 변수
   let isOpen = false;
 
-  // 6. 클릭 이벤트로 토글
   kakao.maps.event.addListener(marker, "click", function () {
     if (isOpen) {
       infowindow.close();
     } else {
       infowindow.open(map, marker);
     }
-    isOpen = !isOpen; // 상태 반전
+    isOpen = !isOpen;
   });
 });

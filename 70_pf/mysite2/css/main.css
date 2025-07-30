@@ -20,3 +20,15 @@ footer {
   height: 100vh;
   background: url(./../images/10011.jpg) no-repeat 50% 50%/cover fixed;
 }
+
+.sec {
+  max-width: 920px;
+}
+
+#skill p {
+  letter-spacing: 5px;
+}
+
+.progress {
+  height: 35px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="track" data-src="water.mp3">물 소리</div>
+  <div class="track" data-src="fire.mp3">불 소리</div>
+  <div class="track" data-src="wind.mp3">바람 소리</div>
+
+  <button id="stop">정지</button>
+  <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+
+  <script>
+    let audioContext;
+    let currentSource = null;
+    let gainNode;
+
+    // 오디오 로드 + 재생 함수
+    async function playAudio(url) {
+      if (!audioContext) {
+        audioContext = new AudioContext();
+        gainNode = audioContext.createGain();
+        gainNode.connect(audioContext.destination);
+      }
+
+      // 기존 재생 중이면 정지
+      if (currentSource) {
+        currentSource.stop();
+        currentSource = null;
+      }
+
+      // mp3 파일 불러오기
+      const response = await fetch(url);
+      const arrayBuffer = await response.arrayBuffer();
+      const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+
+      // 소스 생성 + 연결
+      currentSource = audioContext.createBufferSource();
+      currentSource.buffer = audioBuffer;
+      currentSource.connect(gainNode);
+      currentSource.start(0);
+    }
+
+    // 카드 클릭 시 해당 음원 재생
+    document.querySelectorAll('.track').forEach(track => {
+      track.addEventListener('click', () => {
+        const src = track.dataset.src;
+        playAudio(src);
+      });
+    });
+
+    // 정지 버튼
+    document.getElementById('stop').addEventListener('click', () => {
+      if (currentSource) {
+        currentSource.stop();
+        currentSource = null;
+      }
+    });
+
+    // 볼륨 조절
+    document.getElementById('volume').addEventListener('input', (e) => {
+      if (gainNode) gainNode.gain.value = e.target.value;
+    });
+
+  </script>
+</body>
+
+</html>

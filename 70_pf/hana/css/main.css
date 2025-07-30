@@ -64,6 +64,7 @@ a {
 /* section1 */
 #sec1 {
   position: relative;
+
 }
 
 #sec1 h2 {
@@ -120,12 +121,14 @@ a {
   padding: 10px 15px;
 }
 
+/* section 3 */
 #sec3 h2 {
   margin-bottom: 20px;
 }
 
 #sec3>p {
-  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 2;
 }
 
 #sec3 li {
@@ -276,6 +279,7 @@ a {
   #sec1 {
     max-width: 1510px;
     margin: 0 auto;
+    padding-top: 100px;
   }
 
   /* sec2~4 common */
