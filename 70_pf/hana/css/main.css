@@ -274,6 +274,9 @@ a {
 
 /* desktop */
 @media (min-width:1200px) {
+  .sec {
+    padding: 80px 205px 0;
+  }
 
   /* sec1 */
   #sec1 {
@@ -282,15 +285,10 @@ a {
     padding-top: 100px;
   }
 
-  /* sec2~4 common */
-  .sec {
-    padding: 68px 205px 0;
-  }
 
-  /* sec2~3 common */
+  /* sec2, sec3 */
   #sec2 li,
   #sec3 li {
-    /* 48px을 4분할->12px */
     flex: 0 0 calc(25% - 12px);
   }
 
