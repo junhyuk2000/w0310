@@ -381,3 +381,43 @@ body {
   height: 70px;
   color: #fff;
 }
+
+@media (max-width:768px) {}
+
+@media (max-width:576px) {
+  .hero-text p {
+    font-size: 2rem;
+    padding-top: 150px;
+  }
+
+  #section1 {
+    height: 75vh;
+    border: 1px solid #000;
+  }
+
+  .cloud img {
+    width: 250px;
+    height: 250px;
+  }
+
+  #section2 {
+    display: none;
+  }
+
+  .section3 {
+    height: 80vh;
+    border: 5px solid #fff;
+  }
+
+  .text-box h2 {
+    font-size: 2.5rem;
+  }
+
+  .text-box p {
+    font-size: 1.2rem;
+  }
+
+  .person-box img {
+    width: 200px;
+  }
+}
