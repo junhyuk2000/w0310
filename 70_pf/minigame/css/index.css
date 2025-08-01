@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* body */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0B0F2E;
+  color: #F5F5F5;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.game_tab {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #fff;
+}
