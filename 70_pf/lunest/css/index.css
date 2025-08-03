@@ -86,7 +86,7 @@ body {
 /* 텍스트 애니메이션 효과 */
 .floating-text {
   font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
-  font-size: 6rem;
+  font-size:10rem;
   color: white;
   animation: textFloat 4s ease-in-out infinite;
   white-space: pre-line;
@@ -362,8 +362,7 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.15);
   color: #fff;
   text-align: center;
-  line-height: 400px;
-  font-size: 40px;
+  font-size: 4rem;
   margin: 10% auto;
   transition: opacity 1s;
 }
@@ -385,6 +384,7 @@ body {
 @media (max-width:768px) {}
 
 @media (max-width:576px) {
+
   .hero-text p {
     font-size: 2rem;
     padding-top: 150px;

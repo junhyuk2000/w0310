@@ -26,3 +26,4 @@ selectCard.forEach((elm) => {
     cardClickEvent();
   });
 });
+

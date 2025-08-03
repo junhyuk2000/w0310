@@ -6,12 +6,12 @@ body {
 }
 
 .section {
-  height: 200vh;
+  height: 250vh;
 }
 
 .calendar_info {
   width: 80%;
-  height: 36%;
+  padding: 80px 0;
   background: rgba(2, 2, 2, 0.4);
   margin: 0 auto;
   margin-top: 100px;
@@ -21,20 +21,19 @@ body {
   color: #fff;
   text-align: center;
   padding: 30px 0;
-  font-size: 48px;
+  font-size: 4.8rem;
 }
 
 
 .calendar_wrap {
-  width: 80%;
-  height: 60%;
   background: transparent;
   margin: 0 auto;
   text-align: center;
 }
 
 table th {
-  height: 50px;
+  padding: 30px 0;
+  font-size: 2rem;
 }
 
 table tr {
@@ -43,8 +42,9 @@ table tr {
 
 table td {
   position: relative;
-  height: 70px;
+  padding: 30px 0;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 2rem;
 }
 
 .calendar_wrap table {
@@ -58,25 +58,26 @@ table td {
 
 .gauge_box {
   text-align: center;
-  padding-top: 20px;
+  padding: 50px 0;
+  font-size: 1.8rem;
 }
 
 .gauge {
   position: relative;
-  width: 400px;
+  width: 30%;
   height: 20px;
-  margin: 2% auto;
+  margin: 20px auto 0;
   background: #fff;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .gauge_bar {
   position: absolute;
   top: 0;
   left: 0;
-  background: #8bc7ff;
+  background: #666;
   height: 20px;
-  border-radius: 8px;
 }
 
 .today_diary {
