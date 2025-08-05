@@ -20,11 +20,9 @@ closeBtn.addEventListener('click', () => {
   mobileMenu.style.display = "block";
   document.body.classList.remove("menu_open");
 
-  // 서브메뉴 닫기
   document.querySelectorAll(".sub.open").forEach(sub => sub.classList.remove("open"));
 });
 
-// 리사이즈 시 상태 초기화
 window.addEventListener("resize", () => {
   if (window.innerWidth > 768) {
     gnb.classList.remove("open");

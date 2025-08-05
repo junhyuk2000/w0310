@@ -12,12 +12,26 @@ let currentMonth = nowDate.getMonth();
 let currentDate = nowDate.getDate();
 let currentDay = nowDate.getDay();
 
-const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const monthName = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 const dayName = ["일", "월", "화", "수", "목", "금", "토"];
 
 monthInfo.textContent = monthName[currentMonth];
-todayInfo.textContent = `📆 오늘의 날짜는 .... ${currentYear}년 ${currentMonth + 1}월 ${currentDate}일 ${dayName[currentDay]}요일`;
-
+todayInfo.textContent = `📆 오늘의 날짜는 .... ${currentYear}년 ${
+  currentMonth + 1
+}월 ${currentDate}일 ${dayName[currentDay]}요일`;
 
 // 해당 날짜에 맞춰 달력 cell 채우기
 const renderCalender = (year, month) => {
@@ -58,16 +72,19 @@ const renderCalender = (year, month) => {
 renderCalender(currentYear, currentMonth);
 
 // 일기, 출석기록 로컬스토리지 키
-const DIARY_STORAGE_KEY = 'diary_entries';
-const STAMP_STORAGE_KEY = 'diary_records';
+const DIARY_STORAGE_KEY = "diary_entries";
+const STAMP_STORAGE_KEY = "diary_records";
 
-const getTodayString = () => `${currentYear}-${currentMonth + 1}-${currentDate}`;
+const getTodayString = () =>
+  `${currentYear}-${currentMonth + 1}-${currentDate}`;
 
 // 저장된 일기 불러오기
-const loadDiaryEntries = () => JSON.parse(localStorage.getItem(DIARY_STORAGE_KEY)) || [];
+const loadDiaryEntries = () =>
+  JSON.parse(localStorage.getItem(DIARY_STORAGE_KEY)) || [];
 
 // 저장된 도장 기록 불러오기
-const loadStampRecords = () => JSON.parse(localStorage.getItem(STAMP_STORAGE_KEY)) || [];
+const loadStampRecords = () =>
+  JSON.parse(localStorage.getItem(STAMP_STORAGE_KEY)) || [];
 
 const saveDiaryEntry = (entry) => {
   const entries = loadDiaryEntries();
@@ -85,16 +102,16 @@ const saveStampRecord = (date) => {
 
 const stampDate = (dateStr) => {
   const dateCell = document.querySelector(`td[data-date="${dateStr}"]`);
-  if (!dateCell || dateCell.querySelector('img.stamp')) return;
+  if (!dateCell || dateCell.querySelector("img.stamp")) return;
 
-  const img = document.createElement('img');
-  img.src = '../images/today_record/stamp.png';
-  img.classList.add('stamp');
-  img.style.position = 'absolute';
-  img.style.top = '50%';
-  img.style.left = '50%';
-  img.style.transform = 'translate(-50%, -50%)';
-  img.style.width = '50px';
+  const img = document.createElement("img");
+  img.src = "../images/today_record/stamp.png";
+  img.classList.add("stamp");
+  img.style.position = "absolute";
+  img.style.top = "50%";
+  img.style.left = "50%";
+  img.style.transform = "translate(-50%, -50%)";
+  img.style.width = "50px";
   dateCell.appendChild(img);
 };
 
@@ -111,7 +128,7 @@ const updateGauge = () => {
 
 const createList = () => {
   if (isDiaryExistToday()) {
-    alert('오늘 일기는 이미 작성했습니다.');
+    alert("오늘 일기는 이미 작성했습니다.");
     return;
   }
 
@@ -126,21 +143,30 @@ const createList = () => {
   saveStampRecord(getTodayString());
   stampDate(getTodayString());
 
-   updateGauge();
+  updateGauge();
 };
 
 diaryInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && diaryInput.value === "") {
+    alert("내용을 입력해주세요.");
+    return;
+  }
   if (e.key === "Enter" && diaryInput.value.trim()) createList();
 });
 
 addBtn.addEventListener("click", () => {
-  if (diaryInput.value.trim()) createList();
+  if (diaryInput.value.trim()) {
+    createList();
+  } else {
+    alert("내용을 입력해주세요.");
+    return;
+  }
 });
 
 // 페이지 초기화 (일기, 도장 불러오기)
 const initialRender = () => {
   const entries = loadDiaryEntries();
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     const newList = document.createElement("li");
     newList.textContent = entry.text;
     diaryList.appendChild(newList);
