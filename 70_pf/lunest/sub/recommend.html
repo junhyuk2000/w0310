@@ -51,9 +51,9 @@
   <!-- 시간 & 오늘의 추천 -->
   <div class="container">
     <div class="time-display">
-      <p>지금 시간은...</p>
-      <h1 id="clock">00:00</h1>
-      <p class="night-text">편안한 밤 되세요.</p>
+      <p id="now-time">지금 시간은...</p>
+      <h2 id="clock"></h2>
+      <p class="greeting"></p>
     </div>
 
     <div class="main-player">
@@ -92,11 +92,10 @@
   </div>
 
   <!-- 푸터 -->
-  <footer class="footer">
+ <footer class="footer">
     <div class="footer-left">
-      <img src="./images/푸터 로고.png" alt="Lunest Logo" class="footer-logo" />
+      <img src="../images/index/footer/footer_logo.png" alt="Lunest Logo" class="footer-logo" />
     </div>
-
     <div class="footer-center">
       <p class="footer-desc">Lunest</p>
       <p class="footer-desc">당신의 고요한 밤을 지켜주는 작은 자연입니다.</p>
@@ -109,7 +108,7 @@
         <li>[ 문의하기 ]</li>
       </ul>
       <hr class="footer-line" />
-      <p class="footer-policy">이용약관&nbsp;&nbsp;|&nbsp;&nbsp;개인정보처리방침</p>
+      <p class="footer-policy"><span>이용약관</span> <span>개인정보처리방침</span></p>
     </div>
 
     <div class="footer-right">
@@ -118,7 +117,8 @@
   </footer>
 
   <!-- 스크립트 -->
-  <script>
+   <script src="../js/recomended.js"></script>
+  <!-- <script>
     $(document).ready(function () {
       function updateClock() {
         const now = new Date();
@@ -165,7 +165,7 @@
         $('#play-pause').text('⏸');
       });
     });
-  </script>
+  </script> -->
 </body>
 
 </html>

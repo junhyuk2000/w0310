@@ -137,7 +137,7 @@ function renderPlayer(track) {
     <div class="player">
       <img src="images/index/section4/${track}.jpg" alt="${track}" class="thumb">
       <div class="info">
-        <h3>${track}</h3>
+        <h3 id="track_title">${track}</h3>
         <div class="progress">
           <span id="current_time">0:00</span>
           <input type="range" id="progress_bar" min="0" max="100" value="0">

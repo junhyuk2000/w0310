@@ -381,6 +381,27 @@ body {
   color: #fff;
 }
 
+/* 스크립트로 생성 된 오디오 재생 바 */
+#track_title {
+  font-size: 6rem;
+}
+
+#current_time,
+#total_time {
+  font-size: 2.3rem;
+  padding: 0 20px ;
+}
+
+#play_btn {
+  background: #fff;
+  transition: .3s;
+  font-size: 2rem;
+}
+#play_btn:hover {
+  background: #999;
+}
+
+
 @media (max-width:768px) {}
 
 @media (max-width:576px) {
