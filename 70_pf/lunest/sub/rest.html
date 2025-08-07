@@ -5,39 +5,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../css/rest.css">
-  <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/rest.css">
+  <link rel="stylesheet" href="../css/footer.css">
 
 </head>
 
 <body>
-  <header>
-    <h1>휴식과 명상</h1>
-    <p>“이 소리와 함께 잠들어보세요.”</p>
+  <header class="header">
+    <h1 class="header_logo"><a href="../index.html"><img src="../images/index/logo.png" alt="Lunest 로고"></a></h1>
+    <nav class="gnb">
+      <ul class="main">
+        <li>음악
+          <ul class="sub">
+            <li><a href="../sub/sleep.html">수면</a></li>
+            <li><a href="../sub/rest.html">휴식과 명상</a></li>
+          </ul>
+        </li>
+        <li>오늘을 담다
+          <ul class="sub">
+            <li><a href="../sub/recommend.html">오늘의 추천</a></li>
+            <li><a href="../sub/today_record.html">오늘의 기록</a></li>
+          </ul>
+        </li>
+        <li>마이페이지
+          <ul class="sub">
+            <li><a href="#">즐겨찾기</a></li>
+          </ul>
+        </li>
+        <li>브랜드소개
+          <ul class="sub">
+            <li><a href="../sub/brand.html">브랜드</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="mobile">
+      <div class="mobile_menu"><img src="../images/index/mobile_menu.png" alt=""></div>
+      <div class="close"><img src="../images/index/close.png" alt=""></div>
+    </div>
   </header>
 
+  <div class="section-title">
+    <h1>수면</h1>
+    <p>“이 소리와 함께 잠들어보세요.”</p>
+  </div>
   <!-- 카드 리스트 -->
   <div class="sound-card">
     <img src="../images/수면페이지 비.png" alt="rain">
     <p>“잠시 멈추고,자연의 숨결을 느껴보세요.”</p>
-    <button class="heart" onclick="toggleHeart(this)">♡</button>
+    <button class="heart">♡</button>
   </div>
   <div class="sound-card">
     <img src="../images/수면페이지 바람.png" alt="dandelion">
     <p>“모든 건 바람처럼 스쳐가요, 걱정도 함께”</p>
-    <button class="heart" onclick="toggleHeart(this)">♡</button>
+    <button class="heart">♡</button>
   </div>
   <div class="sound-card">
     <img src="../images/수면페이지 불.png">
     <p>“불꽃의 귓솔말에 귀를 기울여보세요.”</p>
-    <button class="heart" onclick="toggleHeart(this)">♡</button>
+    <button class="heart">♡</button>
   </div>
 
   <!-- 모달 -->
   <div id="alertModal" class="modal">
     <div class="modal-content">
-      즐겨찾기에 추가되었습니다!
+      <p>즐겨찾기에 추가되었습니다!</p>
       <br>
       <button class="modal_btn" onclick="closeAlert()">닫기</button>
     </div>

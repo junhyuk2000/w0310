@@ -1,5 +1,6 @@
 const likeBtn = document.querySelectorAll(".heart");
 const modalText = document.querySelector(".modal-content>p");
+
 likeBtn.forEach((elm) => {
   elm.addEventListener("click", () => {
     if (elm.textContent === "♡") {
@@ -18,15 +19,4 @@ function showAlert() {
 
 function closeAlert() {
   document.getElementById("alertModal").style.display = "none";
-}
-
-function toggleAccordion(id) {
-  const all = document.querySelectorAll(".accordion-content");
-  all.forEach((el) => {
-    if (el.id === id) {
-      el.classList.toggle("open");
-    } else {
-      el.classList.remove("open"); // 나머지는 닫힘
-    }
-  });
 }
