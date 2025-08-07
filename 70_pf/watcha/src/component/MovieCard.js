@@ -2,7 +2,15 @@ import { useState } from "react";
 
 function MovieCard({ rank, image, alt, initialLikes }) {
   const [likes, setLikes] = useState(initialLikes);
-  const handleLike = () => setLikes(likes + 1);
+  const [liked, setLiked] = useState(false);
+  const handleLike = () => {
+    if (!liked) {
+      setLikes(likes + 1);
+    } else {
+      setLikes(likes - 1);
+    }
+    setLiked(!liked);
+  };
 
   return (
     <div className="movie_card">
@@ -14,7 +22,8 @@ function MovieCard({ rank, image, alt, initialLikes }) {
       <div className="likes_btn">
         {/* 좋아요 */}
         <button className="likes" onClick={handleLike}>
-          ❤ {likes}
+          {liked ? "❤" : "♡"}
+          {likes}
         </button>
         {/* 예매버튼 */}
         <a href="#">예매</a>
