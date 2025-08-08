@@ -1,44 +1,36 @@
 @charset "UTF-8";
 
-/* reset */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
 /* body */
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #0B0F2E;
-  color: #F5F5F5;
+  font-family: "Segoe UI", sans-serif;
+  background: #0b0f2e;
+  color: #f5f5f5;
   text-align: center;
   margin: 0;
-  padding: 20px;
+  padding: 20px 200px;
 }
 
 .game_tab {
-  width: 600px;
-  margin: 0 auto;
+  padding: 0 50px;
+  margin: 40px auto;
   display: flex;
-  justify-content: space-between;
-  border: 1px solid #fff;
+  justify-content: space-around;
+  /* border: 1px solid #fff; */
+}
+
+.flipmatch,
+.tictactoe,
+._2048 {
+  padding: 20px;
+  margin-right: 60px;
+  background: #3a427a;
+  border-radius: 20px;
+  transition: background 0.5s ease;
+}
+
+.flipmatch:hover,
+.tictactoe:hover,
+._2048:hover {
+  background: #202761;
 }
