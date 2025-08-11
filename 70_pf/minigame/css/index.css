@@ -16,7 +16,6 @@ body {
   margin: 40px auto;
   display: flex;
   justify-content: space-around;
-  /* border: 1px solid #fff; */
 }
 
 .flipmatch,
@@ -26,11 +25,13 @@ body {
   margin-right: 60px;
   background: #3a427a;
   border-radius: 20px;
-  transition: background 0.5s ease;
+  transition: 0.3s ease;
+  font-size: 1.2rem;
 }
 
 .flipmatch:hover,
 .tictactoe:hover,
 ._2048:hover {
   background: #202761;
+  transform: scale(1.1);
 }
