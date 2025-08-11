@@ -107,11 +107,7 @@ const stampDate = (dateStr) => {
   const img = document.createElement("img");
   img.src = "../images/today_record/stamp.png";
   img.classList.add("stamp");
-  img.style.position = "absolute";
-  img.style.top = "50%";
-  img.style.left = "50%";
-  img.style.transform = "translate(-50%, -50%)";
-  img.style.width = "50px";
+
   dateCell.appendChild(img);
 };
 

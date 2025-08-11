@@ -2,15 +2,15 @@
 
 body {
   height: 200vh;
-
 }
 
 .section {
-  height: 250vh;
+  height: 180vh;
 }
 
 .calendar_info {
   width: 80%;
+  /* height: 40%; */
   padding: 80px 0;
   background: rgba(2, 2, 2, 0.4);
   margin: 0 auto;
@@ -23,7 +23,6 @@ body {
   padding: 30px 0;
   font-size: 4.8rem;
 }
-
 
 .calendar_wrap {
   background: transparent;
@@ -55,6 +54,13 @@ table td {
 .empty {
   background: transparent;
 }
+.stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+}
 
 .gauge_box {
   text-align: center;
@@ -64,7 +70,7 @@ table td {
 
 .gauge {
   position: relative;
-  width: 30%;
+  width: 40%;
   height: 20px;
   margin: 20px auto 0;
   background: #fff;
@@ -94,7 +100,7 @@ table td {
 }
 
 .diary_input_box {
-  width: 600px;
+  width: 50%;
   display: flex;
   margin: 0 auto;
   padding-top: 40px;
@@ -103,7 +109,7 @@ table td {
 }
 
 #diary_input {
-  width: 500px;
+  width: 80%;
   height: 50px;
   margin-left: 50px;
   border: none;
@@ -119,7 +125,7 @@ table td {
   width: 50px;
   height: 50px;
   background: #333;
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
   border-radius: 10px;
   margin-left: 30px;
@@ -128,40 +134,33 @@ table td {
 }
 
 #diary_list {
-  width: 800px;
-  height: 600px;
   margin: 0 auto;
   overflow-y: scroll;
 }
 
-
 /* 스크롤바 전체 */
 #diary_list::-webkit-scrollbar {
   width: 10px;
-  /* 스크롤 두께 */
 }
 
 /* 스크롤 트랙 (배경) */
 #diary_list::-webkit-scrollbar-track {
   background: #222;
-  /* 어두운 톤 배경 */
   border-radius: 10px;
 }
 
-/* 스크롤 thumb (움직이는 부분) */
+/* 스크롤 thumb  */
 #diary_list::-webkit-scrollbar-thumb {
   background: #999;
-  /* 눈에 확 띄게 빨강 */
   border-radius: 10px;
 }
 
-/* thumb hover 시 색 변경 */
 #diary_list::-webkit-scrollbar-thumb:hover {
   background: #ddd;
 }
 
 #diary_list li {
-  width: 600px;
+  width: 50%;
   height: 80px;
   color: #fff;
   font-size: 30px;
@@ -170,4 +169,43 @@ table td {
   border-radius: 20px;
   margin: 30px auto;
   padding-left: 30px;
+}
+
+@media (max-width: 576px) {
+  body {
+    height: 300vh;
+  }
+  .section {
+    height: 250vh;
+  }
+  .stamp {
+    width: 30px;
+  }
+  .gauge {
+    width: 330px;
+  }
+  .diary_input_box {
+    width: 60%;
+    margin: 0 auto;
+  }
+  #diary_input {
+    margin: 0;
+    width: 200px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+  }
+  #add_btn {
+    margin-left: 10px;
+    width: 50px;
+  }
+  #diary_list li {
+    width: 70%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.8rem;
+    margin: 20px auto;
+  }
+  .footer {
+    display: none;
+  }
 }
