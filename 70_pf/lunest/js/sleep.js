@@ -27,8 +27,27 @@ const audioUi = document.querySelector(".audio_ui");
 soundCard.forEach((card) => {
   card.addEventListener("click", () => {
     createAudioUi(card.dataset.title);
+
+  const progress = document.getElementById("progress_bar");
+  const current = document.getElementById("current_time");
+  const total = document.getElementById("total_time");
+  const playBtn = document.getElementById("play_btn");
+  const volume = document.getElementById("volume");
+   
+  volume.addEventListener("input", (e) => {
+      AudioPlayer.setVolume(Number(e.target.value));
+  });
+
+  AudioPlayer.initPlayer(progress, current, total, playBtn);
+  AudioPlayer.setVolume(Number(volume.value));
+  AudioPlayer.playTrack(card.dataset.title);
   });
 });
+
+const deleteUi = () => {
+  audioUi.innerHTML = "";
+};
+
 
 const createAudioUi = (title) => {
   audioUi.innerHTML = `
@@ -52,6 +71,6 @@ const createAudioUi = (title) => {
   `;
 };
 
-const deleteUi = () => {
-  audioUi.innerHTML = "";
-};
+
+
+

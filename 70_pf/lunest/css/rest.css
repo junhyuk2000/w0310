@@ -92,6 +92,30 @@ body {
   cursor: pointer;
 }
 
+
+.player {
+    position: fixed;
+    z-index: 9999;
+    bottom: 2%;
+    left: 50%;
+    width: 80%;
+    height: 20%;
+    transform: translate(-50%);
+}
+
+
+#close {
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    border: none;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
 .accordion {
   width: 900px;
   margin: 40px auto;

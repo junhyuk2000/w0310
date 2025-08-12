@@ -158,13 +158,14 @@
 
 .player {
     position: fixed;
-    z-index: 9999px;
+    z-index: 9999;
     bottom: 2%;
     left: 50%;
     width: 80%;
     height: 20%;
     transform: translate(-50%);
 }
+
 
 #close {
     position: absolute;

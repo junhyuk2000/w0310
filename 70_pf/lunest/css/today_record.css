@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 body {
-  height: 200vh;
+  height: 250vh;
 }
 
 .section {
-  height: 180vh;
+  height: 230vh;
 }
 
 .calendar_info {
@@ -88,7 +88,8 @@ table td {
 
 .today_diary {
   width: 80%;
-  height: 38%;
+  height: 40%;
+  /* overflow: hidden; */
   background: rgba(2, 2, 2, 0.4);
   margin: 140px auto 0;
 }

@@ -20,6 +20,14 @@ const hours = date.getHours();
 const minute = date.getMinutes();
 
 clock.textContent = `${hours} : ${minute}`;
+if(hours < 10 && minute <10 ){
+    clock.textContent = `0${hours} : 0${minute}`;
+    } else if( hours < 10) {
+    clock.textContent = `0${hours} : ${minute}`;
+  } else {
+    clock.textContent = `${hours} : 0${minute}`;
+  }
+
 
 if (hours < 7) {
   greeting.textContent = "좋은 밤 보내세요 🌙";
@@ -58,7 +66,7 @@ function renderPlayer(track) {
   const volume = document.getElementById("volume");
 
   AudioPlayer.initPlayer(progress, current, total, playBtn);
-  window.AudioPlayer.playTrack(track);
+  AudioPlayer.playTrack(track);
 
   volume.addEventListener("input", (e) => {
     window.AudioPlayer.setVolume(e.target.value);
