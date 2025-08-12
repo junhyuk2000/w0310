@@ -1,46 +1,3 @@
-const mobileMenu = document.querySelector(".mobile_menu");
-const closeBtn = document.querySelector(".close");
-const gnb = document.querySelector(".gnb");
-const header = document.querySelector('header');
-
-// 메뉴 열기
-mobileMenu.addEventListener('click', () => {
-  gnb.classList.add("open");
-  header.classList.add("menu_open");
-  mobileMenu.style.display = "none";
-  closeBtn.style.display = "block";
-  document.body.classList.add("menu_open");
-});
-
-// 메뉴 닫기
-closeBtn.addEventListener('click', () => {
-  gnb.classList.remove("open");
-  header.classList.remove("menu_open");
-  closeBtn.style.display = "none";
-  mobileMenu.style.display = "block";
-  document.body.classList.remove("menu_open");
-
-  document.querySelectorAll(".sub.open").forEach(sub => sub.classList.remove("open"));
-});
-
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 768) {
-    gnb.classList.remove("open");
-    header.classList.remove("menu_open");
-    gnb.style.display = "";
-    header.style.height = "";
-    mobileMenu.style.display = "none";
-    closeBtn.style.display = "none";
-    document.body.classList.remove("menu_open");
-  } else {
-    mobileMenu.style.display = "block";
-    closeBtn.style.display = "none";
-  }
-});
-
-
-
-
 // section3
 document.addEventListener("DOMContentLoaded", function () {
   const startBtn = document.getElementById("start-btn");
@@ -78,54 +35,52 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 // section4
 // 질문 로직
-const questions = document.querySelectorAll('.question');
-const selectBoxes = document.querySelectorAll('.select_box');
-const waitTime = document.querySelector('.wait_time');
-const recommendBox = document.querySelector('.recommend');
+const questions = document.querySelectorAll(".question");
+const selectBoxes = document.querySelectorAll(".select_box");
+const waitTime = document.querySelector(".wait_time");
+const recommendBox = document.querySelector(".recommend");
 
 let step = 0;
-let selectedAction = '';
+let selectedAction = "";
 
 function nextStep() {
   if (step < questions.length - 1) {
-    questions[step].classList.remove('show');
-    selectBoxes[step].classList.remove('show');
+    questions[step].classList.remove("show");
+    selectBoxes[step].classList.remove("show");
     step++;
     setTimeout(() => {
-      questions[step].classList.add('show');
-      selectBoxes[step].classList.add('show');
-      
+      questions[step].classList.add("show");
+      selectBoxes[step].classList.add("show");
     }, 300);
   } else {
     showRecommendation();
   }
 }
 
-document.querySelectorAll('.select_card').forEach(card => {
-  card.addEventListener('click', () => {
-    const text = card.querySelector('p').innerText;
+document.querySelectorAll(".select_card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const text = card.querySelector("p").innerText;
     if (step === 2) selectedAction = text;
     nextStep();
   });
 });
 
 function showRecommendation() {
-  questions.forEach(q => q.classList.remove('show'));
-  selectBoxes.forEach(box => box.classList.remove('show'));
+  questions.forEach((q) => q.classList.remove("show"));
+  selectBoxes.forEach((box) => box.classList.remove("show"));
 
-  waitTime.classList.add('show');
+  waitTime.classList.add("show");
 
   setTimeout(() => {
-    waitTime.classList.remove('show');
-    recommendBox.classList.add('show');
+    waitTime.classList.remove("show");
+    recommendBox.classList.add("show");
 
-    let track = 'rain';
-    if (selectedAction.includes('음악')) track = 'bird';
-    else if (selectedAction.includes('휴식')) track = 'fire';
-    else if (selectedAction.includes('잠')) track = 'rain';
+    let track = "rain";
+    if (selectedAction.includes("음악")) track = "bird";
+    else if (selectedAction.includes("휴식")) track = "fire";
+    else if (selectedAction.includes("잠")) track = "rain";
 
     renderPlayer(track);
   }, 1500);
@@ -152,11 +107,11 @@ function renderPlayer(track) {
   `;
 
   // DOM 연결
-  const progress = document.getElementById('progress_bar');
-  const current = document.getElementById('current_time');
-  const total = document.getElementById('total_time');
-  const playBtn = document.getElementById('play_btn');
-  const volume = document.getElementById('volume');
+  const progress = document.getElementById("progress_bar");
+  const current = document.getElementById("current_time");
+  const total = document.getElementById("total_time");
+  const playBtn = document.getElementById("play_btn");
+  const volume = document.getElementById("volume");
 
   // 플레이어 초기화
   AudioPlayer.initPlayer(progress, current, total, playBtn);
@@ -165,8 +120,7 @@ function renderPlayer(track) {
   AudioPlayer.playTrack(track);
 
   // 볼륨 변경
-  volume.addEventListener('input', (e) => {
+  volume.addEventListener("input", (e) => {
     AudioPlayer.setVolume(e.target.value);
   });
 }
-

@@ -1,5 +1,7 @@
 /* footer */
 .footer {
+  position: relative;
+  z-index: -1;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -71,7 +73,6 @@
 
 .footer-right {
   text-align: right;
-  white-space: nowrap;
   align-self: flex-end;
   font-size: 2.4rem;
   opacity: 0.9;

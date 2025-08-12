@@ -2,7 +2,7 @@
 
 body {
   background-image: url(../images/index/bg.jpg);
-  height: 400vh;
+  height: 350vh;
 }
 
 /* section1 */
@@ -35,7 +35,6 @@ body {
   width: 650px;
 }
 
-
 /* 구름 각각의 위치 + 딜레이로 자연스러운 효과 */
 .cloud1 {
   top: 0%;
@@ -63,7 +62,6 @@ body {
 
 /* 구름이 좌우로 부드럽게 흔들리는 애니메이션 */
 @keyframes cloudFloat {
-
   0%,
   100% {
     transform: translateX(0);
@@ -85,15 +83,14 @@ body {
 
 /* 텍스트 애니메이션 효과 */
 .floating-text {
-  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
-  font-size:10rem;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
+  font-size: 10rem;
   color: white;
   animation: textFloat 4s ease-in-out infinite;
   white-space: pre-line;
 }
 
 @keyframes textFloat {
-
   0%,
   100% {
     transform: translateX(0);
@@ -102,7 +99,6 @@ body {
   50% {
     transform: translateX(25px);
   }
-
 }
 
 /* section2 */
@@ -145,12 +141,12 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .right_btn button:hover,
 .left_btn button:hover {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .indicator {
@@ -168,7 +164,7 @@ body {
   height: 18px;
   border-radius: 10px;
   background: #fff;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -179,20 +175,19 @@ body {
   background: #999;
 }
 
-
 /* scrtion3 */
 
 .section3 {
   padding: 80px 20px;
   text-align: center;
   color: white;
-  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
 }
 
 .text-box h2 {
   font-size: 80px;
   margin-bottom: 10px;
-  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
 }
 
 .text-box p {
@@ -205,7 +200,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .person-box img {
@@ -224,7 +218,7 @@ body {
   font-size: 32px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
 }
 
 .start-btn:hover {
@@ -233,7 +227,6 @@ body {
 
 /* 기울어짐 애니메이션 */
 @keyframes tilt {
-
   0%,
   100% {
     transform: rotate(0deg);
@@ -276,7 +269,7 @@ body {
   color: white;
   font-size: 80px;
   font-weight: bold;
-  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
 }
 
 /* section4 */
@@ -303,7 +296,7 @@ body {
   margin: 80px 0 0 117px;
   font-size: 34px;
   color: #eee;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .select_section {
@@ -319,7 +312,7 @@ body {
   justify-content: space-between;
   height: 600px;
   align-items: center;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .select_card {
@@ -345,7 +338,7 @@ body {
   background: rgba(217, 217, 217, 0.02);
   backdrop-filter: blur(15px);
   opacity: 0;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
   text-align: center;
   line-height: 400px;
   color: #fff;
@@ -389,23 +382,22 @@ body {
 #current_time,
 #total_time {
   font-size: 2.3rem;
-  padding: 0 20px ;
+  padding: 0 20px;
 }
 
 #play_btn {
   background: #fff;
-  transition: .3s;
+  transition: 0.3s;
   font-size: 2rem;
 }
 #play_btn:hover {
   background: #999;
 }
 
+@media (max-width: 768px) {
+}
 
-@media (max-width:768px) {}
-
-@media (max-width:576px) {
-
+@media (max-width: 576px) {
   .hero-text p {
     font-size: 2rem;
     padding-top: 150px;

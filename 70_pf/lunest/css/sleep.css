@@ -37,7 +37,7 @@
     font-size: 4rem;
     background: #fff;
     color: #333;
-    padding: 40px; 
+    padding: 40px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -45,7 +45,7 @@
 
 .modal-content button {
     font-size: 2rem;
-    margin-top: 10px;
+    margin: 30px auto 0;
     padding: 10px 30px;
     border: none;
     border-radius: 10px;
@@ -154,4 +154,25 @@
 
 .heart.active {
     color: white;
+}
+
+.player {
+    position: fixed;
+    z-index: 9999px;
+    bottom: 2%;
+    left: 50%;
+    width: 80%;
+    height: 20%;
+    transform: translate(-50%);
+}
+
+#close {
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    border: none;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
 }

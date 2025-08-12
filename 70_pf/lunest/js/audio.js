@@ -10,7 +10,9 @@ let playBtn = null;
 function formatTime(sec) {
   if (!sec || isNaN(sec)) return "0:00";
   const m = Math.floor(sec / 60);
-  const s = Math.floor(sec % 60).toString().padStart(2, '0');
+  const s = Math.floor(sec % 60)
+    .toString()
+    .padStart(2, "0");
   return `${m}:${s}`;
 }
 
@@ -22,14 +24,14 @@ function initPlayer(progressEl, currentEl, totalEl, playButton) {
   playBtn = playButton;
 
   // 진행바 조작 → 위치 변경
-  progressBar.addEventListener('input', () => {
+  progressBar.addEventListener("input", () => {
     if (audio && audio.duration) {
       audio.currentTime = (progressBar.value / 100) * audio.duration;
     }
   });
 
   // 토글 버튼
-  playBtn.addEventListener('click', togglePlay);
+  playBtn.addEventListener("click", togglePlay);
 }
 
 // 특정 곡 재생
@@ -40,27 +42,27 @@ function playTrack(trackName) {
   }
 
   // 새 오디오 로드
-  audio = new Audio(`mp3/${trackName}.mp3`);
+  audio = new Audio(`/mp3/${trackName}.mp3`);
   audio.volume = 0.5;
   audio.play();
 
   // 총 길이 업데이트
-  audio.addEventListener('loadedmetadata', () => {
+  audio.addEventListener("loadedmetadata", () => {
     totalTimeEl.textContent = formatTime(audio.duration);
   });
 
   // 시간/진행바 업데이트
-  audio.addEventListener('timeupdate', () => {
+  audio.addEventListener("timeupdate", () => {
     currentTimeEl.textContent = formatTime(audio.currentTime);
     progressBar.value = (audio.currentTime / audio.duration) * 100;
   });
 
   // 재생 끝나면 버튼 리셋
-  audio.addEventListener('ended', () => {
-    playBtn.textContent = '▶';
+  audio.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
   });
 
-  playBtn.textContent = '⏸';
+  playBtn.textContent = "⏸";
 }
 
 // 재생/일시정지 토글
@@ -69,10 +71,10 @@ function togglePlay() {
 
   if (audio.paused) {
     audio.play();
-    playBtn.textContent = '⏸';
+    playBtn.textContent = "⏸";
   } else {
     audio.pause();
-    playBtn.textContent = '▶';
+    playBtn.textContent = "▶";
   }
 }
 
@@ -87,5 +89,5 @@ function setVolume(value) {
 window.AudioPlayer = {
   initPlayer,
   playTrack,
-  setVolume
+  setVolume,
 };
