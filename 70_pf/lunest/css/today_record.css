@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 body {
-  height: 250vh;
+  height: 100%;
 }
 
 .section {
-  height: 230vh;
+  height: 200vh;
 }
 
 .calendar_info {
@@ -54,6 +54,7 @@ table td {
 .empty {
   background: transparent;
 }
+
 .stamp {
   position: absolute;
   top: 50%;
@@ -176,29 +177,36 @@ table td {
   body {
     height: 300vh;
   }
+
   .section {
     height: 250vh;
   }
+
   .stamp {
     width: 30px;
   }
+
   .gauge {
     width: 330px;
   }
+
   .diary_input_box {
     width: 60%;
     margin: 0 auto;
   }
+
   #diary_input {
     margin: 0;
     width: 200px;
     padding-left: 10px;
     font-size: 1.2rem;
   }
+
   #add_btn {
     margin-left: 10px;
     width: 50px;
   }
+
   #diary_list li {
     width: 70%;
     height: 50px;
@@ -206,6 +214,7 @@ table td {
     font-size: 1.8rem;
     margin: 20px auto;
   }
+
   .footer {
     display: none;
   }

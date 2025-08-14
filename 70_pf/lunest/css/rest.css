@@ -43,7 +43,7 @@ body {
 .sound-card img {
   width: 177px;
   height: 149px;
-  border-radius: 20px;
+  border-radius: 28px;
   margin-left: 20px;
 }
 
@@ -94,25 +94,25 @@ body {
 
 
 .player {
-    position: fixed;
-    z-index: 9999;
-    bottom: 2%;
-    left: 50%;
-    width: 80%;
-    height: 20%;
-    transform: translate(-50%);
+  position: fixed;
+  z-index: 9999;
+  bottom: 2%;
+  left: 50%;
+  width: 80%;
+  height: 20%;
+  transform: translate(-50%);
 }
 
 
 #close {
-    position: absolute;
-    background: transparent;
-    color: #fff;
-    border: none;
-    top: 30px;
-    right: 30px;
-    font-size: 40px;
-    cursor: pointer;
+  position: absolute;
+  background: transparent;
+  color: #fff;
+  border: none;
+  top: 30px;
+  right: 30px;
+  font-size: 40px;
+  cursor: pointer;
 }
 
 
@@ -150,6 +150,11 @@ body {
   max-height: 500px;
   /* 충분히 큰 값으로 설정 */
   padding: 20px;
+}
+
+.cover-img {
+  width: 150px;
+  border-radius: 24px;
 }
 
 .sound-item {

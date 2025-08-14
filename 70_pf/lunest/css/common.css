@@ -23,3 +23,9 @@ body {
   overflow-x: hidden;
   color: #fff;
 }
+
+@media(max-width: 768px) {
+  body {
+    background: url(../images/index/bg.jpg) no-repeat center 30%;
+  }
+}

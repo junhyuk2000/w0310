@@ -45,6 +45,7 @@ const modalImg = document.querySelector(".modal_img");
 const card = document.querySelectorAll(".card");
 const flip = document.querySelector(".flip");
 const flipText = document.querySelector(".flip_back");
+
 card.forEach((cardElm) => {
   cardElm.addEventListener("click", () => {
     const idx = cardElm.dataset.index;
@@ -63,6 +64,7 @@ const modalClose = document.querySelector(".modal_close");
 modalClose.addEventListener("click", () => {
   modal.classList.add("hide");
   modalContents.classList.add("hide");
+  flip.classList.add("flipped");
 });
 
 flip.addEventListener("click", () => {

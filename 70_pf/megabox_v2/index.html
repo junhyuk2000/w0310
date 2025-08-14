@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEET PLAY SHARE, 메가박스</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css');
+        @import url('./css/font.css');
+
+        /* reset */
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        h1,
+        ul {
+            margin: 0;
+            font-family: 'NanumBarunGothic';
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* header common */
+        #header {
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
+            padding: 15px;
+        }
+
+        #header .inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        #header a {
+            color: #fff;
+        }
+
+        /* logo */
+        #logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* top menu */
+        #header .top_link {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        #header .top_link a {
+            font-size: 13px;
+            color: #888;
+        }
+
+        #header .left_link a {
+            margin-right: 20px;
+        }
+
+        #header .right_link a {
+            margin-left: 20px;
+        }
+
+        /* link icon */
+        #header .link_icon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* GNB common */
+        #gnb {
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            top: 50px;
+            transform: translateX(-50%);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* 1depth */
+        #gnb .main {
+            display: flex;
+            justify-content: space-evenly;
+            align-content: flex-end;
+        }
+
+        #gnb .main a {
+            position: relative;
+            font-size: 18px;
+        }
+
+        #gnb .main>li:not(:nth-of-type(5))>a:hover::after {
+            position: absolute;
+            bottom: -25px;
+            content: '';
+            width: 100%;
+            height: 3px;
+            transform: translateX(-100%);
+            background: #fff;
+        }
+
+        #gnb .main>li:nth-of-type(3) {
+            margin-right: 150px;
+        }
+
+        #gnb .main>li:nth-of-type(4) {
+            margin-left: 150px;
+        }
+
+        #gnb .main li:hover .sub {
+            display: flex;
+        }
+
+        /* 2depth */
+        #gnb .sub {
+            position: absolute;
+            transform: translateX(-30%);
+            padding-top: 30px;
+            display: none;
+        }
+
+        #gnb .sub:last-of-type {
+            text-wrap: nowrap;
+        }
+
+        #gnb .sub li {
+            margin: 0 8px;
+        }
+
+        #gnb .sub a {
+            font-size: 15px;
+        }
+
+        #gnb .sub a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* section */
+        #section1 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            color: #fff;
+        }
+
+        #section1 a {
+            color: #fff;
+        }
+
+        #section1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #section1 .bg {
+            background: url('./images/3m5xfcluV5mBUCrpoNtD507AQ6ermcWV_380.jpg') no-repeat 50%/cover;
+            filter: blur(25px) brightness(30%);
+            height: 100vh;
+        }
+
+        #section1 .container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        #section1 .container h2 {
+            display: inline-block;
+            font-size: 16px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 4px;
+        }
+
+        #section1 .more {
+            text-align: right;
+            margin-bottom: 16px;
+        }
+
+        #section1 .more a {
+            font-size: 15px;
+            color: #aaa;
+        }
+
+        #section1 .more span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-left: 4px;
+        }
+
+        #section1 .container ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        #section1 .box_office_card {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 8px;
+        }
+
+        #section1 .rank {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            font-size: 32px;
+            font-weight: 300;
+            font-style: italic;
+            text-shadow: 2px 2px 2px #000;
+        }
+
+        #section1 .poster {
+            width: 245px;
+            height: 352px;
+            border-radius: 5px;
+            overflow: hidden;
+            grid-column: 1 / span 2;
+            /* margin-bottom: 8px; */
+        }
+
+        #section1 .like {
+            display: inline-block;
+            /* width: 68px; */
+            height: 34px;
+            line-height: 34px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+        #section1 .like i {
+            margin-right: 4px;
+        }
+
+        #section1 .reservation_btn {
+            display: inline-block;
+            /* width: 100%; */
+            height: 36px;
+            line-height: 36px;
+            background: #037b94;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="inner">
+            <h1 id="logo"><a href="index.html"><img src="images/logo-white_new2.png" alt="메가박스"></a></h1>
+            <div class="top_link">
+                <div class="left_link">
+                    <a href="#">VIP LOUNGE</a>
+                    <a href="#">멤버십</a>
+                    <a href="#">고객센터</a>
+                </div>
+                <div class="right_link">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">빠른예매</a>
+                </div>
+            </div>
+            <nav id="gnb">
+                <ul class="main">
+                    <li><a href="#">영화</a>
+                        <ul class="sub">
+                            <li><a href="#">전체영화</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">예매</a>
+                        <ul class="sub">
+                            <li><a href="#">빠른예매</a></li>
+                            <li><a href="#">상영시간표</a></li>
+                            <li><a href="#">더 부티크 프라이빗 예매</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">극장</a>
+                        <ul class="sub">
+                            <li><a href="#">전체극장</a></li>
+                            <li><a href="sub/specialized_theaters.html">특별관</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="sub">
+                            <li><a href="#">진행중 이벤트</a></li>
+                            <li><a href="#">지난 이벤트</a></li>
+                            <li><a href="#">당첨자발표</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">스토어</a></li>
+                    <li><a href="#">혜택</a>
+                        <ul class="sub">
+                            <li><a href="#">메가박스 멤버십</a></li>
+                            <li><a href="#">제휴/할인</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="link_icon">
+                <div class="left_link">
+                    <a href="#"><img src="images/ico-sitemap-white.png" alt=""></a>
+                    <a href="#"><img src="images/ico-search-white.png" alt=""></a>
+                </div>
+                <div class="right_link">
+                    <a href="#"><img src="images/ico-schedule-white.png" alt=""></a>
+                    <a href="#"><img src="images/ico-mymega-white.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="section1">
+        <div class="bg">
+        </div>
+        <div class="container">
+            <h2>박스오피스</h2>
+            <div class="more"><a href="#">더 많은 영화보기 <span><img src="images/btn-more-cross-purple.png"
+                            alt="더 많은 영화보기"></span></a></div>
+            <div class="box_office">
+                <ul>
+                    <li class="box_office_card">
+                        <span class="rank">1</span>
+                        <div class="poster"><img
+                                src="https://img.megabox.co.kr/SharedImg/2025/07/25/4fLIzM7kJAnaPCu4ngQJLhgP7ak3GMrs_420.jpg"
+                                alt="영화1"></div>
+                        <span class="like"><i class="fa-regular fa-heart"></i>3.6k</span>
+                        <a href="#" class="reservation_btn">예매</a>
+                    </li>
+                    <li class="box_office_card">
+                        <span class="rank">2</span>
+                        <div class="poster"><img
+                                src="https://img.megabox.co.kr/SharedImg/2025/08/05/GCFwvyXNbZTEogfoCW4TQNLiBNc5l6Hy_420.jpg"
+                                alt="영화1"></div>
+                        <span class="like"><i class="fa-regular fa-heart"></i>1.1k</span>
+                        <a href="#" class="reservation_btn">예매</a>
+                    </li>
+                    <li class="box_office_card">
+                        <span class="rank">3</span>
+                        <div class="poster"><img
+                                src="https://img.megabox.co.kr/SharedImg/2025/06/12/hWiZN7PP9G18jB18bS2BfyOTRDPpJH0m_420.jpg"
+                                alt="영화1"></div>
+                        <span class="like"><i class="fa-regular fa-heart"></i>2.6k</span>
+                        <a href="#" class="reservation_btn">예매</a>
+                    </li>
+                    <li class="box_office_card">
+                        <span class="rank">4</span>
+                        <div class="poster"><img
+                                src="https://img.megabox.co.kr/SharedImg/2025/07/21/PyQHev3OAVz7SGjIbnc6hGIA7GHmqq8g_420.jpg"
+                                alt="영화1"></div>
+                        <span class="like"><i class="fa-regular fa-heart"></i>376</span>
+                        <a href="#" class="reservation_btn">예매</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- //#section1 -->
+</body>
+
+</html>
