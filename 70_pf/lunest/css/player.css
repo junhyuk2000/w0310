@@ -91,8 +91,8 @@
 
 .player .controls input[type="range"] {
   width: 100px;
-  appearance: none;
-  height: 4px;
+  /* appearance: none;  */
+  height: 5px;
   border-radius: 2px;
   background: #999;
   cursor: pointer;
@@ -105,4 +105,17 @@
   border-radius: 50%;
   background: #fff;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .player {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .player img {
+    width: 70px;
+    height: 70px;
+  }
 }

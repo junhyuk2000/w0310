@@ -6,7 +6,7 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -26,6 +26,7 @@ body {
 
 @media(max-width: 768px) {
   body {
-    background: url(../images/index/bg.jpg) no-repeat center 30%;
+    background: url(../images/index/bg.jpg) no-repeat center center;
+    background-size: cover;
   }
 }

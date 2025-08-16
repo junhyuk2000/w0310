@@ -15,27 +15,25 @@ playtBtn.addEventListener("click", () => {
 const clock = document.getElementById("clock");
 const greeting = document.querySelector(".greeting");
 
-const date = new Date();
-const hours = date.getHours();
-const minute = date.getMinutes();
-
-clock.textContent = `${hours} : ${minute}`;
-if(hours < 10 && minute <10 ){
-    clock.textContent = `0${hours} : 0${minute}`;
-    } else if( hours < 10) {
-    clock.textContent = `0${hours} : ${minute}`;
+const updateClock =()=>{
+  const date = new Date();
+  const hours = date.getHours();
+  const minute = date.getMinutes();
+  
+  const time= `${hours.toString().padStart(2, "0")} : ${minute.toString().padStart(2, "0")}`;
+  clock.textContent = time;  
+  
+  if (hours < 7) {
+    greeting.textContent = "좋은 밤 보내세요 🌙";
+  } else if (hours < 18) {
+    greeting.textContent = "오늘도 좋은 하루 되세요 ☀️";
   } else {
-    clock.textContent = `${hours} : 0${minute}`;
+    greeting.textContent = "편안한 저녁 보내세요 ⭐";
   }
-
-
-if (hours < 7) {
-  greeting.textContent = "좋은 밤 보내세요 🌙";
-} else if (hours < 18) {
-  greeting.textContent = "오늘도 좋은 하루 되세요 ☀️";
-} else {
-  greeting.textContent = "편안한 저녁 보내세요 ⭐";
 }
+
+updateClock();
+setInterval(updateClock, 1000);
 
 //오디오
 const recommendBox = document.querySelector(".recommend-player");

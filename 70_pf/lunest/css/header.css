@@ -139,11 +139,13 @@ header {
     visibility: visible;
     overflow: visible;
     display: none;
+    transition:.5s;
   }
 
   .main li.open .sub {
     display: block;
     height: 100px;
+    transition: .3s;
   }
 
   .sub li {

@@ -90,7 +90,6 @@ table td {
 .today_diary {
   width: 80%;
   height: 40%;
-  /* overflow: hidden; */
   background: rgba(2, 2, 2, 0.4);
   margin: 140px auto 0;
 }
@@ -173,15 +172,12 @@ table td {
   padding-left: 30px;
 }
 
-@media (max-width: 576px) {
-  body {
-    height: 300vh;
-  }
+@media (max-width: 768px) {
 
-  .section {
-    height: 250vh;
+  .calendar_info {
+    margin-top: 50px;
+    margin-bottom: 30px;
   }
-
   .stamp {
     width: 30px;
   }
@@ -211,11 +207,11 @@ table td {
     width: 70%;
     height: 50px;
     line-height: 50px;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin: 20px auto;
   }
-
-  .footer {
-    display: none;
+  .today_diary {
+    margin: 0 auto;
   }
+
 }

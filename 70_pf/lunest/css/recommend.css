@@ -1,20 +1,8 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: "Ownglyph_Memo_Okja-Rg";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
 
 body {
-  margin: 0;
-  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
-  background: url("../images/KakaoTalk_20250715_164802197.png") no-repeat center
-    center/cover;
+
   text-align: center;
 }
 
@@ -23,7 +11,7 @@ body {
 }
 
 .time-display {
-  padding: 0 400px;
+  padding: 0 20%;
   margin: 0 auto;
 }
 
@@ -193,3 +181,131 @@ body {
 .thumb:hover {
   border-color: white;
 }
+
+
+/* =========================
+   ✅ Mobile (max-width: 767px)
+   ========================= */
+@media (max-width: 767px) {
+  .container { 
+    padding: 10px; 
+    margin: 50px 0;
+  }
+
+  /* 헤더/시간 영역 */
+  .time-display{
+    margin-bottom: 40px;
+  }
+
+  #now-time {
+    padding-left: 50px;
+    font-size: 5rem;
+  }
+  .time-display p {
+    font-size: 3rem;
+  }
+  #clock { font-size: 6rem; }
+  .night-text {
+    position: static;        /* 절대배치 해제 → 자연스러운 흐름 */
+    display: block;
+    margin-top: .5rem;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* 메인 플레이어 */
+  .main-player {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 20px;
+    height: auto;
+    aspect-ratio: 16 / 9;     /* 컨테이너 비율 고정 */
+    overflow: hidden;
+  }
+  .main-bg { width: 100%; height: 100%; object-fit: cover; }
+
+  .overlay {
+    display: flex;
+    padding: 1rem 1.2rem;
+  }
+  .recommend-label { font-size: 2rem; }
+  #play_btn {
+    font-size: 2rem;
+    min-height: 44px;        
+    border-radius: 10px;
+  }
+
+  /* 추천 섹션 */
+  .recommend-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    margin: 100px 0 200px;
+  }
+
+  .recommend-player {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 100px;
+  }
+
+  .cover-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    margin: 0 auto;
+  }
+  .info {
+    width: 100%;
+  }
+  #track_title {
+    font-size: 4rem;
+    margin: 30px 0;
+  }
+  .audio-info h3 { font-size: 3rem; }
+  .audio-info p  { font-size: 2rem; }
+
+  .controls {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .8rem;
+  }
+  .controls button {
+    font-size: 1.4rem;
+    padding: .7rem 1rem;
+    min-height: 44px;
+    border-radius: 10px;
+  }
+
+  .thumbnail-buttons {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: .5rem;
+  }
+  .thumb {
+    width: 34%;
+    height: 34%;
+    margin-top: 0;
+    border-radius: 48px;
+    margin: 0 auto;
+  }
+  
+  .player img {
+    width: 140px;
+    height: 140px;
+    border-radius: 40px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #clock { font-size: 3.2rem; }
+  .thumb { width: 38vw; height: 38vw; min-width: 38vw; min-height: 38vw; }
+}
+

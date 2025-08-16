@@ -81,3 +81,9 @@
 .noto {
   font-family: 'Noto Sans', sans-serif;
 }
+
+@media (max-width: 767px) {
+  .footer {
+    display: none;
+  }
+}

@@ -3,18 +3,18 @@
 .section-title {
     text-align: center;
     padding: 40px 20px 20px;
-    font-size: 60px;
+    font-size: 6rem;
 }
 
 .section-title h1 {
-    font-size: 74px;
+    font-size: 7.4rem;
     margin-bottom: 5px;
 }
 
 .heart {
     background: none;
     border: none;
-    font-size: 53px;
+    font-size: 5.3rem;
     cursor: pointer;
     color: white;
     margin-top: 10px;
@@ -28,6 +28,8 @@
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
 }
@@ -161,10 +163,11 @@
     z-index: 9999;
     bottom: 2%;
     left: 50%;
-    width: 80%;
+    width: 60%;
     height: 20%;
     transform: translate(-50%);
 }
+
 
 
 #close {
@@ -176,4 +179,81 @@
     right: 30px;
     font-size: 40px;
     cursor: pointer;
+}
+
+/* ✅ 모바일 (최대 767px) */
+@media (max-width: 767px) {
+    .section-title {
+        padding: 80px 5px ;
+    }
+
+   .section-title h1 {
+        font-size: 6rem;
+    }
+    .section-title p{
+        font-size: 4rem;
+    }
+    .heart {
+        font-size: 3rem;
+    }
+
+    .sound-card {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 50px;
+        gap: 10px;
+    }
+
+    .sound-card img {
+        width: 140px;
+        height: 120px;
+    }
+
+    .sound-card p {
+        font-size: 2.5rem;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+
+    .flip-title {
+        font-size: 3.5rem;
+        margin-top: 50px;
+    }
+
+    .flip-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;       
+    gap: 16px;
+  }
+
+  .flip-card {
+    width: min(56vw, 220px);
+    height:50px;         
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+     font-size: 2.5rem;
+    padding: 10px;
+    text-align: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .flip-card,
+  .flip-card.flipped {
+     width: 250px;   /* ← 원하는 값으로 조절 (130/150 등) */
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden; 
+  }
+
+  .player {
+    width: 100%;
+  }
+
+
+   
 }
