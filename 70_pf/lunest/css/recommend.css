@@ -133,7 +133,6 @@ body {
 #current_time,
 #total_time {
   font-size: 2.3rem;
-  padding: 0 20px;
 }
 
 #play_btn {
@@ -231,7 +230,10 @@ body {
     display: flex;
     padding: 1rem 1.2rem;
   }
-  .recommend-label { font-size: 2rem; }
+  .recommend-label { 
+    font-size: 2rem; 
+  }
+
   #play_btn {
     font-size: 2rem;
     min-height: 44px;        
@@ -257,7 +259,7 @@ body {
   .cover-img {
     width: 100%;
     height: 100%;
-    border-radius: 100px;
+    border-radius: 40px;
     margin: 0 auto;
   }
   .info {
@@ -302,15 +304,10 @@ body {
   .player img {
     width: 140px;
     height: 140px;
-    border-radius: 40px;
+    border-radius: 32px;
   }
     .controls>.volume_img {
     width: 24px;
   }
 }
-/* 
-@media screen and (max-width: 360px) {
-  #clock { font-size: 3.2rem; }
-  .thumb { width: 38vw; height: 38vw; min-width: 38vw; min-height: 38vw; }
-} */
 
