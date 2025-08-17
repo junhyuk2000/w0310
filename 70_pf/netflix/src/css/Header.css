@@ -1,0 +1,23 @@
+.header {
+    height: 50px;
+    padding: 10px 60px;
+    display: flex;
+    align-items: center;
+}
+.header_logo {
+    width: 5.5%;
+    height: 25px;
+
+}
+
+.gnb {
+    margin-left: 20px;
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.gnb a {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+}

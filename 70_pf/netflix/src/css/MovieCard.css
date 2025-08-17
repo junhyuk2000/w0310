@@ -1,0 +1,46 @@
+.movie_card {
+  position: relative;
+  width: 215px;
+  height: 312px;
+  border-radius: 20px;
+}
+
+.movie_card img {
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.rank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  font-style: italic;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.likes_btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.likes {
+  background: transparent;
+  border: 1px solid #4c4c4c;
+  border-radius: 5px;
+  margin-right: 6px;
+  color: #fff;
+  width: 80px;
+  cursor: pointer;
+}
+
+.likes_btn a {
+  display: inline-block;
+  background: #0af;
+  padding: 6px 12px;
+  width: calc(100% - 80px);
+  border-radius: 5px;
+  text-align: center;
+}
