@@ -1,17 +1,26 @@
 const likeBtn = document.querySelectorAll(".heart");
 const modalText = document.querySelector(".modal-content>p");
 
-likeBtn.forEach((elm) => {
-  elm.addEventListener("click", () => {
-    if (elm.textContent === "♡") {
-      modalText.textContent = "즐겨찾기에 추가되었습니다.";
-    } else {
-      modalText.textContent = "즐겨찾기에서 삭제되었습니다.";
-    }
-    elm.textContent = elm.textContent === "♡" ? "❤" : "♡";
-    showAlert();
-  });
+const initFavs = JSON.parse(localStorage.getItem("fav") || "[]");
+likeBtn.forEach(btn => {
+  const title = btn.parentElement.dataset.title;
+  btn.textContent = initFavs.includes(title) ? "❤" : "♡";
 });
+
+likeBtn.forEach(btn => {
+  btn.onclick = () => {
+    const title = btn.parentElement.dataset.title;
+    let favs = JSON.parse(localStorage.getItem("fav") || "[]");
+    favs = favs.includes(title) ? favs.filter(v => v !== title) : favs.concat(title);
+    localStorage.setItem("fav", JSON.stringify(favs));
+    const on = favs.includes(title);
+    localStorage.setItem("isClicked_" + title, on ? "true" : "false");
+    btn.textContent = on ? "❤" : "♡";
+    modalText.textContent = on ? "즐겨찾기에 추가되었습니다." : "즐겨찾기에서 삭제되었습니다.";
+    showAlert();
+  };
+});
+
 
 function showAlert() {
   document.getElementById("alertModal").style.display = "flex";
@@ -46,6 +55,8 @@ soundCard.forEach((card) => {
 
 const deleteUi = () => {
   audioUi.innerHTML = "";
+  audio.pause();
+  audio = null;
 };
 
 
@@ -63,6 +74,7 @@ const createAudioUi = (title) => {
         <div class="controls">
           <button id="play_btn">▶</button>
           <input type="range" min="0" max="1" step="0.01" value="0.5" id="volume">
+          <img src="/images/volume.svg" alt="볼륨이미지" class="volume_img">
         </div>
         <button id="close" onclick="deleteUi()"> X </button>
       </div>
@@ -71,6 +83,18 @@ const createAudioUi = (title) => {
   `;
 };
 
+
+// likeBtn.forEach(btn => {
+//   btn.onclick = () => {
+//     const title = btn.parentElement.dataset.title;
+//     let favs = JSON.parse(localStorage.getItem("fav") || "[]");
+
+//     if (!favs.includes(title)) {   
+//       favs.push(title);
+//       localStorage.setItem("fav", JSON.stringify(favs));
+//     }
+//   };
+// });
 
 
 

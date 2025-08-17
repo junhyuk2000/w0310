@@ -80,7 +80,7 @@
 .sound-card p {
     flex: 1;
     margin: 0 50px;
-    font-size: 48px;
+    font-size: 4rem;
 }
 
 .sound-card:hover {
@@ -93,7 +93,7 @@
     text-align: center;
     font-size: 60px;
     margin-top: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     color: white;
     font-family: 'Ownglyph_Memo_Okja-Rg', serif;
 }
@@ -148,6 +148,7 @@
     background: rgba(0, 0, 0, 0.6);
     color: white;
     transform: rotateY(180deg);
+    font-size: 3rem;
 }
 
 .heart {
@@ -167,7 +168,12 @@
     height: 20%;
     transform: translate(-50%);
 }
-
+.info {
+    padding-left: 50px;
+}
+.progress {
+    width: 80%;
+}
 
 
 #close {
@@ -181,7 +187,6 @@
     cursor: pointer;
 }
 
-/* ✅ 모바일 (최대 767px) */
 @media (max-width: 767px) {
     .section-title {
         padding: 80px 5px ;
@@ -253,7 +258,21 @@
   .player {
     width: 100%;
   }
+    .player>img {
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    }
+  #track_title {
+    text-align: center;
+  }
+  .controls>.volume_img {
+    width: 24px;
+  }
+  #close {
+    top: 20px;
+    font-size: 2.4rem;
+  } 
 
 
-   
 }

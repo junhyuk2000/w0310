@@ -14,10 +14,12 @@ body {
 }
 
 .section-title h1 {
-  font-size: 7.4rem;
-  margin-bottom: 5px;
+  font-size: 6.5rem;
+  margin-bottom: 20px;
 }
-
+.section-title p {
+  font-size: 5rem;
+}
 .heart {
   background: none;
   border: none;
@@ -43,14 +45,14 @@ body {
 .sound-card img {
   width: 177px;
   height: 149px;
-  border-radius: 20px;
+  border-radius: 34px;
   margin-left: 20px;
 }
 
 .sound-card p {
-  flex: 1;
+  flex:1;
   margin: 0 50px;
-  font-size: 4.8rem;
+  font-size: 4rem;
 }
 
 .sound-card:hover {
@@ -66,16 +68,18 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
 
 .modal-content {
-  margin: 25% auto;
+  margin: 40vh auto;
   font-size: 4rem;
   background: #fff;
   color: #333;
-  padding: 30px 40px;
+  padding: 40px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -83,7 +87,7 @@ body {
 
 .modal-content button {
   font-size: 2rem;
-  margin-top: 10px;
+  margin:0 auto ;
   padding: 10px 30px;
   border: none;
   border-radius: 5px;
@@ -173,9 +177,38 @@ body {
 
 .sound-info p {
   margin: 5px 0 0;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   color: #ccc;
 }
+
+.player {
+    position: fixed;
+    z-index: 9999;
+    bottom: 2%;
+    left: 50%;
+    width: 60%;
+    height: 20%;
+    transform: translate(-50%);
+}
+.info {
+    padding-left: 50px;
+}
+.progress {
+    width: 80%;
+}
+
+
+#close {
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    border: none;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
 
 @media (max-width: 767px) {
 
@@ -184,14 +217,17 @@ body {
   }
 
 .section-title {
-    padding: 22px 12px 10px;
+    padding: 80px 5px;
     font-size: 3rem;
   }
 .section-title h1 {
-    font-size: 3.8rem;
+    font-size: 6rem;
     margin-bottom: 6px;
     line-height: 1.1;
     word-break: keep-all;
+  }
+  .section-title p {
+    font-size: 4rem;
   }
   .heart {
     font-size: 3rem;
@@ -212,7 +248,7 @@ body {
   .sound-card img {
     width: 140px;
     height: 120px;
-    border-radius: 16px;
+    border-radius: 24px;
     margin: 0;
   }
   .sound-card p {
@@ -241,7 +277,7 @@ body {
     margin: 56px auto 200px;
   }
   .accordion-header {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     padding: 18px 16px;
     border-radius: 12px;
   }
@@ -264,13 +300,31 @@ body {
     border-radius: 14px;
   }
   .sound-info h3 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .sound-info p {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .player img {
     border-radius: 16px;
+  }
+    #track_title {
+    text-align: center;
+  }
+  .controls>.volume_img {
+    width: 24px;
+  }
+  #close {
+    top: 20px;
+    font-size: 2.4rem;
+  } 
+  .player {
+    width: 100%;
+  }
+  .player>img {
+    width: 20%;
+    height: 100%;
+    border-radius: 30px;
   }
 }
 

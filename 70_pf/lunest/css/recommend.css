@@ -79,7 +79,7 @@ body {
 
 .play-btn {
   font-size: 2.8rem;
-  padding: 0.6rem 1.5rem;
+  padding: 6px 15px  8px;
   background: white;
   color: black;
   border: none;
@@ -141,7 +141,9 @@ body {
   transition: 0.3s;
   font-size: 2rem;
   text-align: center;
+  line-height: 1;
   padding-bottom: 5px;
+  border-radius: 15px;
 }
 
 #play_btn:hover {
@@ -242,14 +244,14 @@ body {
     flex-direction: column;
     align-items: center;
   
-    margin: 100px 0 200px;
+    margin: 50px 0
   }
 
   .recommend-player {
     width: 100%;
     height: auto;
     border-radius: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .cover-img {
@@ -302,10 +304,13 @@ body {
     height: 140px;
     border-radius: 40px;
   }
+    .controls>.volume_img {
+    width: 24px;
+  }
 }
-
+/* 
 @media screen and (max-width: 360px) {
   #clock { font-size: 3.2rem; }
   .thumb { width: 38vw; height: 38vw; min-width: 38vw; min-height: 38vw; }
-}
+} */
 

@@ -1,3 +1,16 @@
+const favs = JSON.parse(localStorage.getItem("fav") || "[]");
+const list = document.querySelector(".fav_ul");
+
+list.innerHTML = favs.map(name => `
+  <li class="fav_li" data-title="${name}">
+    <img src="/images/favorite/${name}.jpg" alt="${name}">
+    <p class="fav_title">${name}</p>
+  </li>
+`).join("");
+
+
+
+
 const cardArr = [
   { src: "/images/favorite/fire.jpg", alt: "불" },
   { src: "/images/favorite/fire2.jpg", alt: "불2" },
@@ -70,3 +83,56 @@ modalClose.addEventListener("click", () => {
 flip.addEventListener("click", () => {
   flip.classList.toggle("flipped");
 });
+
+
+
+const favLi = document.querySelectorAll('.fav_li');
+const audioUi = document.querySelector(".audio_ui");
+favLi.forEach((li) => {
+  li.addEventListener("click", () => {
+    createAudioUi(li.dataset.title);
+
+  const progress = document.getElementById("progress_bar");
+  const current = document.getElementById("current_time");
+  const total = document.getElementById("total_time");
+  const playBtn = document.getElementById("play_btn");
+  const volume = document.getElementById("volume");
+   
+  volume.addEventListener("input", (e) => {
+      AudioPlayer.setVolume(Number(e.target.value));
+  });
+
+  AudioPlayer.initPlayer(progress, current, total, playBtn);
+  AudioPlayer.setVolume(Number(volume.value));
+  AudioPlayer.playTrack(li.dataset.title);
+  });
+});
+const deleteUi = () => {
+  audioUi.innerHTML = "";
+  audio.pause();
+  audio = null;
+};
+
+
+const createAudioUi = (title) => {
+  audioUi.innerHTML = `
+    <div class="player">
+      <img src="/images/favorite/${title}.jpg" alt="${title}" class="cover-img">
+      <div class="info">
+        <h3 id="track_title">${title}</h3>
+        <div class="progress">
+          <span id="current_time">0:00</span>
+          <input type="range" id="progress_bar" min="0" max="100" value="0">
+          <span id="total_time">0:00</span>
+        </div>
+        <div class="controls">
+          <button id="play_btn">▶</button>
+          <input type="range" min="0" max="1" step="0.01" value="0.5" id="volume">
+          <img src="/images/volume.svg" alt="볼륨이미지" class="volume_img">
+        </div>
+        <button id="close" onclick="deleteUi()"> X </button>
+      </div>
+    </div>
+  </div>
+  `;
+};

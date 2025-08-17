@@ -4,6 +4,7 @@ const gnb = document.querySelector(".gnb");
 const header = document.querySelector(".header");
 const mainLi = document.querySelectorAll(".main>li");
 let isOpen = false;
+
 // 메뉴 열기
 mobileMenu.addEventListener("click", () => {
   gnb.classList.add("open");
@@ -30,14 +31,18 @@ closeBtn.addEventListener("click", () => {
     .forEach((sub) => sub.classList.remove("open"));
 });
 
+
 mainLi.forEach((li) => {
   li.addEventListener("click", () => {
+    if (window.matchMedia("(max-width: 768px)").matches){
     isOpen=true;
     mainLi.forEach((item) => {
       item.classList.remove("open");
       item.style.color = "#fff";
     });
     li.classList.add("open");
-    li.style.color = "#878787";
+    li.style.color = "#666";
+  }
   });
 });
+

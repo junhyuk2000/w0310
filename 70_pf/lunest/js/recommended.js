@@ -52,6 +52,7 @@ function renderPlayer(track) {
         <div class="controls">
           <button id="play_btn">▶</button>
           <input type="range" min="0" max="1" step="0.01" value="0.5" id="volume">
+          <img src="/images/volume.svg" alt="볼륨이미지" class="volume_img">
         </div>
       </div>
     </div>
