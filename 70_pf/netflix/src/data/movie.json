@@ -1,0 +1,49 @@
+{
+  "movieEveryoneLove": [
+    { "id": 1, "src": "/images/movielist1.jpg", "title": "케이팝데몬헌터스" },
+    { "id": 2, "src": "/images/movielist2.jpeg", "title": "귀멸의칼날" },
+    { "id": 3, "src": "/images/movielist3.jpg", "title": "오징어게임" },
+    { "id": 4, "src": "/images/movielist4.jpg", "title": "웬즈데이" },
+    { "id": 5, "src": "/images/movielist5.jpg", "title": "트리거" }
+  ],
+  "koreanDrama": [
+    { "id": 101, "src": "/images/movielist6.jpg", "title": "더글로리" },
+    { "id": 102, "src": "/images/movielist7.jpg", "title": "눈물의여왕" },
+    { "id": 103, "src": "/images/movielist8.jpg", "title": "중증외상센터" },
+    { "id": 104, "src": "/images/movielist9.jpg", "title": "이태원클라스" },
+    { "id": 105, "src": "/images/movielist10.jpg", "title": "그해우리는" }
+  ],
+  "animation": [
+    { "id": 201, "src": "/images/movielist11.jpg", "title": "사카모토데이즈" },
+    { "id": 202, "src": "/images/movielist12.jpg", "title": "헌터x헌터" },
+    { "id": 203, "src": "/images/movielist13.jpg", "title": "나혼자만레벨업" },
+    { "id": 204, "src": "/images/movielist14.jpg", "title": "진격의거인" },
+    { "id": 205, "src": "/images/movielist15.jpg", "title": "주술회전" }
+  ],
+  "movies": [
+    {
+      "rank": 1,
+      "image": "/images/card1.jpg",
+      "alt": "귀멸의 칼날 무한성편",
+      "likes": 980
+    },
+    {
+      "rank": 2,
+      "image": "/images/card2.jpg",
+      "alt": "진격의 거인",
+      "likes": 867
+    },
+    {
+      "rank": 3,
+      "image": "/images/card3.jpg",
+      "alt": "탑건 매버릭",
+      "likes": 800
+    },
+    {
+      "rank": 4,
+      "image": "/images/card4.jpg",
+      "alt": "F1",
+      "likes": 300
+    }
+  ]
+}

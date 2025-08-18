@@ -27,7 +27,7 @@ function MovieCard({ rank, image, alt, initialLikes }) {
           {likes}
         </button>
         {/* 예매버튼 */}
-        <a href="#">예매</a>
+        <a href="#">시청하기</a>
       </div>
     </div>
   );

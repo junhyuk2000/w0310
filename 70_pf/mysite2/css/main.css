@@ -1,34 +1,68 @@
 @charset "utf-8";
-@import url(./reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('reset.css');
 
 /* typo */
-body {
-  font-family: "Lato", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.8;
+}
 .ls10 {
-  letter-spacing: 10px;
+    letter-spacing: 10px;
 }
 
 p,
-footer {
-  font-family: Arial, Helvetica, sans-serif;
+footer a {
+    font-family: 'Pretendard-Regular', Helvetica, sans-serif;
 }
 
+/* Parallax Scrolling Image */
 #sec1 {
-  height: 100vh;
-  background: url(./../images/10011.jpg) no-repeat 50% 50%/cover fixed;
+    height: 100vh;
+    background: url(../images/parallax1.jpg) no-repeat 50% 50%/cover fixed;
+}
+#sec3 .parallax_bg {
+    height: 400px;
+    background: url(../images/parallax2.jpg) no-repeat 50% 50%/cover fixed;
+}
+#sec4 .parallax_bg {
+    height: 400px;
+    background: url(../images/parallax3.jpg) no-repeat 50% 50%/cover fixed;
 }
 
+/* header */
+#mainNavbar {
+    transform:translateY(-100%);
+}
+#mainNavbar.navbar-scrolled {
+    background-color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform:translateY(0);
+}
+
+
+/* section common */
 .sec {
-  max-width: 920px;
+    max-width: 920px;
 }
 
+/* skill progressbar */
 #skill p {
-  letter-spacing: 5px;
+    letter-spacing: 4px;
+}
+.progress {
+    height:35px;
 }
 
-.progress {
-  height: 35px;
+/* footer */
+footer:hover {
+    background: #111 !important;
 }

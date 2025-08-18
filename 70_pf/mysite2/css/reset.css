@@ -1,12 +1,15 @@
 @charset "utf-8";
-
+/* reset */
 ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    list-style:none;
 }
-
+img {
+    width: 100%;
+    height: 100%;
+    /* 부모 요소에 가득 차게, 이미지는 비율 유지 */
+    object-fit: cover;
+}
 a {
-  text-decoration: none;
-  color: #333;
+    text-decoration: none;
 }
