@@ -62,7 +62,6 @@ body {
 
 /* 구름이 좌우로 부드럽게 흔들리는 애니메이션 */
 @keyframes cloudFloat {
-
   0%,
   100% {
     transform: translateX(0);
@@ -92,10 +91,10 @@ body {
   white-space: pre-line;
   margin-left: 110px;
   margin-bottom: 50px;
+  word-break: keep-all;
 }
 
 @keyframes textFloat {
-
   0%,
   100% {
     transform: translateX(0);
@@ -232,7 +231,6 @@ body {
 
 /* 기울어짐 애니메이션 */
 @keyframes tilt {
-
   0%,
   100% {
     transform: rotate(0deg);
@@ -402,7 +400,6 @@ body {
   background: #999;
 }
 
-
 @media (max-width: 768px) {
   .hero-text p {
     width: 350px;
@@ -411,7 +408,7 @@ body {
   }
 
   #section1 {
-    height: 600px
+    height: 600px;
   }
 
   .cloud img {
@@ -461,7 +458,7 @@ body {
   .select_box {
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     width: 90%;
     height: 60%;
@@ -502,7 +499,7 @@ body {
   .player {
     padding: 10px;
   }
-  .player>.thumb {
+  .player > .thumb {
     width: 130px;
     height: 130px;
   }
@@ -513,7 +510,7 @@ body {
     display: flex;
     justify-content: center;
   }
-  .controls>.volume_img {
+  .controls > .volume_img {
     width: 24px;
   }
 }
