@@ -1,0 +1,23 @@
+.skill,
+.tools {
+  padding: 50px 0 0 85px;
+  font-size: 2.4em;
+  color: #787878;
+}
+
+.skill ul,
+.tools ul {
+  list-style: square;
+}
+.skill_title {
+  font-weight: 400;
+  color: #787878;
+  margin-bottom: 10px;
+}
+
+.skill li,
+.tools li {
+  color: #a2a2a8;
+  padding: 5px 0;
+  font-size: 1.2rem;
+}

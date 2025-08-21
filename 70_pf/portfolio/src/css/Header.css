@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  width: 35vw;
+  height: 100vh;
+  background: url(../../public/images/bg1.jpg);
+  padding: 170px 85px;
+}
+
+.header_inner {
+  width: 100%;
+  height: 100%;
+}
+
+.profile_image {
+  display: flex;
+  justify-content: flex-end;
+  height: 20%;
+}
+.image {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  border-radius: 120px;
+  background: #000;
+}
+
+.short_intro {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 1.8rem;
+  word-break: keep-all;
+  line-height: 1.8;
+  color: #c2c1c1;
+  font-weight: 400;
+}
+
+.short_intro span {
+  color: #fff;
+}
+.social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  height: 50%;
+  gap: 50px;
+}
+.social img {
+  width: 36px;
+  height: 36px;
+}

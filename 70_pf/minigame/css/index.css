@@ -15,18 +15,21 @@ body {
   padding: 0 50px;
   margin: 40px auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 
 .flipmatch,
 .tictactoe,
 ._2048 {
+  width: 30%;
+  margin: 30px auto 70px;
   padding: 20px;
-  margin-right: 60px;
   background: #3a427a;
   border-radius: 20px;
   transition: 0.3s ease;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .flipmatch:hover,

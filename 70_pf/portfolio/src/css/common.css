@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto-Sans-KR";
+  font-size: 10px;
+  background: #fff;
+  height: 100vh;
+}

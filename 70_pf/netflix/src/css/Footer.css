@@ -1,0 +1,55 @@
+.footer {
+  width: 1200px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  margin-bottom: 250px;
+}
+
+.call {
+  font-size: 16px;
+  margin: 20px 0 30px;
+}
+.call span {
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+.footer_list ul {
+  display: flex;
+  width: 1200px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.footer_list li {
+  width: 300px;
+  padding-top: 20px;
+  font-size: 14px;
+  word-break: break-all;
+  text-decoration: underline;
+}
+
+.select_box {
+  margin: 0 0 30px;
+}
+
+.select_box select {
+  background: transparent;
+  color: #f1f1f1;
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+.select_box option {
+  background: #000;
+  color: #f1f1f1;
+}
+.netflix_korea {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.copy {
+  font-size: 12px;
+}
