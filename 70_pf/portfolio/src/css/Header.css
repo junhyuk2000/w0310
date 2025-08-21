@@ -20,7 +20,6 @@
   display: inline-block;
   width: 30%;
   height: 100%;
-  border-radius: 120px;
   background: #000;
 }
 
@@ -37,11 +36,27 @@
 .short_intro span {
   color: #fff;
 }
+
+.info {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  font-size: 1.8em;
+}
+.info a {
+  color:#c2c1c1;
+}
+.info p:nth-of-type(1)::after {
+  content : "|";
+  margin: 0 10px;
+  color: #c2c1c1;
+}
 .social {
   display: flex;
   justify-content: flex-end;
   align-items: end;
-  height: 50%;
+  height: 30%;
   gap: 50px;
 }
 .social img {

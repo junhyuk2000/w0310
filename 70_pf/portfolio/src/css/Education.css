@@ -1,0 +1,46 @@
+.education {
+    width: 50%;
+    padding: 50px 0 0 85px;
+    color:#787878;
+}
+.education_title {
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.school {
+    font-size: 1.2rem;
+}
+.high_school {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.high_school h3,
+.univercity h3,
+.study h3 {
+    font-weight: normal;
+}
+.high_school p {
+    margin-top: 16px;
+    font-size: 1rem;
+}
+.univercity {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.univercity p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.study {
+    display: flex;
+    justify-content: space-between;
+}
+.study p {
+    font-size: 1rem;
+    margin-top: 16px;
+}
