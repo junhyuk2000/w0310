@@ -1,6 +1,18 @@
+.skill_section {
+  padding-top: 50px;
+  background: #f9c51d;
+}
+
+.main_skill {
+  font-size: 2.4rem;
+  color:#787878;
+  font-weight: 400;
+}
+
 .skill,
 .tools {
-  padding: 50px 0 0 85px;
+  padding-top: 30px;
+  padding-left: 20px;
   font-size: 2.4em;
   color: #787878;
 }
@@ -9,6 +21,7 @@
 .tools ul {
   list-style: square;
 }
+
 .skill_title {
   font-weight: 400;
   color: #787878;

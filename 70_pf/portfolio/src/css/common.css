@@ -1,9 +1,16 @@
 * {
   box-sizing: border-box;
 }
+
+html { 
+  scroll-behavior: smooth; 
+}
 body {
-  font-family: "Noto-Sans-KR";
+  font-family: "Pretendard", "Noto Sans Kr";
   font-size: 10px;
   background: #fff;
   height: 100vh;
 }
+
+
+section { scroll-margin-top: 90px; }

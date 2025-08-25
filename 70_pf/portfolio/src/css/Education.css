@@ -1,46 +1,49 @@
 .education {
     width: 50%;
-    padding: 50px 0 0 85px;
-    color:#787878;
+    padding-top: 50px;
+    margin: 0 auto;
 }
 .education_title {
-    font-size: 2.4rem;
-    font-weight: normal;
-    margin-bottom: 40px;
+    width: 40%;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
 }
 .school {
     font-size: 1.2rem;
+
 }
-.high_school {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-.high_school h3,
-.univercity h3,
-.study h3 {
+.univercity h4,
+.developmentPropgram h4 {
     font-weight: normal;
 }
 .high_school p {
-    margin-top: 16px;
     font-size: 1rem;
 }
 .univercity {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    align-items: center;
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
 }
-
 .univercity p {
     font-size: 1rem;
-    margin: 10px 0;
 }
 
-.study {
+.developmentPropgram {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+    line-height: 2;
 }
-.study p {
+.developmentPropgram p {
     font-size: 1rem;
-    margin-top: 16px;
 }

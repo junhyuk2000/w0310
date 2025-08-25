@@ -1,0 +1,89 @@
+.project {
+    color:#787878;
+    margin-top: 40px;
+}
+.project_title {
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.tab_menu {
+    display: flex;
+    gap : 30px
+}
+
+.tab {
+    width: 80px;
+    height: 50px;
+    background: none;
+    border: 1px solid #878787;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.tab.active {
+    background: #111;
+    color:#f1f1f1
+}
+.project_overview {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 50px;
+}
+
+.thumb {
+    position: relative;
+    overflow: hidden;
+}
+.thumb::after {
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity .2s;
+    inset: 0;
+}
+.card img {
+    display: block;
+    width: 500px;
+    height: 300px;
+}
+.thumb:hover::after,
+.thumb:hover .view_btn{
+   opacity: 1;
+}
+
+.view_btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;       
+  opacity: 0;
+  transition: opacity .2s;
+  cursor: pointer;
+  background: none;
+  padding: 15px 20px;
+  color:#fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.project_name {
+    font-size: 1.6rem;
+}
+.p_skill {
+    display: flex;
+    gap: 10px;
+}
+.project_skill {
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 4px 8px;
+  background: #f0f0f0;
+  border-radius: 9999px;
+}
