@@ -1,0 +1,59 @@
+/* 필터 섹션 스타일 */
+.filter_section {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #141414;
+  border-radius: 8px;
+  display: flex;
+  height: 50px;
+  gap: 30px;
+}
+
+.category_filter {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category_filter:hover {
+  background-color: #444;
+  border-color: #777;
+}
+
+.category_filter:focus {
+  outline: none;
+  border-color: #a81e1e;
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.3);
+}
+
+.category_filter option {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem;
+}
+.filter {
+  margin: 0 0 100px;
+}
+.filter_contents .list_item {
+  width: 19%;
+}
+.movie_filter_list {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 21px;
+}
+
+/* .movie_filter_list .modal_small {
+  height: 220%;
+} */
+.movie_filter_list .modal_small .age {
+  height: 60px;
+}

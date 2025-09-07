@@ -6,9 +6,15 @@
   height: 50px;
   background: transparent;
   z-index: 9999;
-  color:#fff;
+  color:#f1f1f1;
+  transition: background .3s;
 }
-
+.header.scroll {
+  background: rgba(0,0,0,0.8);
+  color:#f1f1f1;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
 .header_inner {
   width: 70%;
   height: 100%;
@@ -28,7 +34,7 @@
 
 .gnb a {
   font-size: 1rem;
-  color:#fff;
+  color:#f1f1f1;
   transition: color .3s;
   font-weight: 500;
 }

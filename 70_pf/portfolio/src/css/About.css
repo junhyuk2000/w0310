@@ -31,12 +31,13 @@
 .about_me_info {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 40%;
     font-size: 1rem;
     padding: 20px;
     text-align: left;
     border-bottom: 1px solid #ddd;
     color:#333;
+    word-break: keep-all;
 }
 .about_me_info img {
     width: 50px;

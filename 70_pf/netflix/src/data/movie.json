@@ -1,49 +1,87 @@
 {
+
+  "TopInfo":[
+    { "id":11, "src":"/images/TopHighlight/sectionbg1.jpg", "alt":"귀멸의칼날 배경", "logo":"/images/TopHighlight/logo1.png", "desc":" 혈귀로 변해버린 여동생 네즈코를 인간으로 되돌리기 위해 혈귀를 사냥하는 조직인 《귀살대》에 입대한 카마도 탄지로. 입대 후 동료인 아가츠마 젠이츠, 하시비라 이노스케와 함께 많은 혈귀와 싸우고, 성장하면서 세 사람의 우정과 유대는 깊어진다."},
+    { "id":12, "src":"/images/TopHighlight/sectionbg2.jpg", "alt":"베테랑 배경", "logo":"/images/TopHighlight/logo2.png","desc" : "강력반 형사 서도철은 집요함 하나로 이름난 베테랑. 화물기사 폭행 사건을 파다 보니 재벌 3세 조태오의 추악한 권력 놀음이 드러난다. 도철과 팀원들은 법과 상식을 비웃는 그와 맞붙으며 증거를 모으고, 유머와 근성으로 서로를 끌어주며 끝까지 추격을 멈추지 않는다. 통쾌한 액션과 사회풍자, 팀 케미가 한데 섞여 “권력엔 책임이 따른다”는 메시지를 시원하게 박아 넣는 범죄 오락 영화."},
+    { "id":13, "src":"/images/TopHighlight/sectionbg3.jpg", "alt":"스토리텔러 배경", "logo":"/images/TopHighlight/logo3.png","desc" : "스토리텔러는 스토리 구축에 관한 수상 경력이 있는 퍼즐 게임입니다. 제목, 설정, 캐릭터로 시작하여 스토리의 설명에 맞는 스토리를 만들어 보세요. 사랑, 음모, 범죄, 괴물, 배신 등의 이야기를 가지고 플레이하세요!"}
+  ],
   "movieEveryoneLove": [
-    { "id": 1, "src": "/images/movielist1.jpg", "title": "케이팝데몬헌터스" },
-    { "id": 2, "src": "/images/movielist2.jpeg", "title": "귀멸의칼날" },
-    { "id": 3, "src": "/images/movielist3.jpg", "title": "오징어게임" },
-    { "id": 4, "src": "/images/movielist4.jpg", "title": "웬즈데이" },
-    { "id": 5, "src": "/images/movielist5.jpg", "title": "트리거" }
+    { "id": 1, "src": "/images/movielist1.jpg", "title": "케이팝데몬헌터스" , "age": "/images/age12.png" , "metaData":"1시간35분"  , "categories":[" 상상의 나래 "," 흥미진진 "]  , "videoId":"xQnsFqn44uo"},
+    { "id": 2, "src": "/images/movielist2.jpeg", "title": "귀멸의 칼날" , "age": "/images/age15.png" , "metaData":"시즌 5개"  , "categories":[" 흥미진진"]  , "videoId":"9-7GTax6FpA"},
+    { "id": 3, "src": "/images/movielist3.jpg", "title": "오징어 게임" , "age": "/images/age19.png" , "metaData":"시즌 3개"  , "categories":[" 폭력적인"," 긴장감 넘치는"," 스릴러"]  , "videoId":"b96oSVw75lA"},
+    { "id": 4, "src": "/images/movielist4.jpg", "title": "웬즈데이" , "age": "/images/age15.png" , "metaData":"시즌 2개"  , "categories":[" 으스스한"," 상상의 나래"," 다크 코미디"]  , "videoId":"2LaCvjjNgR4"},
+    { "id": 5, "src": "/images/movielist5.jpg", "title": "트리거" , "age": "/images/age19.png" , "metaData":"리미티드 시리즈"  , "categories":[" 긴장감 넘치는"," 액션"] , "videoId":"QOk-7wazEX4" },
+    { "id": 6, "src": "/images/movielist6.jpg", "title": "센과 치히로의 행방불명" , "age": "/images/ageall.png" , "metaData":"2시간 5분"  , "categories":[" 상상의나래"," 초현실적인"] , "videoId":"lwrG3HQXTFw" }
   ],
   "koreanDrama": [
-    { "id": 101, "src": "/images/movielist6.jpg", "title": "더글로리" },
-    { "id": 102, "src": "/images/movielist7.jpg", "title": "눈물의여왕" },
-    { "id": 103, "src": "/images/movielist8.jpg", "title": "중증외상센터" },
-    { "id": 104, "src": "/images/movielist9.jpg", "title": "이태원클라스" },
-    { "id": 105, "src": "/images/movielist10.jpg", "title": "그해우리는" }
+    { "id": 101, "src": "/images/movielist7.jpg", "title": "더 글로리" , "age":"/images/age19.png" , "metaData":"에피소드 16개"  , "categories":[" 어두운"] , "videoId":"YQtgHb8tkYM" },
+    { "id": 102, "src": "/images/movielist8.jpg", "title": "눈물의 여왕" , "age":"/images/age15.png" , "metaData":"에피소드 16개"  , "categories":[" 로멘틱"," 코미디"] , "videoId":"s3jsSv7fvE8" },
+    { "id": 103, "src": "/images/movielist9.jpg", "title": "폭군의 셰프" , "age":"/images/age15.png" , "metaData":"에피소드 16개"  , "categories":[" 유쾌발랄"," 로멘틱"] , "videoId":"9rrsRh3EZAk" },
+    { "id": 104, "src": "/images/movielist10.jpg", "title": "중증외상센터" , "age":"/images/age15.png" , "metaData":"에피소드 8개"  , "categories":[" 위트있는"," 감명깊은"] , "videoId":"GsHTag-UMvY" },
+    { "id": 105, "src": "/images/movielist11.jpg", "title": "이태원 클라스" , "age":"/images/age15.png" , "metaData":"에피소드 16개"  , "categories":[" 감명주는"," 설렘주의"]  , "videoId":"8Q5xRpNwulc"},
+    { "id": 106, "src": "/images/movielist12.jpg", "title": "그 해 우리는" , "age":"/images/age15.png" , "metaData":"에피소드 16개" , "categories":[" 힐링"," 코미디"]  , "videoId":"Ra0y1PjUe-Y"}
   ],
   "animation": [
-    { "id": 201, "src": "/images/movielist11.jpg", "title": "사카모토데이즈" },
-    { "id": 202, "src": "/images/movielist12.jpg", "title": "헌터x헌터" },
-    { "id": 203, "src": "/images/movielist13.jpg", "title": "나혼자만레벨업" },
-    { "id": 204, "src": "/images/movielist14.jpg", "title": "진격의거인" },
-    { "id": 205, "src": "/images/movielist15.jpg", "title": "주술회전" }
+    { "id": 201, "src": "/images/movielist13.jpg", "title": "사카모토데이즈" , "age":"/images/age19.png" , "metaData":"에피소드 19개"  , "categories":[" 흥미진진"," 다크 코미디"]  , "videoId":"4ZX5rg6aRek"},
+    { "id": 202, "src": "/images/movielist14.jpg", "title": "헌터x헌터" , "age":"/images/age19.png" , "metaData":"시즌 6개"  , "categories":[" 흥미진진"," 상상의나래"]  , "videoId":"PrsCRQe_jAI"},
+    { "id": 203, "src": "/images/movielist15.jpg", "title": "나 혼자만 레벨업" , "age":"/images/age19.png" , "metaData":"에피소드 25개"  , "categories":[" 흥미진진"]  , "videoId":"srnpK54nRBk"},
+    { "id": 204, "src": "/images/movielist16.jpg", "title": "히카루가 죽은여름" , "age":"/images/age19.png" , "metaData":"에피소드 9개"  , "categories":[" 흥미진진"," 공포"," 스릴러"]  , "videoId":"pqxGf-NTO-s"},
+    { "id": 205, "src": "/images/movielist17.jpg", "title": "진격의 거인" , "age":"/images/age19.png" , "metaData":"시즌 7개"  , "categories":[" 흥미진진"," 어두운"]  , "videoId":"WV-VgdtK_LU"},
+    { "id": 206, "src": "/images/movielist18.jpg", "title": "주술회전 O" , "age":"/images/age15.png" , "metaData":"1시간 44분"  , "categories":[" 상상의 나래"," 어두운"]  , "videoId":"bsIsvp2VxtE"}
   ],
-  "movies": [
-    {
-      "rank": 1,
-      "image": "/images/card1.jpg",
-      "alt": "귀멸의 칼날 무한성편",
-      "likes": 980
-    },
-    {
-      "rank": 2,
-      "image": "/images/card2.jpg",
-      "alt": "진격의 거인",
-      "likes": 867
-    },
-    {
-      "rank": 3,
-      "image": "/images/card3.jpg",
-      "alt": "탑건 매버릭",
-      "likes": 800
-    },
-    {
-      "rank": 4,
-      "image": "/images/card4.jpg",
-      "alt": "F1",
-      "likes": 300
-    }
+  "hollywoodMovie": [
+    {"id":301, "src":"/images/Movie/hollywood1.jpg","title":"더 이퀄라이저", "age":"/images/age19.png", "metaData": "2시간12분", "categories":[" 폭력적인"," 어두운"," 스릴러"],"videoId":"ekxDzz4C2kU"},
+    {"id":302, "src":"/images/Movie/hollywood2.jpg","title":"존윅 3 : 파라벨룸 ", "age":"/images/age19.png", "metaData": "2시간10분", "categories":[" 긴박감 넘치는"," 능수능란"," 필름 누아르"],"videoId":"X7QxK0izJAM"},
+    {"id":303, "src":"/images/Movie/hollywood3.jpg","title":"미션임파서블 : 데드레코닝", "age":"/images/age15.png", "metaData": "2시간44분", "categories":[" 긴박감 넘치는"," 능수능란"],"videoId":"F40MAXyXaac"},
+    {"id":304, "src":"/images/Movie/hollywood4.jpg","title":"베놈 : 라스트 댄스", "age":"/images/age15.png", "metaData": "1시간48분", "categories":[" 아드레날린 폭발"," SF"],"videoId":"soCtsN0JYUg"},
+    {"id":305, "src":"/images/Movie/hollywood5.jpg","title":"굿 윌 헌팅", "age":"/images/age15.png", "metaData": "2시간6분", "categories":[" 힐링"," 감성적"],"videoId":"LUIFyamcQDE"},
+    {"id":306, "src":"/images/Movie/hollywood6.jpg","title":"트루먼 쇼", "age":"/images/age12.png", "metaData": "1시간43분", "categories":[" 다크 코미디"," 쇼비즈"],"videoId":"qE6HVOBkYUs"}
+  ],
+  "koreanMovie":[
+    {"id":401, "src":"/images/Movie/korean_movie1.jpg","title":"베테랑","age":"/images/age15.png","metaData":"1시간58분","categories":[" 능수능란"," 흥미진진"],"videoId":"hcKp68DtBb0"},
+    {"id":402, "src":"/images/Movie/korean_movie2.jpg","title":"승부","age":"/images/age12.png","metaData":"1시간56분","categories":[" 라이벌구도"],"videoId":"J8qqMLZPPTo"},
+    {"id":403, "src":"/images/Movie/korean_movie3.jpg","title":"타짜","age":"/images/age19.png","metaData":"2시간20분","categories":[" 능수능란"," 필름 누아르"],"videoId":"vLHyh8F-vQo"},
+    {"id":404, "src":"/images/Movie/korean_movie4.jpg","title":"공조2 : 인터내셔날","age":"/images/age15.png","metaData":"2시간8분","categories":[" 긴장감 넘치는"," 액션 스릴러"],"videoId":"fzUKUfHeIYA"},
+    {"id":405, "src":"/images/Movie/korean_movie5.jpg","title":"서울의 봄","age":"/images/age12.png","metaData":"2시간21분","categories":[" 긴장감 넘치는"," 스릴러"," 정치"],"videoId":"-AZ7cnwn2YI"},
+    {"id":406, "src":"/images/Movie/korean_movie6.jpg","title":"파묘","age":"/images/age15.png","metaData":"2시간14분","categories":[" 으스스한"," 불길한"],"videoId":"rjW9E1BR_30"}
+  ],
+  "ranking" : [
+    {"id" : 21, "src":"/images/Movie/rank1.jpg","title":"케이팝 데몬 헌터스","age":"/images/age12.png","metaData":"1시간 35분","categories":[" 상상의 나래 "," 흥미진진 "],"videoId":"xQnsFqn44uo"},
+    {"id" : 22, "src":"/images/Movie/rank2.jpg","title":"목요일 살인 클럽","age":"/images/age19.png","metaData":"2시간","categories":[" 위트있는"," 진심어린", " 미스터리"],"videoId":"VzJit9Tnzyo"},
+    {"id" : 23, "src":"/images/Movie/rank3.jpg","title":"귀멸의 칼날 무한열차편","age":"/images/age15.png","metaData":"1시간56분","categories":[" 흥미진진"," 애니메이션 영화"," 악마"],"videoId":"Zn_0-deeZ-U"},
+    {"id" : 24, "src":"/images/Movie/rank4.jpg","title":"태양의 노래","age":"/images/age12.png","metaData":"1시간 48분","categories":[" 감명을 주는"," 달콤 쌉싸름", " 음악"],"videoId":"LP42Qxzo86k"},
+    {"id" : 25, "src":"/images/Movie/rank5.jpg","title":"노스맨","age":"/images/age19.png","metaData":"2시간 17분","categories":[" 폭력적인", " 어두운", " 서사시"],"videoId":"qJIxsSgRg4s"},
+    {"id" : 26, "src":"/images/Movie/rank6.jpg","title":"고백의 역사","age":"/images/age12.png","metaData":"2시간 1분","categories":[" 설렘주의", " 향수 자극", " 청소년"],"videoId":"De12eNHxTQg"}
+  ],
+  "comedy" : [
+    {"id" : 501, "src":"/images/Movie/comedy1.jpg","title":"파일럿","age":"/images/age12.png","metaData":"1시간51분","categories":[" 익살스러운"," 코미디"],"videoId":"amI9ujTxtH4"},
+    {"id" : 502, "src":"/images/Movie/comedy2.jpg","title":"터미널","age":"/images/ageall.png","metaData":"2시간9분","categories":[" 힐링"," 기분 좋아지는"],"videoId":"_YtlUcuNH_0"},
+    {"id" : 503, "src":"/images/Movie/comedy3.jpg","title":"포레스트검프","age":"/images/age12.png","metaData":"2시간22분","categories":[" 감성적", " 기분 좋아지는"],"videoId":"Hh8uuP3cOL4"},
+    {"id" : 504, "src":"/images/Movie/comedy4.jpg","title":"기생충","age":"/images/age15.png","metaData":"2시간12분","categories":[" 어두운"," 다크 코미디"],"videoId":"jBdRhhSt3Bc"},
+    {"id" : 505, "src":"/images/Movie/comedy5.jpg","title":"극한직업","age":"/images/age15.png","metaData":"1시간51분","categories":[" 익살스러운"," 유쾌 발랄", " 액션 코미디"],"videoId":"BaIRaKXrLPk"},
+    {"id" : 506, "src":"/images/Movie/comedy6.jpg","title":"육사오","age":"/images/age12.png","metaData":"1시간53분","categories":[" 허당 매력"," 코미디", "밀리터리"],"videoId":"LF-oW7e5jI8"}
+  ],
+  "mobilegame" : [
+    {"id" : 601, "src":"/images/Game/game1.png","title":"스토리텔러","age":"/images/age12.png","metaData":"모바일게임","categories":"퍼즐","videoId":""},
+    {"id" : 602, "src":"/images/Game/game2.png","title":"GTA-San Andreas","age":"/images/age19.png","metaData":"모바일게임","categories":"액션 어드벤처","videoId":""},
+    {"id" : 603, "src":"/images/Game/game3.png","title":"Soccer","age":"/images/ageall.png","metaData":"모바일게임","categories":"스포츠","videoId":""},
+    {"id" : 604, "src":"/images/Game/game4.png","title":"Street Fighter IV CE","age":"/images/ageall.png","metaData":"모바일게임","categories":"액션 아케이드","videoId":""},
+    {"id" : 605, "src":"/images/Game/game5.png","title":"데드 셀","age":"/images/age15.png","metaData":"모바일게임","categories":"액션 아케이드","videoId":""},
+    {"id" : 606, "src":"/images/Game/game6.png","title":"블룬스 TD6","age":"/images/age12.png","metaData":"모바일게임","categories":"전략 전술","videoId":""},
+    {"id" : 607, "src":"/images/Game/game7.png","title":"아스팔트 익스트림","age":"/images/age19.png","metaData":"모바일게임","categories":"레이싱","videoId":""},
+    {"id" : 608, "src":"/images/Game/game8.png","title":"농사 시뮬레이터","age":"/images/age19.png","metaData":"모바일게임","categories":"시뮬레이션","videoId":""},
+    {"id" : 609, "src":"/images/Game/game9.png","title":"지렁이키우기","age":"/images/age12.png","metaData":"모바일게임","categories":"아케이드","videoId":""}
+  ],
+  "mobilegame2" : [
+    {"id" : 610, "src":"/images/Game/game10.png","title":"오징어게임 : 모바일 서바이벌","age":"/images/age12.png","metaData":"모바일게임","categories":"액션","videoId":""},
+    {"id" : 611, "src":"/images/Game/game11.png","title":"솔리테어","age":"/images/age19.png","metaData":"모바일게임","categories":"카드게임 테이블게임","videoId":""},
+    {"id" : 612, "src":"/images/Game/game12.png","title":"컷 더 로프 데일리","age":"/images/age15.png","metaData":"모바일게임","categories":"퍼즐 아케이드","videoId":""},
+    {"id" : 613, "src":"/images/Game/game13.png","title":"Sonic Prime Dash","age":"/images/ageall.png","metaData":"모바일게임","categories":"아케이드","videoId":""},
+    {"id" : 614, "src":"/images/Game/game14.png","title":"핀볼 마스터즈","age":"/images/ageall.png","metaData":"모바일게임","categories":"아케이드","videoId":""},
+    {"id" : 615, "src":"/images/Game/game15.png","title":"크리스피 스트리트","age":"/images/age12.png","metaData":"모바일게임","categories":"퍼즐","videoId":""},
+    {"id" : 616, "src":"/images/Game/game16.png","title":"와일드 어드벤처: 동물 구조대","age":"/images/ageall.png","metaData":"모바일게임","categories":"퍼즐","videoId":""},
+    {"id" : 617, "src":"/images/Game/game17.png","title":"Puzzle","age":"/images/age15.png","metaData":"모바일게임","categories":"퍼즐 단어게임","videoId":""},
+    {"id" : 619, "src":"/images/Game/game18.png","title":"원더퍼팅 포에버","age":"/images/ageall.png","metaData":"모바일게임","categories":"스포츠","videoId":""}
   ]
+
 }

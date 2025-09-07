@@ -1,0 +1,104 @@
+
+
+.ranking_item {
+    position: relative;
+    width: 100%;
+    transition: transform .3s;
+    cursor: pointer;
+    display: flex;
+}
+
+.ranking_item img {
+    border-radius: 6px;
+}
+.ranking_modal_small {
+    position: absolute;
+    top: -30%;
+    left: 0%;
+    width: 100%;
+    height: 130%;
+    z-index: 1000;
+    background: #fff;
+    color:#000;
+    opacity: 0;
+    transition: .3s;
+    pointer-events: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111;
+}
+.ranking_modal_small.show {
+    opacity: 1;
+    transform: scale(1.2);
+    pointer-events: auto;
+    z-index: 1000;
+}
+
+.ranking_modal_small img {
+    height: 70%;
+    border-radius: 0;
+}
+.ranking_modal_title {
+    color:#ccc;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+.list_btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.interaction_btn {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    gap: 10px;
+    height: 50px;
+}
+.interaction_btn button,
+.detail_btn button{
+    background: transparent;
+    color:#f1f1f1;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.interaction_btn button:nth-of-type(1) {
+    background: #f1f1f1;
+    color:#111;
+}
+.interaction_btn button:hover:nth-of-type(1) {
+    background: #c9c9c9;
+    color:#111;
+}
+.interaction_btn button:hover:nth-of-type(2),
+.interaction_btn button:hover:nth-of-type(3),
+.detail_btn button:hover {
+    border: 1px solid #f1f1f1;
+    background: #444;
+}
+.list_item_info {
+    display: flex;
+    gap: 10px;
+    color:#f1f1f1;
+    font-size: 0.9rem;
+    height: 10%;
+    
+}
+
+.list_item_info span{
+    line-height: 2;
+    color:#c9c9c9;
+}
+.category {
+    color:#f1f1f1;
+    padding: 10px;
+    font-size: 0.9rem;
+    color:#c9c9c9;
+}

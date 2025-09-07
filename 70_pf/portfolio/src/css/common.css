@@ -9,8 +9,9 @@ body {
   font-family: "Pretendard", "Noto Sans Kr";
   font-size: 10px;
   background: #fff;
+  color:#333;
   height: 100vh;
 }
 
 
-section { scroll-margin-top: 90px; }
+section { scroll-margin-top: 50px; }

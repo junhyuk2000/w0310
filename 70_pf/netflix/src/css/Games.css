@@ -1,0 +1,19 @@
+.game .modal_small {
+    height: 190%;
+}
+.movie_list.games {
+    gap: 20px;
+}
+
+.movie_list.games .list_btn{
+    padding: 0 10px;
+} 
+.movie_list.games .interaction_btn button, 
+.movie_list.games .detail_btn button{
+    height: 30px;
+    font-size: 1rem;
+    width: 30px;
+}
+.category {
+    margin-bottom: 20px;
+}

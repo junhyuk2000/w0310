@@ -1,0 +1,91 @@
+.header {
+    position: relative;
+    height: 50px;
+    padding: 10px 60px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+.header_nav {
+    width: 72%;
+    display: flex;
+}
+.header_logo {
+    width: 8%;
+    height: 25px;
+
+}
+
+.gnb {
+    margin-left: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.gnb a {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+}
+
+.header_btn {
+    position: relative;
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_btn button{
+    background: transparent;
+    border: none;
+    width: 40px;
+}
+
+.search_btn {
+    cursor: pointer;
+}
+.search_btn.active {
+    opacity: 0;
+}
+
+.search_input {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  width: 0;                
+  overflow: hidden;         
+  transition: width .5s ease;
+  margin-left: auto;        
+}
+
+.search_input input {
+  flex: 1 0 auto;          
+  min-width: 0;
+  height: 100%;
+  width: 100%;          
+  background: transparent;
+  border: none;
+  outline: none;
+  color:#fff;
+}
+
+.search_input img {
+  flex: 0 0 40px;           
+  width: 40px;
+}
+
+.search_input.active {
+  width: 240px;       
+  border: 1px solid #333;
+  padding: 10px 0;
+  transition: .3s;
+}
+
+.page_overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: transparent;
+}

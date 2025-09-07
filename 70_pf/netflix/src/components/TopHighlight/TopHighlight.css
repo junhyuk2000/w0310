@@ -1,0 +1,62 @@
+.top_highlight {
+  /* background: url("/images/sectionbg.jpg"); */
+  height: 760px;
+}
+
+.movie_logo {
+  width: 341px;
+  height: 300px;
+  padding: 80px 0 0 35px;
+}
+.movie_logo img {
+  object-fit: contain;
+  vertical-align: middle;
+}
+.movie_info {
+  width: 690px;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+  padding: 30px 0 0 60px;
+  word-break: keep-all;
+}
+.movie_btn {
+  margin-top: 30px;
+  padding-left: 60px;
+}
+
+.play_btn {
+  display: inline-block;
+  width: 150px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 10px 30px;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.play_btn:hover {
+  background: #bbb;
+}
+.info_btn {
+  display: inline-block;
+  width: 180px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-left: 15px;
+  background: #6d6d6e;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.info_btn:hover {
+  background: #333;
+}

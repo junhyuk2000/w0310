@@ -43,6 +43,7 @@
     border-bottom: 1px solid #ddd;
     flex-wrap: wrap;
     line-height: 2;
+    margin-bottom: 40px;
 }
 .developmentPropgram p {
     font-size: 1rem;

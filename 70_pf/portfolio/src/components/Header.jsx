@@ -1,8 +1,18 @@
+import { useEffect,useState } from "react";
 import "../css/Header.css";
 
 export default function Header() {
+  const [ scroll , setScroll ] = useState(false);
+
+  useEffect(()=>{
+    const onScroll = () => setScroll(window.scrollY>850);
+    window.addEventListener("scroll",onScroll);
+    onScroll();
+    return () =>window.removeEventListener("scroll",onScroll);
+  },[])
+
   return (
-    <div className="header">
+    <div className={`header ${scroll ? "scroll" : ""}`}>
       <div className="header_inner">
         <h2><a href="#intro"  className="name">JunHyuk Portfolio</a></h2>
         <nav className="gnb">

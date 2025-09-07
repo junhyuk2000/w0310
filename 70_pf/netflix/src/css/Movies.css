@@ -1,15 +1,6 @@
-.boxoffice_title {
-  width: 80%;
-  display: block;
-  margin:0 auto 20px;
-  padding-bottom: 8px;
-  font-size: 16px;
-  font-weight: 400;
-  border-bottom: 2px solid #333;
-  text-align: center;
+/* .movie_list .modal_small {
+    height: 250%;
 }
-.boxoffice {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
+.movie_list .modal_small .age {
+    height: 60px;
+} */
