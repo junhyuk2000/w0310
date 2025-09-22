@@ -3,14 +3,19 @@ import "../css/Skill.css";
 
 export default function Skill() {
   const skills = [
-    { label:"HTML/CSS" , value:90}, 
-    {label : "JavaScript (ES6+)", value:80}, 
-    {label:"React", value:70}
+    {label:"HTML/CSS" , value:90}, 
+    {label:"JavaScript (ES6+)", value:80}, 
+    {label:"React", value:70},
   ];
   const tools = [
     {label:"Git / GitHub" , value:60}, 
+    {label : "Photoshop", value:40},
     {label : "Figma", value:80}, 
-    {label : "Notion", value:60}
+    {label : "Notion", value:60},
+
+    {label:"Bootstrap 5", value:50},
+    {label:"JQuary", value:50},
+
   ];
   
   return (

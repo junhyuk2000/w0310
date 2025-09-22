@@ -1,0 +1,29 @@
+.forecast_daily {
+    background: #222;
+    border-radius: 40px;
+    width: 70%;
+    height: 300px;
+    margin: 50px auto;
+    padding: 20px 40px;
+}
+.forecast_title {
+    margin: 10px 0;
+}
+
+.forecast_box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.forecast_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forecast_block i {
+    width: 10%;
+}
+.forecast_temp {
+    margin: 5px 0;
+}

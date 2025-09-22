@@ -56,7 +56,7 @@
 .percent {
   position: absolute;
   height: 100%;
-  background: #111;
+  background: #333;
 }
 .skill_value {
   font-size: 1.2rem;

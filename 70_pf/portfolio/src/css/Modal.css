@@ -1,0 +1,41 @@
+.detail_modal {
+    position: fixed;
+    inset:0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+.detail_overview {
+    margin: 5% auto;
+    width: 800px;
+    height: 800px;
+    background: #f1f1f1;
+}
+.detail_txt {
+    padding: 20px;
+}
+.detail_title {
+    font-size: 2rem;
+    padding: 0 0 5px 0;
+}
+
+.detail_skills {
+    font-size: 1rem;
+    color:#777;
+}
+.detail_url {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+.detail_main {
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+.detail_desc {
+    padding-top: 10px;
+    font-size: 1.1rem;
+    word-break: keep-all;
+    line-height: 2;
+}

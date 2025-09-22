@@ -6,7 +6,7 @@ export default function About() {
       <h2 className="about_me">ABOUT ME</h2>
       <div className='about_me_contents'>
         <div className="phoro">
-          <img src="/images/profile.png" alt="" />
+          <img src="/images/profile.jpg" alt="" />
         </div>
         <div className="about_me_info_wrap">
           <div className="about_me_info">

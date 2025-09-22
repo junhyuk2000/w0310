@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    background: #111;
+    border-bottom: 1px solid #444;
+}
+.logo {
+    width: 30%;
+    padding-left: 20px;
+}
+.header_search {
+    width: 40%;
+    display: flex;
+    gap: 30px;
+}
+.header_input {
+    width: 540px;
+    height: 40px;
+    border-radius: 30px;
+    background: transparent;
+    color:#f1f1f1;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    padding: 0 30px;
+    outline: none;
+}
+.search_btn {
+    background: transparent;
+    width: 60px;
+    color:#f1f1f1;
+    border: 2px solid #f1f1f1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.header_input:focus {
+    border: 2px solid gray;
+}

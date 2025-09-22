@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Project.css"
-import { projects } from "../data/projectsData"
+import Modal from "../components/Modal"
+import { projects,projectDetail } from '../data/projectsData'
 import { useState } from "react";
 
 export default function Project() {
@@ -9,6 +10,13 @@ export default function Project() {
   const [tab,setTab] = useState("All");
   const list = tab === "All" ? projects : projects.filter((p)=>p.type === tab);
 
+  const [open,setOpen] = useState(false);
+  const [selected,setSelected] = useState(null);
+  const openModal = (id) => {
+    const detail = projectDetail.find((d) => d.id === id);
+    setSelected(detail || null);
+    setOpen(true);
+  };
   return <div
   className="project">
     <h4 className="project_title">Project</h4>
@@ -29,7 +37,7 @@ export default function Project() {
         className="card">
           <div className="thumb">
             <img src={p.img} alt={p.alt} />
-            <button className="view_btn">View Project</button>
+            <button className="view_btn" onClick={() => openModal(p.id)}>View Project</button>
           </div>
           <h5 className="project_name">{p.title}</h5>
           <div className="p_skill">
@@ -39,6 +47,8 @@ export default function Project() {
         </li>  
       ))}
     </ul>
+
+    {open && <Modal onClose={() => { setOpen(false); setSelected(null); }} project={selected}/>}
   </div>;
 }
 
